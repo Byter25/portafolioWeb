@@ -1,0 +1,15 @@
+.detras{
+  background-color: black;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+div{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+video{
+  object-position: center;
+}

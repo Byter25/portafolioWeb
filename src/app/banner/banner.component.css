@@ -1,8 +1,0 @@
-.banner{
-  background-image: url(banner3.jpg);
-  height: 100vh;
-  border: 5px solid black;
-  border-top: none;
-  box-shadow: 0 3px 25px rgb(0, 0, 0);
-  background-size: cover;
-}
