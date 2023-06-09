@@ -1,0 +1,39 @@
+<section class="app-cal">
+  <div class="contend-cal">
+    <div class="visor">
+      <p class="resg placeholder"> {{resG || 0}}</p>
+      <p class="op placeholder">{{visor || 0}}</p>
+      <p class="res placeholder">{{result || 0}}</p>
+    </div>
+    <div class="control">
+      <div class="operacion">
+        <button (click)="borrar()">AC</button>
+        <button class="poten" id="poten">p</button>
+        <button class="raiz" id="raiz">r</button>
+        <button class="pi" id="pi">pi</button>
+        <button class="divide" id="divde">/</button>
+      </div>
+      <div class="num">
+        <button (click)="escribeOp('1')" >1</button>
+        <button (click)="escribeOp('2')" >2</button>
+        <button (click)="escribeOp('3')" >3</button>
+        <button (click)="escribeOp('4')" >4</button>
+        <button (click)="escribeOp('5')" >5</button>
+        <button (click)="escribeOp('6')" >6</button>
+        <button (click)="escribeOp('7')" >7</button>
+        <button (click)="escribeOp('8')" >8</button>
+        <button (click)="escribeOp('9')" >9</button>
+        <button (click)="escribeOp('.')" >.</button>
+        <button (click)="escribeOp('0')" >0</button>
+        <button (click)="escribeRes()" > = </button>
+      </div>
+      <div class="operacion">
+        <button (click)="retroceder()"> <= </button>
+        <button (click)="escribeOp('+')">+</button>
+        <button (click)="escribeOp('-')">-</button>
+        <button (click)="escribeOp('x')">x</button>
+        <button (click)="escribeOp('/')">/</button>
+      </div>
+    </div>
+  </div>
+</section>
