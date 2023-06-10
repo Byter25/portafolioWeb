@@ -7,6 +7,7 @@ import { MenuComponent } from './menu/menu.component';
 import { SeccionComponent } from './seccion/seccion.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { ScrollCComponent } from './scroll-c/scroll-c.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TaskListComponent } from './task-list/task-list.component';
     MenuComponent,
     SeccionComponent,
     CalculadoraComponent,
-    TaskListComponent
+    TaskListComponent,
+    ScrollCComponent
   ],
   imports: [
     BrowserModule,
