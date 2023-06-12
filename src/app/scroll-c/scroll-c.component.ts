@@ -12,19 +12,22 @@ export class ScrollCComponent {
       titulo:"nombre",
       descripcion:"Esta es una descripcion",
       pie:"esta es el pie",
-      visual:{video:"link123",img:"link345"}
+      visual:{video:"link123",img:"link345"},
+      fondo: "../../assets/zedLoop.webm"
     },
     {id:2,
       titulo:"nombre1",
       descripcion:"Esta es una segunda descripcion",
       pie:"esta es un segundo pie",
-      visual:{video:"link13223",img:"link23345"}
+      visual:{video:"link13223",img:"link23345"},
+      fondo:"../../assets/Minecraft.webm"
     },
     {id:3,
       titulo:"FuncionaLawea",
       descripcion:"Esta es una segunda descripcion",
       pie:"esta es un segundo pie",
-      visual:{video:"link13223",img:"link23345"}
+      visual:{video:"link13223",img:"link23345"},
+      fondo:"../../assets/zedLoop.webm"
     }
   ]
 }

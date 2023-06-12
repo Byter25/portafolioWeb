@@ -2,7 +2,7 @@ header{
     padding: 5px 6px;
     top: 0;
     z-index: 50;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     display: flex;
     align-items: center;

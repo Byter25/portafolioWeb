@@ -4,4 +4,5 @@ export interface Seccion{
   descripcion:String
   pie:String
   visual:{}
+  fondo:String
 }
