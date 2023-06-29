@@ -21,6 +21,7 @@ ul{
     display: flex;
 }
 ul li a{
+    text-transform: uppercase;
     color: white;
     font-size: 14px ;
     display: inline-block;

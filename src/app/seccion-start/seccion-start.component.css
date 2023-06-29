@@ -1,5 +1,4 @@
-
-.detras{
+.base{
   background-color: black;
   position: sticky;
   height: 100vh;
@@ -7,15 +6,18 @@
   text-align: center;
   overflow: hidden;
 }
+
 .superior{
   position: relative;
   z-index: 30;
 }
+
 .contenido{
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+
 .pie{
   display: flex;
   flex-direction: column;
@@ -23,16 +25,20 @@
   justify-content: end;
   padding-bottom: 50px;
 }
+
 .pie a{
   color: white;
 }
+
 .contenido h2{
   padding: 100px 0px 0px;
 }
+
 .contenido p{
   width: 400px;
   margin: 0 auto;
 }
+
 div{
   position: absolute;
   top: 0;
@@ -41,6 +47,7 @@ div{
   width: 100vw;
   height: 100vh; 
 }
+
 video{
   object-position: center;
   object-fit: cover ;
