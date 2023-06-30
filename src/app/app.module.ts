@@ -8,6 +8,7 @@ import { SeccionStartComponent } from './seccion-start/seccion-start.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { ScrollCComponent } from './scroll-c/scroll-c.component';
+import { SeccionMeComponent } from './seccion-me/seccion-me.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ScrollCComponent } from './scroll-c/scroll-c.component';
     SeccionStartComponent,
     CalculadoraComponent,
     TaskListComponent,
-    ScrollCComponent
+    ScrollCComponent,
+    SeccionMeComponent
   ],
   imports: [
     BrowserModule,
