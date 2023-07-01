@@ -4,6 +4,7 @@ main{
   overflow: auto;
   scroll-snap-type: y mandatory;
 }
+
 .scroll-c{
   scroll-snap-align: center;
 }

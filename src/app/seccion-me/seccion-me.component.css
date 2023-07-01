@@ -1,9 +1,17 @@
 .contend-max{
   z-index: 30;
-  max-width: 80%;
+  max-width: 95%;
   max-height: 80%;
+  min-height: 100px;
+  min-width: 200px;
 }
 
+@media(max-width:768px){
+  .card-contend-flex{
+    flex-direction: column;
+  }
+
+}
 
 .contendH2{
   display: flex;
@@ -15,7 +23,7 @@
 }
 
 .titulo-max{
-  font-size: 42px;
+  font-size: 40px;
   font-weight: bold;
   margin: 10px 0 20px;
 }
@@ -24,7 +32,6 @@
 .titulo-min{
   font-size: 20px;
   text-transform: capitalize;
-  font-weight: bold;
 }
 .contendH2 p{
   text-align: left;
@@ -43,11 +50,10 @@
   text-align: left;
 }
 table td{
-  font-weight: bold;
-  padding: 10px 0px;
+  padding-top: 10px;
   padding-right: 20px;
 }
-table tbody tr :first-child{
+table tr :first-child{
   color: red;
   text-transform: uppercase;
   font-weight: bold;
@@ -62,6 +68,8 @@ table tbody tr :first-child{
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .interes{
   display: flex;
@@ -71,7 +79,7 @@ table tbody tr :first-child{
   text-transform: uppercase;
   width: 100px;
   height: 100px;
-  margin: 0px 20px 40px 0px;
+  margin: 0px 20px 20px 0px;
   background-color: black;
   border-radius: 20px;
   border: solid white 3px;

@@ -1,19 +1,20 @@
-<header>
-    <div class="centrar">
+<header class="menu" id="menu">
+    <div class="menu-lado">
         <img src="../../assets/logo.png">
     </div>
-    <div class="titulo">
-        <h1>BYTHER</h1>
-    </div>
-    <nav class="centrar">
+
+    <nav class="menu-centro">
         <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">sobre mi</a></li>
-            <li><a href="">skills</a></li>
-            <li><a href="">curriculum</a></li>
-            <li><a href="">portfolio</a></li>
-            <li><a href="">contacto</a></li>
+            <li (mouseenter)="backdrop()"><a href="#inicio">Inicio</a></li>
+            <li (mouseenter)="backdrop()"><a href="#sobre-mi">sobre mi</a></li>
+            <li (mouseenter)="backdrop()"><a href="#skills">skills</a></li>
+            <li (mouseenter)="backdrop()"><a href="#curriculum">curriculum</a></li>
+            <li (mouseenter)="backdrop()"><a href="#portfolio">portfolio</a></li>
+            <li (mouseenter)="backdrop()"><a href="#contacto">contacto</a></li>
         </ul>
     </nav>
-
+    <div class="menu-lado right">
+        <h1>byter</h1>
+    </div>
+    <div class="backdrop" id="backdrop"></div>
 </header>

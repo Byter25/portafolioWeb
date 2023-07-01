@@ -1,33 +1,72 @@
-header{
-    padding: 5px 6px;
-    top: 0;
-    z-index: 50;
-    width: 100vw;
+.menu{
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    top: 0;
+    z-index: 50;
+    width: 100vw;
 }
-.centrar{
+
+/* LOGO */
+.menu img{
+    margin: 5px 0px 0px 15px;
+    height: 50px;
+}
+
+/* TITULO */
+.menu .menu-lado h1{
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    transition: 0.5s;
+    margin-right: 25px;
+}
+.menu h1:hover{
+    color: red;
+}
+
+/* NAV IZQUIERDO */
+.menu-lado{
     display: flex;
     flex-grow: 1;
     flex-basis: 0;
 }
-nav{
-    justify-content: end;
-}
-ul{
+
+/* NAV CENTRO */
+.menu ul{
     list-style: none;
     display: flex;
+    padding-right: 15px;
 }
-ul li a{
+.menu ul li{
+    margin-left: 10px;
+}
+.menu ul li a{
+    display: inline-block;
     text-transform: uppercase;
     color: white;
-    font-size: 14px ;
-    display: inline-block;
-    padding-right: 30px;
+    font-size: 15px ;
+    padding: 10px;
+    transition: 0.5s;
 }
-img{
-    margin-left: 30px;
-    height: 40px;
+
+/* NAV DERECHO */
+.right {
+    justify-content: end;
+}
+
+/* FONOD TRANSICION ANIMADO  */
+.backdrop{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: 16px;
+    border-radius: 10px;
+    left: var(--left);
+    top: var(--top);
+    width: var(--width);
+    height: var(--height);
+    transition: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -10;
 }
