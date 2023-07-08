@@ -23,14 +23,12 @@
 }
 
 .titulo-max{
-  font-size: 40px;
-  font-weight: bold;
   margin: 10px 0 20px;
+  height: 50px;
 }
 
 /* TITULO Y DESCRIPCION */
 .titulo-min{
-  font-size: 20px;
   text-transform: capitalize;
 }
 .contendH2 p{
@@ -69,7 +67,7 @@ table tr :first-child{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: last baseline;
 }
 .interes{
   display: flex;

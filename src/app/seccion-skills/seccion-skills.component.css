@@ -1,0 +1,48 @@
+.skills{
+  width: 90%;
+  height: 80%;
+}
+.skills td{
+  width: 50%;
+  text-align: start;
+}
+.skills > span{
+  margin-bottom: 10px;
+}
+
+.skills .barra{
+  position: relative;
+  height: 8px;
+  width: 80%;
+  background-color: rgb(41, 41, 41);
+  margin-bottom: 40px;
+}
+
+.skills .progress{
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+}
+
+.skills .barra span{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: red;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 40px;
+  top: -17px;
+  left: -15px;
+  font-size: 14px;
+}
+.skills .barra .animacion{
+  width: 0;
+  animation: 2s animacion forwards;
+}
+@keyframes animacion{
+  0%{width: 0%;}
+  100%{width: 75%;}
+}

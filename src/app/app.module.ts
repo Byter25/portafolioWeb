@@ -9,6 +9,7 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { ScrollCComponent } from './scroll-c/scroll-c.component';
 import { SeccionMeComponent } from './seccion-me/seccion-me.component';
+import { SeccionSkillsComponent } from './seccion-skills/seccion-skills.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SeccionMeComponent } from './seccion-me/seccion-me.component';
     CalculadoraComponent,
     TaskListComponent,
     ScrollCComponent,
-    SeccionMeComponent
+    SeccionMeComponent,
+    SeccionSkillsComponent
   ],
   imports: [
     BrowserModule,
