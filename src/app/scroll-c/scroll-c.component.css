@@ -8,3 +8,7 @@ main{
 .scroll-c{
   scroll-snap-align: center;
 }
+
+.title-s{
+  margin: 20px 0px 0px;
+}

@@ -15,13 +15,27 @@
 }
 
 /* TITULO */
-.menu .menu-lado h1{
+.menu .menu-lado span{
+    box-sizing: content-box;
     text-transform: uppercase;
-    letter-spacing: 15px;
+    font-size: 30px;
+    border-right: 3px solid;
+    font-family: monospace;
+    width: 5ch;
+    animation:
+    typing 3s steps(5),
+    blinking .75s infinite step-end alternate;
+    overflow: hidden;
     transition: 0.5s;
-    margin-right: 25px;
 }
-.menu h1:hover{
+@keyframes typing{
+    from { width: 0;}
+
+}
+@keyframes blinking{
+    50% {border-color: transparent;}
+}
+.menu span:hover{
     color: red;
 }
 

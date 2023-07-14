@@ -6,3 +6,8 @@ export interface Seccion{
   visual:{}
   fondo:String
 }
+export interface Skills{
+  id:Number
+  skill:String
+  progreso:String
+}

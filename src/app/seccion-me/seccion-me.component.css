@@ -1,14 +1,7 @@
-.contend-max{
-  z-index: 30;
-  max-width: 95%;
-  max-height: 80%;
-  min-height: 100px;
-  min-width: 200px;
-}
 
 @media(max-width:768px){
   .card-contend-flex{
-    flex-direction: column;
+    flex-wrap: nowrap;
   }
 
 }
@@ -18,14 +11,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center ;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.titulo-max{
-  margin: 10px 0 20px;
-  height: 50px;
-}
 
 /* TITULO Y DESCRIPCION */
 .titulo-min{
@@ -39,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 /* CONTENEDOR DATOS PERSONALES */
@@ -91,8 +78,8 @@ table tr :first-child{
 .boton-descargar{
   font-size: 15px;
   color: white;
-  margin: 20px;
-  padding: 10px 20px;  
+  padding: 10px 20px;
+  margin-bottom: 20px;  
   background-color: black;
   border: solid white 3px;
   transition: 0.2s;

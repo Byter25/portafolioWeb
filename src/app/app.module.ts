@@ -10,6 +10,7 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { ScrollCComponent } from './scroll-c/scroll-c.component';
 import { SeccionMeComponent } from './seccion-me/seccion-me.component';
 import { SeccionSkillsComponent } from './seccion-skills/seccion-skills.component';
+import { SeccionCurriculumComponent } from './seccion-curriculum/seccion-curriculum.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SeccionSkillsComponent } from './seccion-skills/seccion-skills.componen
     TaskListComponent,
     ScrollCComponent,
     SeccionMeComponent,
-    SeccionSkillsComponent
+    SeccionSkillsComponent,
+    SeccionCurriculumComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,5 +32,6 @@ import { SeccionSkillsComponent } from './seccion-skills/seccion-skills.componen
   bootstrap: [AppComponent]
 })
 export class AppModule { 
+  
   
 }
