@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {backdrop } from './menu/menu.component';
-import { elemento } from './seccion-skills/seccion-skills.component'
+import { Seccion } from "./seccion.interface";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,10 +7,4 @@ import { elemento } from './seccion-skills/seccion-skills.component'
 })
 export class AppComponent {
   
-
 }
-document.addEventListener("DOMContentLoaded", function() {
-  backdrop();
-  elemento();
-});
-// Obtener el elemento que quieres observar
