@@ -14,8 +14,8 @@ export function backdrop(){
     item.addEventListener("mouseenter",()=> {
       const {left, top, width, height} = item.getBoundingClientRect()
       const {clientHeight,clientWidth} = item
-      console.log({left, top, width, height})
-      console.log({clientHeight,clientWidth})
+      // console.log({left, top, width, height})
+      // console.log({clientHeight,clientWidth})
 
       backdrop.style.setProperty("--left",`${left}px`)
       backdrop.style.setProperty("--top",`${top}px`)

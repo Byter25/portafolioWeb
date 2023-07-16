@@ -52,6 +52,7 @@
 .skills .skill .barra .anima{
   width: 0;
   animation: 2s anima forwards;
+  animation-delay: calc(var(--position) * 0.5s);
 }
 @keyframes anima{
   0%{width: 0%;}
