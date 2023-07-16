@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Skills } from "../seccion.interface";
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-seccion-skills',
