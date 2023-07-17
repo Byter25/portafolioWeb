@@ -6,6 +6,13 @@ export interface Seccion{
   visual:{}
   fondo:String
 }
+
+export interface Intereses{
+  id:Number
+  interes:String
+  icon:String 
+}
+
 export interface Skills{
   id:Number
   skill:String
