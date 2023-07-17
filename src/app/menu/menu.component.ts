@@ -26,3 +26,20 @@ export function backdrop(){
     })
   })
 }
+export function escribir(){
+  const element = document.querySelector(".menu-lado spam") as HTMLElement
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){ 
+          // element.style.animation{
+          //   typing 3s steps(5),
+          //   blinking .75s infinite step-end alternate;
+          // }
+      }else{
+          // element.style.animation{null}
+      }
+    });
+  });
+  // Inicia la observación del elemento objetivo
+  observer.observe(element);
+}

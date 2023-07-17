@@ -1,9 +1,28 @@
-
 @media(max-width:768px){
   .card-contend-flex{
     flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
-
+  .datos-personales{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .datos-personales table{
+    display: flex;
+    flex-direction: column;
+  }
+  .card-interes{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 200px;
+  }
+  .card-interes .intereses{
+    min-width: 100%;
+  }
 }
 
 .contendH2{
@@ -11,7 +30,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center ;
-  overflow: hidden;
 }
 
 
@@ -25,23 +43,23 @@
 }
 .card-contend-flex{
   display: flex;
+  overflow: auto;
   width: 90%;
   margin-top: 15px;
-  overflow-x: scroll;
-  overflow-y: hidden;
   justify-content: space-between;
 }
 
 /* CONTENEDOR DATOS PERSONALES */
 .card-contend-flex .datos-personales{
+  width: 100%;
+  margin-right: 20px;
   text-align: left;
-  background-color: aqua;
 }
-table td{
+.datos-personales table td{
   padding-top: 10px;
   padding-right: 20px;
 }
-table tr :first-child{
+.datos-personales table tr :first-child{
   color: red;
   text-transform: uppercase;
   font-weight: bold;

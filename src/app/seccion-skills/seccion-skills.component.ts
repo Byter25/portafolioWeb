@@ -10,18 +10,19 @@ import { Skills } from "../seccion.interface";
 export class SeccionSkillsComponent {
 
   tecnicas:Skills[] =[
-    {id:1,skill:"html-css",progreso:"80%"},
+    {id:1,skill:"html-css",progreso:"82%"},
     {id:2,skill:"javascript",progreso:"70%"},
-    {id:3,skill:"python",progreso:"75%"},
-    {id:4,skill:"java",progreso:"60%"},
-    {id:5,skill:"mainkera",progreso:"90%"}
+    {id:3,skill:"python",progreso:"76%"},
+    {id:4,skill:"java",progreso:"63%"},
+    {id:5,skill:"sql",progreso:"72%"}
   ]
 
   profesional:Skills[] =[
-    {id:1,skill:"trabajo en equipo",progreso:"90%"},
-    {id:2,skill:"makako",progreso:"65%"},
-    {id:3,skill:"python",progreso:"75%"},
-    {id:4,skill:"java",progreso:"70%"},
+    {id:1,skill:"trabajo en equipo",progreso:"83%"},
+    {id:2,skill:"adaptabilidad",progreso:"91%"},
+    {id:3,skill:"pensamiento analitico",progreso:"89%"},
+    {id:4,skill:"empatia",progreso:"90%"},
+    {id:5,skill:"a",progreso:"60%"}
   ]
 }
 
@@ -34,16 +35,13 @@ export function elemento(){
         barras.forEach((barra) => {
           barra.classList.add("anima")
         })
-        console.log("hola")
       }else{
         barras.forEach((barra) => {
           barra.classList.remove("anima")
         })
-        console.log("chao")
       }
     });
   });
-  
   // Inicia la observación del elemento objetivo
   observer.observe(element);
 }

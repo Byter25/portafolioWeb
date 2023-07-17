@@ -1,9 +1,8 @@
-
 <section class="base" id="sobre-mi">
   <div class="contend-max">
     <header class="contendH2">
       <h2 class="title-s">SOBRE MI</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum facilis, est ea repellat quo, cumque illum repudiandae labore optio molestiae quibusdam doloremque ut aliquid qui maxime eligendi ab autem aperiam.</p>
+      <p>Mi enfoque se basa en la resolución de problemas, y mi capacidad para analizar los requisitos del proyecto y traducirlos en soluciones técnicas efectivas. Soy un apasionado por aprender nuevas tecnologías y mantenerme actualizado en las tendencias de desarrollo, lo que me permite adaptarme rápidamente a los desafíos y cambios en el entorno de desarrollo de software. Estoy preparado para afrontar desafíos complejos y entregar soluciones de software de alto rendimiento, combinando habilidades técnicas sólidas con una mentalidad de resolución de problemas y una actitud colaborativa.</p>
       <div class="card-contend-flex">
         <div class="datos-personales">
           <h3 class="titulo-min">datos personales</h3>
@@ -33,40 +32,12 @@
 
         <div class="intereses">
           <h3 class="titulo-min">intereses</h3>
-          <div class="card-interes">
-            <div class="interes">
-              <i class="fa-solid fa-headphones"></i>
-              <span> musica</span>
-            </div>
-            <div class="interes">
-              <i class="fa-solid fa-gamepad"></i>
-              <span>juegos</span>
-            </div>
-            <div class="interes">
-              <i class="fa-brands fa-windows"></i>
-              <span>windows</span>
-            </div>
-            <div class="interes">
-              <i class="fa-solid fa-futbol"></i>
-              <span>futbol</span>
-            </div>
-            <div class="interes">
-              <i class="fa-solid fa-headphones"></i>
-              <span> musica</span>
-            </div>
-            <div class="interes">
-              <i class="fa-solid fa-gamepad-modern"></i>
-              <span>juegos</span>
-            </div>
-            <div class="interes">
-              <i class="fa-brands fa-windows"></i>
-              <span>windows</span>
-            </div>
-            <div class="interes">
-              <i class="fa-solid fa-futbol"></i>
-              <span>futbol</span>
-            </div>
-          </div>
+          <ul class="card-interes" >
+            <li class="interes" *ngFor="let sec of intereses ; let i = index">
+              <i class="{{sec.icon}}"></i>
+              <span>{{sec.interes}}</span>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
