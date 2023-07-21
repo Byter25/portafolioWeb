@@ -5,17 +5,19 @@ import { Component } from '@angular/core';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
+
 export class MenuComponent {
 }
+
 export function backdrop(){
-  const liItem = document.querySelectorAll("#menu li")
+  const liItem = document.querySelectorAll("nav li")
   const backdrop = document.querySelector("#backdrop") as HTMLElement
   liItem.forEach((item) => {
     item.addEventListener("mouseenter",()=> {
       const {left, top, width, height} = item.getBoundingClientRect()
       const {clientHeight,clientWidth} = item
-      // console.log({left, top, width, height})
-      // console.log({clientHeight,clientWidth})
+      console.log({left, top, width, height})
+      console.log({clientHeight,clientWidth})
 
       backdrop.style.setProperty("--left",`${left}px`)
       backdrop.style.setProperty("--top",`${top}px`)
@@ -26,8 +28,9 @@ export function backdrop(){
     })
   })
 }
+
 export function escribir(){
-  const element = document.querySelector(".menu-lado spam") as HTMLElement
+  const element = document.querySelector(".menu-lado spam") as HTMLSpanElement
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting){ 

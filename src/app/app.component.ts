@@ -11,7 +11,9 @@ export class AppComponent {
 
 }
 document.addEventListener("DOMContentLoaded", function() {
-  backdrop();
+  if(window.innerWidth >= 860){
+    backdrop();
+  }
   elemento();
   
 });

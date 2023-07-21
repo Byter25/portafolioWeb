@@ -6,11 +6,16 @@
     top: 0;
     z-index: 50;
     width: 100vw;
+    padding-right: 10px;
 }
-
+#check,
+.esconder-menu,
+.mostrar-menu{
+    display: none;
+}
 /* LOGO */
 .menu img{
-    margin: 5px 0px 0px 15px;
+    margin: auto 10px;
     height: 30px;
 }
 
@@ -23,18 +28,13 @@
     font-family: monospace;
     width: 5ch;
     animation:
-    typing 3s steps(5),
-    blinking .75s infinite step-end alternate;
+    typing 2s steps(5),
+    blinking .5s infinite step-end alternate;
     overflow: hidden;
     transition: 0.5s;
 }
-@keyframes typing{
-    from { width: 0;}
-
-}
-@keyframes blinking{
-    50% {border-color: transparent;}
-}
+@keyframes typing{ from{ width: 0;}}
+@keyframes blinking{ 50%{border-color: transparent;}}
 .menu span:hover{
     color: red;
 }
@@ -44,18 +44,19 @@
     display: flex;
     flex-grow: 1;
     flex-basis: 0;
+    height: 100%;
 }
 
 /* NAV CENTRO */
-.menu ul{
+.menu .menu-centro ul{
     list-style: none;
     display: flex;
     padding-right: 15px;
 }
-.menu ul li{
+.menu .menu-centro ul li{
     margin-left: 10px;
 }
-.menu ul li a{
+.menu .menu-centro ul li a{
     display: inline-block;
     text-transform: uppercase;
     color: white;
@@ -64,13 +65,8 @@
     transition: 0.5s;
 }
 
-/* NAV DERECHO */
-.right {
-    justify-content: end;
-}
-
 /* FONOD TRANSICION ANIMADO  */
-.backdrop{
+.menu .backdrop{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: 16px;
@@ -83,4 +79,39 @@
     transition-duration: 300ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -10;
+}
+
+@media(max-width:868px){
+    .menu{
+        padding-right: 0;
+    }
+    .menu .mostrar-menu, 
+    .menu .menu-centro .esconder-menu{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        font-size: 20px;
+        padding-right: 20px;
+        height: 36px; 
+    }
+    .menu .menu-centro{
+        background-color: rgb(36, 36, 36);
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: -100%;
+        text-align: end;
+        min-width: 30%;
+        transition: .5s;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .menu .menu-centro ul{
+        display: inline;
+    }
+    #check:checked~.menu-centro{
+        transition: .5s;
+        right: 0;
+    }
 }
