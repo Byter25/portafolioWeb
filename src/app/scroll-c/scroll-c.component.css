@@ -20,8 +20,6 @@
 .contend-max{
   z-index: 30;
   width: 95%;
-  max-height: 80%;
-  min-height: 600px;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 25px;
@@ -64,6 +62,6 @@ main{
 }
 @media(max-height:600px){
   .contend-max{
-    min-height: 500px;
+    min-height: 400px;
   }
 }
