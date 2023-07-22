@@ -1,3 +1,57 @@
+.base{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+  max-width: 100vw;
+}
+.contend-min{
+  z-index: 30;
+  max-width: 30%;
+  min-width: 342px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+}
+.contend-max{
+  z-index: 30;
+  width: 95%;
+  max-height: 85%;
+  min-height: 600px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+}
+.card-contend-flex{
+  display: flex;
+  width: 90%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* VIDEO BG */
+.videoF{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+video{
+  object-position: center;
+  object-fit: cover ;
+  width: 100%;
+  height: 100%;
+}
+.title-s{
+  padding: 20px 0px 5px;
+}
+
 main{
   position: relative;
   height: 100vh;
@@ -5,11 +59,11 @@ main{
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
-
 .scroll-c{
   scroll-snap-align: center;
 }
-
-.title-s{
-  margin: 20px 0px 0px;
+@media(max-height:600px){
+  .contend-max{
+    min-height: 500px;
+  }
 }

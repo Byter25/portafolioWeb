@@ -5,7 +5,7 @@ import { Skills } from "../seccion.interface";
 @Component({
   selector: 'app-seccion-skills',
   templateUrl: './seccion-skills.component.html',
-  styleUrls: ['./seccion-skills.component.css','../seccion-start/seccion-start.component.css','../scroll-c/scroll-c.component.css']
+  styleUrls: ['./seccion-skills.component.css','../scroll-c/scroll-c.component.css']
 })
 export class SeccionSkillsComponent {
 
@@ -27,7 +27,7 @@ export class SeccionSkillsComponent {
 }
 
 export function elemento(){
-  const element = document.querySelector(".barra") as HTMLElement
+  const element = document.querySelector("#activa") as HTMLDivElement
   const barras = document.querySelectorAll(".progreso")
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

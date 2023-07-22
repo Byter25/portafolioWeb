@@ -23,7 +23,7 @@
 .menu .menu-lado span{
     box-sizing: content-box;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 2rem;
     border-right: 3px solid;
     font-family: monospace;
     width: 5ch;

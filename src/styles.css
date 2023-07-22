@@ -21,11 +21,13 @@ h2{
     font-family: 'D3 Circuitism', sans-serif;
     letter-spacing: 5px;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 2rem;
     text-transform: uppercase;
 }
 h3{
+    text-transform: capitalize;
     font-size: 25px;
+    margin-bottom: 15px;
 }
 /* ::-webkit-scrollbar{
     width: 16px;

@@ -1,11 +1,9 @@
-
 .contendH2{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center ;
 }
-
 
 /* TITULO Y DESCRIPCION */
 .titulo-min{
@@ -14,19 +12,12 @@
 .contendH2 p{
   text-align: left;
   max-width: 90%;
-}
-.card-contend-flex{
-  display: flex;
-  overflow: auto;
-  width: 90%;
-  margin-top: 15px;
-  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 /* CONTENEDOR DATOS PERSONALES */
 .card-contend-flex .datos-personales{
-  width: 100%;
-  margin-right: 20px;
+  width: 40%;
   text-align: left;
 }
 .datos-personales table td{
@@ -41,47 +32,55 @@
 
 /* CONTENEDOR INTERESES */
 .card-contend-flex .intereses{
-  max-width: 50%;
+  width: 45%;
   height: 100%;
   text-align: left;
+  overflow: hidden;
 }
 .intereses .card-interes{
-  margin-top: 15px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: last baseline;
+  margin: 15px 0px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      80px,
+      1fr
+    )
+  );
+  gap: 10px;
 }
-.interes{
+.intereses .card-interes .interes{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   margin: 0px 20px 20px 0px;
   background-color: black;
   border-radius: 20px;
   border: solid white 3px;
 }
-.interes i{
-  font-size: 40px;
+.intereses .card-interes .interes i{
+  font-size: 2rem;
   margin-bottom: 10px;
+}
+.intereses .card-interes .interes span{
+  font-size: 1rem;
+}
+/* BOTON DESCARGAR */
+.boton-descargar{
+  color: white;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: solid white 3px;
+  background-color: black;
+  transition: .5s;
 }
 
 /* BOTON DESCARGAR */
-.boton-descargar{
-  font-size: 15px;
-  color: white;
-  padding: 10px 20px;
-  margin-bottom: 20px;  
-  background-color: black;
-  border: solid white 3px;
-  transition: 0.2s;
-}
 .boton-descargar:hover{
   border-color: red;
 }
@@ -89,30 +88,24 @@
   background-color: red;
   border-color: white;
 }
-@media(max-width:868px){
+
+@media(max-width:760px){
   .card-contend-flex{
     overflow-x: scroll;
-    overflow-y: hidden;
   }
-  .datos-personales{
-    width: 100%;
+  .card-contend-flex .datos-personales{
+    min-width: 100%;
+    margin-right: 15%;
   }
   .datos-personales table{
     display: flex;
     flex-direction: column;
   }
-  .intereses{
+
+  .card-contend-flex .intereses{
     min-width: 100%;
   }
-  .intereses .card-interes{
-    display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(
-        110px,
-        1fr
-      )
-    );
-    gap: 0;
-  } 
+  .intereses .card-interes .interes{
+    margin: 0;
+  }
 }
