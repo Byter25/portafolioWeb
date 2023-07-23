@@ -30,7 +30,7 @@
   border-radius: 10px;
 }
 .skill .barra:hover{
-  transition: .5s ;
+  transition: .2s ;
   box-shadow: 1px 1px 10px red;
 }
 .skill .barra span{
