@@ -81,6 +81,7 @@
     z-index: -10;
 }
 
+
 @media(max-width:868px){
     .menu{
         padding-right: 0;
@@ -101,7 +102,7 @@
         flex-direction: column;
         top: 0;
         right: -100%;
-        text-align: end;
+        text-align: left;
         min-width: 30%;
         transition: .5s;
         border-top-left-radius: 20px;

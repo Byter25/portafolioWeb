@@ -38,7 +38,6 @@
   overflow: hidden;
 }
 .intereses .card-interes{
-  margin: 15px 0px;
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -57,30 +56,34 @@
   text-transform: uppercase;
   width: 90px;
   height: 90px;
-  margin: 0px 20px 20px 0px;
   background-color: black;
   border-radius: 20px;
   border: solid white 3px;
+  transition: .2s;
+}
+.intereses .card-interes .interes:hover{
+  color: var(--color);
+  border-color: var(--color);
+  box-shadow: 1px 1px 15px var(--color);
 }
 .intereses .card-interes .interes i{
   font-size: 2rem;
   margin-bottom: 10px;
 }
 .intereses .card-interes .interes span{
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
+
 /* BOTON DESCARGAR */
 .boton-descargar{
   color: white;
   font-size: 15px;
   padding: 10px 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   border: solid white 3px;
   background-color: black;
   transition: .5s;
 }
-
-/* BOTON DESCARGAR */
 .boton-descargar:hover{
   border-color: red;
 }
@@ -89,7 +92,7 @@
   border-color: white;
 }
 
-@media(max-width:760px){
+@media(max-width:720px){
   .card-contend-flex{
     overflow-x: scroll;
   }
@@ -106,6 +109,13 @@
     min-width: 100%;
   }
   .intereses .card-interes .interes{
-    margin: 0;
+    width: 70px;
+    height: 70px;
+  }
+  .intereses .card-interes .interes i{
+    margin-bottom: 0;
+  }
+  .interes span{
+    display: none;
   }
 }

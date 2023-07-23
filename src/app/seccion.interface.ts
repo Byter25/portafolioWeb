@@ -10,7 +10,12 @@ export interface Seccion{
 export interface Intereses{
   id:Number
   interes:String
-  icon:String 
+  icon:String
+  color:String
+  // color:{
+  //   color1:String,
+  //   color2:String
+  // }
 }
 
 export interface Skills{

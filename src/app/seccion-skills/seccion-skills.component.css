@@ -56,7 +56,7 @@
   100%{width: var(--progreso);}
 }
 
-@media(max-width:1000px){
+@media(max-width:800px){
   .card-contend-flex{
     overflow-x: scroll;
     scroll-snap-type: mandatory x;

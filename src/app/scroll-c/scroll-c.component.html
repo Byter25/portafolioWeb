@@ -1,12 +1,8 @@
 <main>
   <!--<div class="scroll-c" *ngFor="let sec of secciones ; let i = index">-->
-  <div class="scroll-c">
-    <app-seccion-start></app-seccion-start>
-  </div>
-  <div class="scroll-c">
-    <app-seccion-me></app-seccion-me>
-  </div>
-  <div class="scroll-c">
-    <app-seccion-skills></app-seccion-skills>
-  </div>
+  <app-seccion-start class="base scroll-c" id="inicio" style="--fondo: url('https://i.pinimg.com/originals/bc/23/b9/bc23b955d467d91ccbcb21ba44dabf17.gif')"></app-seccion-start>
+  
+  <app-seccion-me class="base scroll-c" id="sobre-mi" style="--fondo: url('https://i.pinimg.com/originals/34/16/fc/3416fc4113b69a0bf1cc75a772c4b5c4.gif')"></app-seccion-me>
+
+  <app-seccion-skills class="base scroll-c" id="skills" style="--fondo: url('https://i.pinimg.com/originals/48/4b/32/484b325cdb5bdd8bce6d8e3d131fda75.gif')"></app-seccion-skills>
 </main>
