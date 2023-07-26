@@ -3,14 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center ;
-  height: 80%;
 }
-footer{
-  position: relative;
-  width: 100%;
-  height: 20%;
-  bottom: 0;
-}
+
 /* TITULO Y DESCRIPCION */
 .contendH2 p{
   text-align: left;
@@ -78,11 +72,14 @@ footer{
 }
 
 /* BOTON DESCARGAR */
+footer{
+  padding: 40px 0;
+  bottom: 0;
+}
 .boton-descargar{
   color: white;
   font-size: 15px;
   padding: 10px 20px;
-  margin: 20px 0;
   border: solid white 3px;
   background-color: black;
   transition: .5s;
@@ -90,10 +87,7 @@ footer{
 .boton-descargar:hover{
   border-color: red;
 }
-.boton-descargar:active{
-  background-color: red;
-  border-color: white;
-}
+
 
 @media(max-width:720px){
   .card-contend-flex{
@@ -130,5 +124,8 @@ footer{
   }
   .interes span{
     display: none;
+  }
+  footer{
+    padding: 20px 0;
   }
 }

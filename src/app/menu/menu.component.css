@@ -4,19 +4,19 @@
     align-items: center;
     justify-content: space-between;
     top: 0;
-    z-index: 50;
+    z-index: 100;
     width: 100vw;
-    padding-right: 10px;
-}
-#check,
-.esconder-menu,
-.mostrar-menu{
-    display: none;
+    padding-right:20px;
 }
 /* LOGO */
 .menu img{
     margin: auto 10px;
     height: 30px;
+}
+#check,
+.esconder-menu,
+.mostrar-menu{
+    display: none;
 }
 
 /* TITULO */
@@ -28,7 +28,7 @@
     font-family: monospace;
     width: 5ch;
     animation:
-    typing 2s steps(5),
+    typing 1.5s steps(5),
     blinking .5s infinite step-end alternate;
     overflow: hidden;
     transition: 0.5s;
@@ -51,7 +51,6 @@
 .menu .menu-centro ul{
     list-style: none;
     display: flex;
-    padding-right: 15px;
 }
 .menu .menu-centro ul li{
     margin-left: 10px;
@@ -62,7 +61,7 @@
     color: white;
     font-size: 15px ;
     padding: 10px;
-    transition: 0.5s;
+    transition: .5s;
 }
 
 /* FONOD TRANSICION ANIMADO  */
@@ -88,25 +87,28 @@
     }
     .menu .mostrar-menu, 
     .menu .menu-centro .esconder-menu{
-        display: flex;
-        align-items: center;
-        justify-content: right;
+        display: inline-block;
+        width: 100%;
         font-size: 20px;
-        padding-right: 20px;
-        height: 36px; 
+        text-align: right;
+    }
+    .menu .mostrar-menu{
+        padding-right: 10px;
     }
     .menu .menu-centro{
-        background-color: rgb(36, 36, 36);
         position: fixed;
-        display: flex;
-        flex-direction: column;
+        display: inline;
+        text-align: left;
         top: 0;
         right: -100%;
-        text-align: left;
         min-width: 30%;
-        transition: .5s;
+        padding: 10px;
+        padding-top: 5px;
+        background-color: rgb(36, 36, 36);
+        border: 2px solid red;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
+        transition: .5s;
     }
     .menu .menu-centro ul{
         display: inline;

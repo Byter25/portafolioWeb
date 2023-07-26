@@ -1,51 +1,53 @@
-<div class="contend-max">
-  <header class="contendH2">
-      <h2 class="title-s">SOBRE MI</h2>
-      <p>Soy un apasionado por aprender nuevas tecnologías y mantenerme actualizado en las tendencias de desarrollo, lo que me permite adaptarme rápidamente a los desafíos y cambios en el entorno de desarrollo de software. Estoy preparado para afrontar desafíos complejos y entregar soluciones de software de alto rendimiento, combinando habilidades técnicas sólidas con una mentalidad de resolución de problemas y una actitud colaborativa.</p>
-      <div class="card-contend-flex">
-        <div class="datos-personales">
-          <h3>datos personales</h3>
-          <table>
-            <tr>
-              <td>nacimiento</td>
-              <td>11-09-2003</td>
-            </tr>
-            <tr>
-              <td>telefono</td>
-              <td>994275735</td>
-            </tr>
-            <tr>
-              <td>email</td>
-              <td>bryan25contacto@gmail.com</td>
-            </tr>
-            <tr>
-              <td>direccion</td>
-              <td>Calle Yahuarwaca</td>
-            </tr>
-          </table>
+<section  class="base scroll-c" id="sobre_mi" style="--fondo: url(https://i.pinimg.com/originals/34/16/fc/3416fc4113b69a0bf1cc75a772c4b5c4.gif)">
+  <div class="contend-max">
+    <header class="contendH2">
+        <h2 class="title-s">SOBRE MI</h2>
+        <p>Soy un apasionado por aprender nuevas tecnologías y mantenerme actualizado en las tendencias de desarrollo, lo que me permite adaptarme rápidamente a los desafíos y cambios en el entorno de desarrollo de software. Estoy preparado para afrontar desafíos complejos y entregar soluciones de software de alto rendimiento, combinando habilidades técnicas sólidas con una mentalidad de resolución de problemas y una actitud colaborativa.</p>
+        <div class="card-contend-flex">
+          <div class="datos-personales">
+            <h3>datos personales</h3>
+            <table>
+              <tr>
+                <td>nacimiento</td>
+                <td>11-09-2003</td>
+              </tr>
+              <tr>
+                <td>telefono</td>
+                <td>994275735</td>
+              </tr>
+              <tr>
+                <td>email</td>
+                <td>bryan25contacto@gmail.com</td>
+              </tr>
+              <tr>
+                <td>direccion</td>
+                <td>Calle Yahuarwaca</td>
+              </tr>
+            </table>
+          </div>
+  
+          <div class="intereses">
+            <h3 class="titulo-min">intereses</h3>
+            <ul class="card-interes" >
+              <li *ngFor="let sec of intereses ; let i = index" 
+              class="interes {{sec.interes}}" 
+              style='--color: {{sec.color}}'>
+                <i class="{{sec.icon}}"></i> 
+                <span>{{sec.interes}}</span>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div class="intereses">
-          <h3 class="titulo-min">intereses</h3>
-          <ul class="card-interes" >
-            <li *ngFor="let sec of intereses ; let i = index" 
-            class="interes {{sec.interes}}" 
-            style='--color: {{sec.color}}'>
-              <i class="{{sec.icon}}"></i> 
-              <span>{{sec.interes}}</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-  </header>
-
-  <footer>
-      <button class="boton-descargar">
-        <span>Descargar CV </span>
-        <i class="fa-sharp fa-solid fa-download"></i>
-      </button>
-  </footer>
-</div>
+    </header>
+  
+    <footer>
+        <a download="cv-Bryan-Chacaliaza-Saavedra" href="../../assets/CV-Bryan-Chacaliaza.pdf" class="boton-descargar">
+          <span>Descargar CV </span>
+          <i class="fa-sharp fa-solid fa-download"></i>
+        </a>
+    </footer>
+  </div>
+</section>
 <!-- <section class="base" id="">
   <div class="superior contenido">
     <header>

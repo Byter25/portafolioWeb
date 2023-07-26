@@ -3,7 +3,7 @@ import { Intereses } from "../seccion.interface";
 @Component({
   selector: 'app-seccion-me',
   templateUrl: './seccion-me.component.html',
-  styleUrls: ['./seccion-me.component.css','../scroll-c/scroll-c.component.css']
+  styleUrls: ['./seccion-me.component.css', '../app.component.css']
 })
 export class SeccionMeComponent {
   intereses:Intereses[] =[

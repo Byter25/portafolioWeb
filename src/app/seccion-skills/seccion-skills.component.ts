@@ -5,7 +5,7 @@ import { Skills } from "../seccion.interface";
 @Component({
   selector: 'app-seccion-skills',
   templateUrl: './seccion-skills.component.html',
-  styleUrls: ['./seccion-skills.component.css','../scroll-c/scroll-c.component.css']
+  styleUrls: ['./seccion-skills.component.css', '../app.component.css']
 })
 export class SeccionSkillsComponent {
 

@@ -1,19 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, QueryList, ElementRef, AfterViewInit, ViewChildren } from '@angular/core';
 import {backdrop } from './menu/menu.component';
 import { elemento } from './seccion-skills/seccion-skills.component'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: [ './app.component.css' ]
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit{
   
-
-}
-document.addEventListener("DOMContentLoaded", function() {
-  if(window.innerWidth >= 860){
-    backdrop();
+  ngAfterViewInit(): void {
+    if(window.innerWidth >= 860){
+      backdrop()
+    }
+    elemento()
   }
-  elemento();
-  
-});
+
+  bajar(){
+    console.log("preciono el boton alv")
+  }
+}

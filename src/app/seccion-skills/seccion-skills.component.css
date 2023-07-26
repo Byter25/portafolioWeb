@@ -5,6 +5,10 @@
   width: 50%;
   text-align: left;
 }
+.card-contend-flex .box:hover~.card-contend-flex .skill .barra{
+  transition: .2s ;
+  box-shadow: 1px 1px 10px red;
+}
 .card-contend-flex .box:first-child{
   margin-right: 100px;
 }
@@ -28,10 +32,6 @@
   left: 0;
   height: 8px;
   border-radius: 10px;
-}
-.skill .barra:hover{
-  transition: .2s ;
-  box-shadow: 1px 1px 10px red;
 }
 .skill .barra span{
   position: absolute;

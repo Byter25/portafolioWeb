@@ -1,0 +1,93 @@
+.base{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+  max-width: 100vw; 
+  /* linear-gradient(rgba(0, 174, 255, 0.5),rgba(0, 0, 0, 0.5)),  */
+  background-image: var(--fondo);
+  background-size: cover;
+  transition: .3s;
+}
+.contend-min{
+  margin: auto;
+  max-width: 30%;
+  min-width: 342px;
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  
+}
+.contend-max{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  min-height: 75%;
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+.contend-max ::-webkit-scrollbar{
+  width: 16px;
+  color: black;
+}
+.card-contend-flex{
+  display: flex;
+  width: 90%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* FLECHA SCROLL */
+.flecha-abajo{
+  text-align: center;
+  z-index: 30;
+  color: currentColor;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.flecha-abajo button{
+  background-color: transparent;
+  border-color: transparent;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+/* VIDEO BG */
+/* .videoF{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+video{
+  object-position: center;
+  object-fit: cover ;
+  width: 100%;
+  height: 100%;
+} */
+
+main{
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.scroll-c{
+  scroll-snap-align: center;
+}
+@media(max-width:600px){
+  .contend-max{
+    max-height: 86%;
+    min-height: none;
+  }
+}
