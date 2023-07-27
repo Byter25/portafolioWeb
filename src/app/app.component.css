@@ -4,7 +4,7 @@
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
   max-width: 100vw; 
   /* linear-gradient(rgba(0, 174, 255, 0.5),rgba(0, 0, 0, 0.5)),  */
   background-image: var(--fondo);
@@ -14,12 +14,10 @@
 .contend-min{
   margin: auto;
   max-width: 30%;
-  min-width: 342px;
   overflow: hidden;
   border-radius: 25px;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
-  
 }
 .contend-max{
   display: flex;
@@ -27,7 +25,6 @@
   align-items: center;
   justify-content: center;
   width: 95%;
-  min-height: 75%;
   overflow: hidden;
   border-radius: 25px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -39,8 +36,7 @@
 }
 .card-contend-flex{
   display: flex;
-  width: 90%;
-  height: 100%;
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -86,8 +82,10 @@ main{
   scroll-snap-align: center;
 }
 @media(max-width:600px){
+  .contend-min{
+    max-width: 95%;
+  }
   .contend-max{
     max-height: 86%;
-    min-height: none;
   }
 }

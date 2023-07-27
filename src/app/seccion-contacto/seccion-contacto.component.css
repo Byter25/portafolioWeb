@@ -1,0 +1,31 @@
+.contacto{
+  width: inherit;
+}
+.card-conted-flex{
+  width: 100%;
+}
+.contacto .datos{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.contacto input, .contacto textarea{
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.contacto textarea{
+  resize: horizontal;
+  min-height: 100px;
+}
+/* .contacto .mapa{
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+} */

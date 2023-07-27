@@ -1,16 +1,9 @@
-.card-contend-flex{
-  margin: auto;
-}
 .card-contend-flex .box{
   width: 50%;
   text-align: left;
 }
-.card-contend-flex .box:hover~.card-contend-flex .skill .barra{
-  transition: .2s ;
-  box-shadow: 1px 1px 10px red;
-}
-.card-contend-flex .box:first-child{
-  margin-right: 100px;
+.card-contend-flex .box{
+  padding: 2rem;
 }
 .card-contend-flex .skill > span{
   display: block;
@@ -21,7 +14,7 @@
   position: relative;
   height: 8px;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   background-color: rgb(48, 48, 48);
   border-radius: 10px;
 }

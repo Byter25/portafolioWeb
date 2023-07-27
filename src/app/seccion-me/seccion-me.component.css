@@ -3,12 +3,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center ;
+  width: 90%;
 }
 
 /* TITULO Y DESCRIPCION */
 .contendH2 p{
   text-align: left;
-  max-width: 90%;
   margin-bottom: 20px;
 }
 
