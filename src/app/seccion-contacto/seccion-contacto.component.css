@@ -1,31 +1,57 @@
 .contacto{
   width: inherit;
 }
-.card-conted-flex{
-  width: 100%;
-}
+
+/* FORMULARIO */
 .contacto .datos{
   display: flex;
   flex-direction: column;
-  font-size: 15px;
   text-align: left;
-  margin-bottom: 20px;
+  width: 50%;
+  font-size: 15px;
+  margin: 0 50px;
 }
 .contacto input, .contacto textarea{
   background-color: transparent;
   border: 2px solid white;
   border-radius: 10px;
-  width: 300px;
+  width: 100%;
   padding: 10px;
   margin-bottom: 20px;
 }
 .contacto textarea{
   resize: horizontal;
   min-height: 100px;
+  margin-bottom: 0;
 }
-/* .contacto .mapa{
-  background-color: red;
+.contacto input[type="submit"]{
+  width: 10rem;
+}
+/* UBIACION */
+.contacto .ubi{
+  margin: 0 50px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto .ubi span{
+  margin-bottom: 20px;
+}
+.contacto .ubi iframe{
   width: 100%;
-  height: 100%;
-  padding: 0 40px;
-} */
+  min-height: 90%;
+  background-color: rgb(46, 46, 46);
+  border: 2px solid white;
+  border-radius: 20px;
+}
+@media(max-width:600px){
+  .contacto .datos{
+    width: 90%;
+    margin: auto;
+  }
+  .contacto .ubi{
+    display: none;
+  }
+}

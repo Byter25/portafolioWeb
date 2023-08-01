@@ -25,6 +25,7 @@
   align-items: center;
   justify-content: center;
   width: 95%;
+  max-height: 85%;
   overflow: hidden;
   border-radius: 25px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -38,6 +39,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 /* FLECHA SCROLL */
@@ -81,6 +83,7 @@ main{
 .scroll-c{
   scroll-snap-align: center;
 }
+
 @media(max-width:600px){
   .contend-min{
     max-width: 95%;

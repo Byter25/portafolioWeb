@@ -1,3 +1,4 @@
+/* TITULO Y DESCRIPCION */
 .contendH2{
   display: flex;
   flex-direction: column;
@@ -5,11 +6,15 @@
   align-items: center ;
   width: 90%;
 }
-
-/* TITULO Y DESCRIPCION */
-.contendH2 p{
+.contendH2 .reziceCaja{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contendH2 .reziceCaja p{
   text-align: left;
-  margin-bottom: 20px;
+}
+.contendH2 .reziceCaja button{
+  display: none;
 }
 
 /* CONTENEDOR DATOS PERSONALES */
@@ -90,6 +95,19 @@ footer{
 
 
 @media(max-width:720px){
+  .contendH2 .reziceCaja p{
+    max-height: 109px;
+    overflow: hidden;
+  }
+  .contendH2 .reziceCaja button{
+    display: inline;
+    border: 2px solid white;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 50px;
+  }
+
   .card-contend-flex{
     overflow-x: scroll;
   }
@@ -125,7 +143,9 @@ footer{
   .interes span{
     display: none;
   }
+ 
   footer{
+    margin-bottom: 15px;
     padding: 20px 0;
   }
 }
