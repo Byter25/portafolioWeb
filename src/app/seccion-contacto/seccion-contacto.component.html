@@ -1,18 +1,22 @@
 <section class="base scroll-c" id="contacto" style="--fondo: url(https://i.pinimg.com/originals/cb/9a/b4/cb9ab416861c56995b50405a8582f0dc.gif)">
   <div class="contend-max">
     <h2>contacto</h2>
-    <form action="Post" class="contacto" id="contacto">
+    <form name="contact" method="POST" class="contacto" id="contacto" data-netlyfy="true">
       <div class="card-contend-flex">
         <div class="datos">
           <span>NOMBRES</span>
-          <input type="text" placeholder="Bryan Alexander" id="nom">
+          <input type="text" name="Nombres" placeholder="Nombre completo" id="nom">
+          
           <span>APELLIDOS</span>
-          <input type="text" placeholder="Chacaliaza Saavedra" id="ape">
+          <input type="text" name="Apwellidos" placeholder="Apellido completo" id="ape">
+          
           <span>E-MAIL</span>
-          <input type="email" placeholder="ejemplo@gmail.com" name="correo" id="correo">
+          <input type="email" name="Correo" placeholder="ejemplo@gmail.com" name="correo" id="correo">
+          
           <span>ASUNTO</span>
           <textarea id="asunto"></textarea>
         </div>
+
         <div class="ubi">
           <span>Ubicaccion</span>
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1938.0709648406548!2d-76.15102116949346!3d-13.709852521861494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1690862692256!5m2!1ses!2spe" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
