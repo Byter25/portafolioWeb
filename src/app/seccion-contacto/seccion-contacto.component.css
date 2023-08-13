@@ -11,7 +11,7 @@
   font-size: 15px;
   margin: 0 50px;
 }
-.contacto input, .contacto textarea{
+.contacto input,.contacto button, .contacto textarea{
   background-color: transparent;
   border: 2px solid white;
   border-radius: 10px;
