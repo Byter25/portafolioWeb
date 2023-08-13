@@ -24,7 +24,7 @@
   min-height: 100px;
   margin-bottom: 0;
 }
-.contacto input[type="submit"]{
+.contacto button[type="submit"]{
   width: 10rem;
 }
 /* UBIACION */
