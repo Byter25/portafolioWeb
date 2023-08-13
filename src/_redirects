@@ -1,0 +1,3 @@
+# _redirects file
+# Redirect all routes to index.html
+/* /index.html 200
