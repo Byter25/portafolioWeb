@@ -5,5 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./seccion-start.component.css', '../app.component.css']
 })
 export class SeccionStartComponent {
-  
+  redirectExternalPage(link:string) {
+    window.location.href = link;
+  }
 }

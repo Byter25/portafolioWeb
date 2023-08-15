@@ -1,5 +1,0 @@
-# _redirects file
-# Redirect all routes to index.html
-/* /index.html 200
-# Specify the base path of your app
-/basepath/* /basepath/index.html 200

@@ -19,30 +19,30 @@
 
 /* CONTENEDOR DATOS PERSONALES */
 .card-contend-flex .datos-personales{
-  width: 40%;
-  text-align: left;
+  width: 50%;
 }
 .datos-personales table td{
   padding-top: 10px;
-  padding-right: 20px;
+  text-align: left;
 }
 .datos-personales table tr :first-child{
   color: red;
+  padding-right: 1ch;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 /* CONTENEDOR INTERESES */
 .card-contend-flex .intereses{
-  width: 45%;
+  width: 50%;
   height: 100%;
-  text-align: left;
+
   overflow: hidden;
 }
 .intereses .card-interes{
   display: grid;
   grid-template-columns: repeat(
-    auto-fit,
+    4,
     minmax(
       80px,
       1fr
@@ -94,45 +94,31 @@ footer{
 }
 
 
-@media(max-width:720px){
-  .contendH2 .reziceCaja p{
-    max-height: 109px;
-    overflow: hidden;
-  }
-  .contendH2 .reziceCaja button{
-    display: inline;
-    border: 2px solid white;
-    padding: 5px;
-    margin-top: 10px;
-    font-size: 1rem;
-    border-radius: 50px;
-  }
 
-  .card-contend-flex{
-    overflow-x: scroll;
+@media(max-width : 1024px){
+  .intereses .card-interes{
+    grid-template-columns: repeat(
+      3,
+      minmax(
+        80px,
+        1fr
+        )
+      );
+      gap: 5px;
+    }
+
+  footer{
+    margin-bottom: 15px;
+    padding: 20px 0;
   }
-  .card-contend-flex .datos-personales{
-    min-width: 100%;
-    margin-right: 15%;
-  }
+}
+
+@media (max-width:768px) {
   .datos-personales table{
     display: flex;
     flex-direction: column;
   }
 
-  .card-contend-flex .intereses{
-    min-width: 100%;
-  }
-  .intereses .card-interes{
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(
-        70px,
-        1fr
-      )
-    );
-    gap: 5px;
-  }
   .intereses .card-interes .interes{
     width: 70px;
     height: 70px;
@@ -140,12 +126,57 @@ footer{
   .intereses .card-interes .interes i{
     margin-bottom: 0;
   }
-  .interes span{
+  .card-interes .interes span{
     display: none;
   }
- 
-  footer{
-    margin-bottom: 15px;
-    padding: 20px 0;
+}
+
+
+@media (max-width:652px) {
+  .card-contend-flex{
+    overflow-x: scroll;
   }
+  .card-contend-flex .datos-personales{
+    min-width: 100%;
+  }
+  .card-contend-flex .intereses{
+    min-width: 100%;
+  }
+  .intereses .card-interes{
+    grid-template-columns: repeat(
+      4,
+      minmax(
+        80px,
+        1fr
+        )
+      );
+      gap: 5px;
+    }
+}
+
+
+@media (max-width:425px) {
+  .contendH2 .reziceCaja p{
+    max-height: 92px;
+    overflow: hidden;
+  }
+  .contendH2 .reziceCaja button{
+    display: inline;
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 50%;
+  }
+  .intereses .card-interes{
+    grid-template-columns: repeat(
+      3,
+      minmax(
+        80px,
+        1fr
+        )
+      );
+      gap: 5px;
+    }
 }

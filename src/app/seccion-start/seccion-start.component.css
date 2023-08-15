@@ -1,15 +1,14 @@
 /*CONTENIDO HEADER */
+.contendH{
+  padding: 0px 5px;
+}
 .contendH img{
   height: 200px;
   border-radius: 50%;
   border: solid 5px;
   margin: 25px 0px ;
 }
-.contendH h2{
-  margin: auto;
-  max-width: 90%;
-  text-transform: uppercase;
-}
+
 .contendH p{
   text-transform: capitalize;
 }
@@ -21,11 +20,11 @@
   justify-content: center;
 }
 .contendP i{
-  color: white;
+  color: inherit;
   font-size: 30px;
   margin: 10px;
   padding: 5px;
-  border: solid white 3px;
+  border: solid 3px;
   border-radius: 10px;
   transition: .2s;
 }
@@ -33,4 +32,16 @@
   color: var(--color);
   box-shadow: 0px 0px 10px var(--color);
   border-color: var(--color);
+}
+
+
+@media(max-width: 1020px){
+  .contendP i{
+    margin: 5px;
+  }
+}
+@media(min-height:800px) and (min-width:1280px){
+  .contendH img{
+    height: 250px;
+  } 
 }
