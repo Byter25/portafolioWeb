@@ -1,54 +1,79 @@
-<section  class="base scroll-c" id="sobre_mi" style="--fondo: url(https://i.pinimg.com/originals/34/16/fc/3416fc4113b69a0bf1cc75a772c4b5c4.gif)">
+<section
+  class="base scroll-c"
+  id="sobre_mi"
+  style="
+    --fondo: url(https://i.pinimg.com/originals/34/16/fc/3416fc4113b69a0bf1cc75a772c4b5c4.gif);
+  "
+>
   <div class="contend-max">
-    <header class="contendH2">
-        <h2 class="title-s">SOBRE MI</h2>
-        <div class="reziceCaja">
-          <p>Soy un apasionado por aprender nuevas tecnologías y mantenerme actualizado en las tendencias de desarrollo, lo que me permite adaptarme rápidamente a los desafíos y cambios en el entorno de desarrollo de software. Estoy preparado para afrontar desafíos complejos y entregar soluciones de software de alto rendimiento, combinando habilidades técnicas sólidas con una mentalidad de resolución de problemas y una actitud colaborativa.</p>
-          <button id="btnAgrandar" (click)="agrandarCaja()"><i class="fa-solid fa-plus"></i></button>
-        </div>
-        <div class="card-contend-flex">
-          <div class="datos-personales">
-            <h3>datos personales</h3>
-            <table>
-              <tr>
-                <td>nacimiento</td>
-                <td>11-09-2003</td>
-              </tr>
-              <tr>
-                <td>telefono</td>
-                <td>994275735</td>
-              </tr>
-              <tr>
-                <td>email</td>
-                <td>bryan25contacto@gmail.com</td>
-              </tr>
-              <tr>
-                <td>direccion</td>
-                <td>ica-pisco-la villa</td>
-              </tr>
-            </table>
-          </div>
-  
-          <div class="intereses">
-            <h3 class="titulo-min">intereses</h3>
-            <ul class="card-interes" >
-              <li *ngFor="let sec of intereses ; let i = index" 
-              class="interes {{sec.interes}}" 
-              style='--color: {{sec.color}}'>
-                <i class="{{sec.icon}}"></i> 
-                <span>{{sec.interes}}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </header>
-  
-    <footer>
-        <a download="cv-Bryan-Chacaliaza-Saavedra" href="../../assets/CV-Bryan-Chacaliaza.pdf" class="boton-descargar">
-          <span>Descargar CV </span>
-          <i class="fa-sharp fa-solid fa-download"></i>
-        </a>
-    </footer>
+    <h2 class="titleSection">SOBRE MI</h2>
+    <div class="reziceCaja">
+      <p>
+        Soy un apasionado por aprender nuevas tecnologías y mantenerme
+        actualizado en las tendencias de desarrollo, lo que me permite adaptarme
+        rápidamente a los desafíos y cambios en el entorno de desarrollo de
+        software. Estoy preparado para afrontar desafíos complejos y entregar
+        soluciones de software de alto rendimiento, combinando habilidades
+        técnicas sólidas con una mentalidad de resolución de problemas y una
+        actitud colaborativa.
+      </p>
+      <button id="btnAgrandar" (click)="agrandarCaja()">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+    <div class="card-contend-flex">
+      <div class="datos-personales">
+        <h3 class="subtitleContend">datos personales</h3>
+        <br>
+        <table>
+          <tr>
+            <td>Nombres</td>
+            <td>Bryan Alexander Chacaliaza Saavedra</td>
+          </tr>
+          <tr>
+            <td>nacimiento</td>
+            <td>11-09-2003</td>
+          </tr>
+          <tr>
+            <td>teléfono</td>
+            <td>+51 994275735</td>
+          </tr>
+          <tr>
+            <td>email</td>
+            <td>bryan25contacto@gmail.com</td>
+          </tr>
+          <tr>
+            <td>dirección</td>
+            <td>ica-pisco-la villa</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="intereses">
+        <h3 class="subtitleContend">intereses</h3>
+        <br>
+        <ul class="card-interes">
+          <li
+            *ngFor="let sec of intereses; let i = index"
+            class="interes {{ sec.interes }}"
+            style="--color: {{ sec.color }}"
+          >
+            <i class="{{ sec.icon }}" ></i>
+            <span>{{ sec.interes }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="boton-descargar">
+      <a
+        download="cv-Bryan-Chacaliaza-Saavedra"
+        href="../../assets/CV-Bryan-Chacaliaza.pdf"
+      >
+        <span>Descargar CV </span>
+        <i class="fa-sharp fa-solid fa-download"></i>
+      </a>
+    </button>
   </div>
 </section>
 <!-- <section class="base" id="">
@@ -57,7 +82,7 @@
       <h2>{{DatosEntrada.titulo}} || titulo</h2>
       <p>{{DatosEntrada.descripcion}} || descripcion</p>
     </header>
-  
+
     <footer class="pie">
       <a href="">{{DatosEntrada.pie}}</a>
     </footer>
@@ -67,5 +92,5 @@
     <video autoplay loop [volume]=0 >
       <source src="../../assets/Minecraft.webm" type="video/webm">
     </video>
-  </div>  
+  </div>
 </section> -->

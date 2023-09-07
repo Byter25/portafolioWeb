@@ -1,120 +1,125 @@
-.menu{
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 0;
-    z-index: 100;
-    width: 100vw;
-    padding-right:20px;
+.menu {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  top: 0;
+  z-index: 100;
+  width: 100vw;
+  padding-right: 20px;
 }
 /* LOGO */
-.menu img{
-    margin: auto 10px;
-    height: 30px;
+.menu img {
+  margin: auto 10px;
+  height: 30px;
 }
 #check,
 .esconder-menu,
-.mostrar-menu{
-    display: none;
+.mostrar-menu {
+  display: none;
 }
 
 /* TITULO */
-.menu .menu-lado span{
-    box-sizing: content-box;
-    text-transform: uppercase;
-    font-size: 2rem;
-    border-right: 3px solid;
-    font-family: monospace;
-    width: 5ch;
-    animation:
-    typing 1.5s steps(5),
-    blinking .5s infinite step-end alternate;
-    overflow: hidden;
-    transition: 0.5s;
+.menu .menu-lado h1 {
+  box-sizing: content-box;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  border-right: 3px solid;
+  font-family: monospace;
+  width: 5ch;
+  animation: typing 1.5s steps(5), blinking 0.5s infinite step-end alternate;
+  overflow: hidden;
+  transition: 0.5s;
 }
-@keyframes typing{ from{ width: 0;}}
-@keyframes blinking{ 50%{border-color: transparent;}}
-.menu span:hover{
-    color: red;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
+.menu span:hover {
+  color: red;
 }
 
 /* NAV IZQUIERDO */
-.menu-lado{
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 0;
-    height: 100%;
+.menu-lado {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 100%;
 }
 
 /* NAV CENTRO */
-.menu .menu-centro ul{
-    list-style: none;
-    display: flex;
+.menu .menu-centro ul {
+  list-style: none;
+  display: flex;
 }
-.menu .menu-centro ul li{
-    margin-left: 10px;
+.menu .menu-centro ul li {
+  margin-left: 10px;
 }
-.menu .menu-centro ul li a{
+.menu .menu-centro ul li a {
+  display: inline-block;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+/* FONDO TRANSICIÓN ANIMADO  */
+.menu .backdrop {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: 16px;
+  border-radius: 10px;
+  left: var(--left);
+  top: var(--top);
+  width: var(--width);
+  height: var(--height);
+  transition: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -10;
+}
+
+@media (max-width: 868px) {
+  .menu {
+    padding-right: 0;
+  }
+  .menu .mostrar-menu,
+  .menu .menu-centro .esconder-menu {
     display: inline-block;
-    text-transform: uppercase;
-    color: white;
-    font-size: 15px ;
+    width: 100%;
+    font-size: 20px;
+    text-align: right;
+  }
+  .menu .mostrar-menu {
+    padding-right: 10px;
+  }
+  .menu .menu-centro {
+    position: fixed;
+    display: inline;
+    text-align: left;
+    top: 0;
+    right: -100%;
+    min-width: 30%;
     padding: 10px;
-    transition: .5s;
-}
-
-/* FONOD TRANSICION ANIMADO  */
-.menu .backdrop{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: 16px;
-    border-radius: 10px;
-    left: var(--left);
-    top: var(--top);
-    width: var(--width);
-    height: var(--height);
-    transition: all;
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: -10;
-}
-
-
-@media(max-width:868px){
-    .menu{
-        padding-right: 0;
-    }
-    .menu .mostrar-menu, 
-    .menu .menu-centro .esconder-menu{
-        display: inline-block;
-        width: 100%;
-        font-size: 20px;
-        text-align: right;
-    }
-    .menu .mostrar-menu{
-        padding-right: 10px;
-    }
-    .menu .menu-centro{
-        position: fixed;
-        display: inline;
-        text-align: left;
-        top: 0;
-        right: -100%;
-        min-width: 30%;
-        padding: 10px;
-        padding-top: 5px;
-        background-color: rgb(36, 36, 36);
-        border: 2px solid red;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        transition: .5s;
-    }
-    .menu .menu-centro ul{
-        display: inline;
-    }
-    #check:checked~.menu-centro{
-        transition: .5s;
-        right: 0;
-    }
+    padding-top: 5px;
+    background-color: rgb(36, 36, 36);
+    border: 2px solid red;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: 0.5s;
+  }
+  .menu .menu-centro ul {
+    display: inline;
+  }
+  #check:checked ~ .menu-centro {
+    transition: 0.5s;
+    right: 0;
+  }
 }

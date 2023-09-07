@@ -1,10 +1,12 @@
 <section class="base scroll-c" id="skills" style="--fondo: url(https://i.pinimg.com/originals/ed/a5/73/eda5739966cb33768d8ad0d77d7307ce.gif)">
   <div class="contend-max" >
-    <h2 class="title-s">skills</h2>
+    <h2 class="titleSection">skills</h2>
+
     <div class="card-contend-flex" id="activa">
       <!-- HABILIDADES TECNICAS -->
       <div class="box tecnicas">
-        <h3>technicals skills</h3>
+        <h3 class="subtitleContend">technicals skills</h3>
+        <br>
         <div class="skill" *ngFor="let sec of tecnicas ; let i = index">
           <span>{{sec.skill}}</span>
           <div class="barra">
@@ -16,7 +18,8 @@
       </div>
       <!-- HABILIDADES PROFESIONALES -->
       <div class="box profesionals">
-        <h3>profesional skills</h3>
+        <h3 class="subtitleContend">profesional skills</h3>
+        <br>
         <div class="skill" *ngFor="let sec of profesional ; let i = index">
           <span>{{sec.skill}}</span>
           <div class="barra">
@@ -26,7 +29,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
-  </div>  
+  </div>
 </section>
