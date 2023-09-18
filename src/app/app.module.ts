@@ -9,8 +9,8 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { SeccionMeComponent } from './seccion-me/seccion-me.component';
 import { SeccionSkillsComponent } from './seccion-skills/seccion-skills.component';
-import { SeccionCurriculumComponent } from './seccion-curriculum/seccion-curriculum.component';
-import { SeccionPortfolioComponent } from './seccion-portfolio/seccion-portfolio.component';
+import { SeccionCertificadosComponent } from './seccion-certificados/seccion-certificados.component';
+import { SeccionProyectosComponent } from './seccion-proyectos/seccion-proyectos.component';
 import { SeccionContactoComponent } from './seccion-contacto/seccion-contacto.component';
 
 @NgModule({
@@ -22,8 +22,8 @@ import { SeccionContactoComponent } from './seccion-contacto/seccion-contacto.co
     TaskListComponent,
     SeccionMeComponent,
     SeccionSkillsComponent,
-    SeccionCurriculumComponent,
-    SeccionPortfolioComponent,
+    SeccionCertificadosComponent,
+    SeccionProyectosComponent,
     SeccionContactoComponent,
   ],
   imports: [
@@ -33,7 +33,7 @@ import { SeccionContactoComponent } from './seccion-contacto/seccion-contacto.co
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-  
-  
+export class AppModule {
+
+
 }
