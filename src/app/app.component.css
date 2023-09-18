@@ -14,7 +14,7 @@
 .contend-min {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 30%;
   padding: 20px 10px;
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 90%;
   height: 85%;
   padding: 20px;
@@ -52,14 +52,16 @@
   z-index: 30;
   color: currentColor;
   position: fixed;
-  bottom: 0;
+  bottom: 10;
   width: 100%;
 }
 .flecha-abajo button {
   background-color: transparent;
   border-color: transparent;
 }
-
+.flecha-abajo button i{
+  font-size: 1.6em;
+}
 main {
   position: relative;
   height: 100vh;
@@ -78,6 +80,10 @@ main {
   }
   .contend-max {
     max-height: 80%;
-    justify-content: space-evenly;
+  }
+}
+@media (min-height:800px) {
+  .contend-max{
+    height: 65%;
   }
 }
