@@ -1,20 +1,10 @@
-import { Component, AfterViewInit} from '@angular/core';
-import {backdrop } from './menu/menu.component';
-import { elemento } from './seccion-skills/seccion-skills.component'
+import { Component} from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent implements AfterViewInit{
-
-  ngAfterViewInit(): void {
-    if(window.innerWidth >= 860){
-      backdrop()
-    }
-    elemento()
-  }
-
+export class AppComponent{
   bajar(){
     console.log("preciono el boton alv")
   }

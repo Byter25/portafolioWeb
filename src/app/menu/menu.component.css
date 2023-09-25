@@ -27,8 +27,8 @@
   font-size: 2.5rem;
   border-right: 3px solid;
   font-family: monospace;
-  width: 5ch;
-  animation: typing 1.5s steps(5), blinking 0.5s infinite step-end alternate;
+  width: var(--char);
+  animation: typing 2s alternate steps(var(--char)), blinking 0.5s infinite step-end alternate;
   overflow: hidden;
   transition: 0.5s;
 }
