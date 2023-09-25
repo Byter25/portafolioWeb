@@ -1,8 +1,6 @@
 .card-contend-flex .box{
   width: 50%;
   text-align: left;
-}
-.card-contend-flex .box{
   padding: 0 2rem;
 }
 .card-contend-flex .skill > span{
@@ -14,7 +12,7 @@
   position: relative;
   height: 8px;
   width: 100%;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   background-color: rgb(48, 48, 48);
   border-radius: 10px;
 }

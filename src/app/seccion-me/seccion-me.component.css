@@ -54,31 +54,46 @@
   border: solid white 3px;
   transition: .2s;
 }
+.intereses .card-interes .interes i{
+  transition: inherit;
+  font-size: 3rem;
+}
+.intereses .card-interes .interes span{
+  transition: inherit;
+}
 .intereses .card-interes .interes:hover{
   color: var(--color);
   border-color: var(--color);
   box-shadow: 1px 1px 15px var(--color);
 }
-.intereses .card-interes .interes i{
-  font-size: 3rem;
+.intereses .card-interes .interes:hover i,
+.intereses .card-interes .interes:hover span{
+  color: var(--color);
 }
 
 
 /* BOTÓN DESCARGAR */
 .boton-descargar{
-  padding: 40px 0;
-  bottom: 0;
-}
-.boton-descargar{
   color: white;
-  font-size: 15px;
+  text-transform: uppercase;
+  font-size: 1.6rem;
   padding: 10px 20px;
   border: solid white 3px;
+  border-radius: 20px;
   background-color: black;
   transition: .5s;
 }
+.boton-descargar i{
+  font-size: inherit;
+  transition: inherit;
+}
 .boton-descargar:hover{
+  color: red;
   border-color: red;
+  box-shadow: 1px 1px 10px red;
+}
+.boton-descargar:hover i{
+  color: red;
 }
 
 @media(max-width : 1024px){
