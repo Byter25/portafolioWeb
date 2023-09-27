@@ -1,14 +1,14 @@
-.card-contend-flex .box{
+.card-contend-flex .box {
   width: 50%;
   text-align: left;
   padding: 0 2rem;
 }
-.card-contend-flex .skill > span{
+.card-contend-flex .skill > span {
   display: block;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-.card-contend-flex .skill .barra{
+.card-contend-flex .skill .barra {
   position: relative;
   height: 8px;
   width: 100%;
@@ -16,7 +16,7 @@
   background-color: rgb(48, 48, 48);
   border-radius: 10px;
 }
-.skill .barra .progreso{
+.skill .barra .progreso {
   position: absolute;
   background-color: red;
   top: 0;
@@ -24,7 +24,7 @@
   height: 8px;
   border-radius: 10px;
 }
-.skill .barra span{
+.skill .barra span {
   position: absolute;
   height: 40px;
   width: 40px;
@@ -35,27 +35,30 @@
   top: -17px;
   left: calc(100% - 15px);
 }
-.card-contend-flex .skill .barra .anima{
+.card-contend-flex .skill .barra .anima {
   width: 0;
   animation: 2s anima forwards;
   animation-delay: calc(var(--position) * 0.5s);
 }
 
-
-@keyframes anima{
-  0%{width: 0%;}
-  100%{width: var(--progreso);}
+@keyframes anima {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--progreso);
+  }
 }
 
-@media(max-width:425px){
-  .card-contend-flex{
+@media (max-width: 425px) {
+  .card-contend-flex {
     overflow-x: scroll;
     scroll-snap-type: mandatory x;
   }
-  .card-contend-flex .box{
+  .card-contend-flex .box {
     min-width: 100%;
   }
-  .card-contend-flex:first-child{
+  .card-contend-flex:first-child {
     margin-right: 50px;
   }
 }

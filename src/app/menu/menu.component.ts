@@ -1,45 +1,62 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { interval, map, take, timer } from 'rxjs';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
 })
-
-export class MenuComponent implements OnInit {
+export class MenuComponent implements AfterViewInit {
   constructor() {}
 
-  ngOnInit(): void {
-    if (window.innerWidth >= 860) {
-      this.backdrop();
-    }
-    this.itera();
+  ngAfterViewInit(): void {
+    if (window.innerWidth >= 860) this.backdrop();
+
+    this.maquinaEscribe(this.mostrar, this.etiqueta.nativeElement);
   }
 
-  public texto: string = 'Byter';
   public mostrar: string[] = ['byter', 'developer', 'software'];
-  public char: number = 10;
-  @ViewChild('muestra') 'muestra': ElementRef;
-  itera() {
-    const obs$ = interval(5000);
-    let actual = '';
-    obs$
-      .pipe(map((value) => this.mostrar[value % this.mostrar.length]))
-      .subscribe((value) => {
-        actual = value;
-        this.texto = actual
-      });
+  @ViewChild('etiqueta') 'etiqueta': ElementRef;
+
+  maquinaEscribe(palabras: string[], etiqueta: HTMLSpanElement) {
+    let p1 = 0;
+    let c1 = 0;
+    let isDeleting = false;
+
+    const efectoTipear = () => {
+      const palabra = palabras[p1];
+      const caracterActual = palabra.substring(0, c1);
+      etiqueta.textContent = caracterActual; // Usa textContent en lugar de innerHTML
+
+      if (!isDeleting && c1 < palabra.length) {
+        c1++;
+        setTimeout(efectoTipear, 200);
+      } else if (isDeleting && c1 > 0) {
+        c1--;
+        setTimeout(efectoTipear, 100);
+      } else {
+        isDeleting = !isDeleting;
+        p1 = !isDeleting ? (p1 + 1) % palabras.length : p1;
+        setTimeout(efectoTipear, 1500);
+      }
+    };
+    efectoTipear();
   }
+
   backdrop() {
     const liItem = document.querySelectorAll('nav li');
     const backdrop = document.querySelector('#backdrop') as HTMLElement;
     liItem.forEach((item) => {
       item.addEventListener('mouseenter', () => {
         const { left, top, width, height } = item.getBoundingClientRect();
-        const { clientHeight, clientWidth } = item;
-        console.log({ left, top, width, height });
-        console.log({ clientHeight, clientWidth });
+        // const { clientHeight, clientWidth } = item;
+        // console.log({ left, top, width, height });
+        // console.log({ clientHeight, clientWidth });
 
         backdrop.style.setProperty('--left', `${left}px`);
         backdrop.style.setProperty('--top', `${top}px`);
@@ -50,22 +67,4 @@ export class MenuComponent implements OnInit {
       });
     });
   }
-}
-
-export function escribir() {
-  const element = document.querySelector('.menu-lado spam') as HTMLSpanElement;
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // element.style.animation{
-        //   typing 3s steps(5),
-        //   blinking .75s infinite step-end alternate;
-        // }
-      } else {
-        // element.style.animation{null}
-      }
-    });
-  });
-  // Inicia la observación del elemento objetivo
-  observer.observe(element);
 }

@@ -1,9 +1,9 @@
-.contacto{
+.contacto {
   width: inherit;
 }
 
 /* FORMULARIO */
-.contacto .datos{
+.contacto .datos {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -11,7 +11,9 @@
   font-size: 1rem;
   margin: 0 50px;
 }
-.contacto input,.contacto button, .contacto textarea{
+.contacto input,
+.contacto button,
+.contacto textarea {
   background-color: transparent;
   border: 2px solid white;
   border-radius: 10px;
@@ -19,16 +21,16 @@
   padding: 10px;
   margin-bottom: 20px;
 }
-.contacto textarea{
+.contacto textarea {
   resize: none;
   min-height: 100px;
   margin-bottom: 0;
 }
-.contacto button[type="submit"]{
+.contacto button[type="submit"] {
   width: 10rem;
 }
 /* UBICACIÓN */
-.contacto .ubi{
+.contacto .ubi {
   margin: 0 50px;
   width: 50%;
   display: flex;
@@ -36,22 +38,22 @@
   justify-content: center;
   align-items: center;
 }
-.contacto .ubi span{
+.contacto .ubi span {
   margin-bottom: 20px;
 }
-.contacto .ubi iframe{
+.contacto .ubi iframe {
   width: 100%;
   min-height: 90%;
   background-color: rgb(46, 46, 46);
   border: 2px solid white;
   border-radius: 20px;
 }
-@media(max-width:720px){
-  .contacto .datos{
+@media (max-width: 720px) {
+  .contacto .datos {
     width: 90%;
     margin: auto;
   }
-  .contacto .ubi{
+  .contacto .ubi {
     display: none;
   }
 }
