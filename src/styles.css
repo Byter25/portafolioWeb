@@ -40,8 +40,11 @@ body {
   letter-spacing: 0.5em;
   text-transform: uppercase;
 }
-@media (min-height: 800px) {
+@media (max-widtht: 1000px) {
   .titleSection{ font-size: 4.5rem;}
+}
+@media (max-width: 600px) {
+  .titleSection{ font-size: 2.5rem;}
 }
 /* ::-webkit-scrollbar{
     width: 16px;

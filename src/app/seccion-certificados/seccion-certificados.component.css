@@ -1,19 +1,23 @@
 .contend-cert{
   display: flex;
   height: 80%;
-  width: 80%;
+  width: 100%;
+}
+.contend-cert button{
+  width: 15%;
 }
 .slider{
-  width: 100%;
+  width: 70%;
   height: 100%;
   overflow-y: hidden;
   overflow-x: scroll;
 }
+
 .slider-view{
   display: flex;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  width: 700%;
+  width: 490%;
   height: 100%;
   animation: slide .5s infinite alternate ease-in-out;
 }
@@ -57,3 +61,27 @@
 /* .slider-info:hover{
   visibility: hidden;
 } */
+@media (max-width:720px) {
+  h2{
+    letter-spacing: 5px;
+  }
+  .contend-cert button{
+    display: none;
+  }
+  .slider{
+    width: 100%;
+  }
+  .slider-view{
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    gap: 10px;
+  }
+  .slider-img img{
+    width: 100%;
+  }
+  .slider-info{
+    display: none;
+  }
+}
