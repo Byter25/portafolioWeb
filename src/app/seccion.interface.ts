@@ -23,3 +23,10 @@ export interface Skills{
   skill:String
   progreso:String
 }
+
+export interface Certificados{
+  id:Number,
+  titulo:String,
+  descripcion:String,
+  url:String
+}

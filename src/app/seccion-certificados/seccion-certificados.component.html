@@ -1,5 +1,26 @@
 <section class="base scroll-c" id="curriculum" style="--fondo: url('https://cutewallpaper.org/21/pixel-wallpaper-gif/Pixel-art-wallpaper-gif-GIF-Images-Download.gif')">
   <div class="contend-max">
-    <p style="font-size:1.6rem;">seccion-certificados en proceso!</p>
+    <p class="titleSection">certificados</p>
+
+    <div class="contend-cert">
+      <button> < </button>
+
+      <div class="slider">
+        <ul class="slider-view">
+          <li class="slider-view-list" *ngFor="let c of certificados, let i = index">
+            <div class="slider-img">
+              <img src="{{c.url}}"  alt="">
+            </div>
+            <div class="slider-info">
+              <p class="slider-info-title">{{c.titulo}}</p>
+              <p class="slider-info-description">{{c.descripcion}}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <button> > </button>
+    </div>
+
   </div>
 </section>

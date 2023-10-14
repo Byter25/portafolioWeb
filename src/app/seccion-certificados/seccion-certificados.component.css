@@ -1,0 +1,59 @@
+.contend-cert{
+  display: flex;
+  height: 80%;
+  width: 80%;
+}
+.slider{
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.slider-view{
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  width: 700%;
+  height: 100%;
+  animation: slide .5s infinite alternate ease-in-out;
+}
+::-webkit-scrollbar{
+  background-color: rgba(0, 0, 0, 0.308);
+  height: 1rem;
+  box-sizing: content-box;
+}
+::-webkit-scrollbar-thumb{
+  background: red;
+  border-radius: 20px;
+}
+.slider-view-list{
+  scroll-snap-align: center;
+  position: relative;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+.slider-img{
+  height: 100%;
+}
+.slider-img img{
+  position: relative;
+  height: 100%;
+}
+.slider-info{
+  scroll-snap-type: mandatory;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.521);
+  transition: .3s all;
+}
+/* .slider-info:hover{
+  visibility: hidden;
+} */
