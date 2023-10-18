@@ -9,7 +9,7 @@
   max-width: 100vw;
   background-image: var(--fondo);
   background-size: cover;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .contend-min {
   display: flex;
