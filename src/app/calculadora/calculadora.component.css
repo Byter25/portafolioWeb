@@ -1,13 +1,11 @@
 .app-cal{
-  width: 100%;
-  min-height: 800px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: solid white 3px;
 }
 .contend-cal{
-  position: relative;
   background-color: black;
   border: 3px solid #444;
   box-shadow: 10px 10px 15px black;

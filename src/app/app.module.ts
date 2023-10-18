@@ -12,6 +12,8 @@ import { SeccionSkillsComponent } from './seccion-skills/seccion-skills.componen
 import { SeccionCertificadosComponent } from './seccion-certificados/seccion-certificados.component';
 import { SeccionProyectosComponent } from './seccion-proyectos/seccion-proyectos.component';
 import { SeccionContactoComponent } from './seccion-contacto/seccion-contacto.component';
+import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { SeccionContactoComponent } from './seccion-contacto/seccion-contacto.co
     SeccionCertificadosComponent,
     SeccionProyectosComponent,
     SeccionContactoComponent,
+    HomeComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

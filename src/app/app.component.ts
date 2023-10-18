@@ -5,7 +5,5 @@ import { Component} from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent{
-  bajar(){
-    console.log("preciono el boton alv")
-  }
+
 }

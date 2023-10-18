@@ -1,0 +1,11 @@
+.proyectos{
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+.proyectos-opcion{
+  text-transform: uppercase;
+  border:2px solid blueviolet;
+  padding: 10px;
+  border-radius: 10px;
+}
