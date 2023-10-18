@@ -28,7 +28,6 @@ body {
   font-family: "D3 Circuitism", sans-serif;
   letter-spacing: 0.5em;
   font-weight: 400;
-
 }
 .subtitleContend{
   text-transform: uppercase;
@@ -39,6 +38,7 @@ body {
   font-size: 3.5rem;
   letter-spacing: 0.5em;
   text-transform: uppercase;
+  height: 10%;
 }
 @media (max-widtht: 1000px) {
   .titleSection{ font-size: 4.5rem;}
