@@ -27,7 +27,7 @@
   box-sizing: content-box;
 }
 ::-webkit-scrollbar-thumb{
-  background: red;
+  background: gray;
   border-radius: 20px;
 }
 .slider-view-list{
