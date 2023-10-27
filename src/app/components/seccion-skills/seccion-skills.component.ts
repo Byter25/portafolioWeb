@@ -1,10 +1,10 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { Skills } from '../seccion.interface';
+import { Skills } from '../../seccion.interface';
 
 @Component({
   selector: 'app-seccion-skills',
   templateUrl: './seccion-skills.component.html',
-  styleUrls: ['./seccion-skills.component.css', '../app.component.css'],
+  styleUrls: ['./seccion-skills.component.css', '../../app.component.css'],
 })
 export class SeccionSkillsComponent implements AfterViewInit {
   constructor() {}

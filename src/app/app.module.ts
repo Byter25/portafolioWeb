@@ -3,17 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { SeccionStartComponent } from './seccion-start/seccion-start.component';
-import { CalculadoraComponent } from './calculadora/calculadora.component';
-import { TaskListComponent } from './task-list/task-list.component';
-import { SeccionMeComponent } from './seccion-me/seccion-me.component';
-import { SeccionSkillsComponent } from './seccion-skills/seccion-skills.component';
-import { SeccionCertificadosComponent } from './seccion-certificados/seccion-certificados.component';
-import { SeccionProyectosComponent } from './seccion-proyectos/seccion-proyectos.component';
-import { SeccionContactoComponent } from './seccion-contacto/seccion-contacto.component';
-import { HomeComponent } from './home/home.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { SeccionStartComponent } from './components/seccion-start/seccion-start.component';
+import { CalculadoraComponent } from './pages/calculadora/calculadora.component';
+import { TaskListComponent } from './components/task-list/task-list.component';
+import { SeccionMeComponent } from './components/seccion-me/seccion-me.component';
+import { SeccionSkillsComponent } from './components/seccion-skills/seccion-skills.component';
+import { SeccionCertificadosComponent } from './components/seccion-certificados/seccion-certificados.component';
+import { SeccionProyectosComponent } from './components/seccion-proyectos/seccion-proyectos.component';
+import { SeccionContactoComponent } from './components/seccion-contacto/seccion-contacto.component';
+import { HomeComponent } from './pages/home/home.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [

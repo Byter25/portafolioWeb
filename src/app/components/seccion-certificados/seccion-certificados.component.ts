@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Certificados } from '../seccion.interface';
+import { Certificados } from '../../seccion.interface';
 @Component({
   selector: 'app-seccion-certificados',
   templateUrl: './seccion-certificados.component.html',
-  styleUrls: ['./seccion-certificados.component.css', '../app.component.css']
+  styleUrls: ['./seccion-certificados.component.css', '../../app.component.css']
 })
 export class SeccionCertificadosComponent {
 

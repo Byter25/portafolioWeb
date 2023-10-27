@@ -2,10 +2,15 @@
   display: flex;
   list-style: none;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .proyectos-opcion{
   text-transform: uppercase;
-  border:2px solid blueviolet;
+  background-color: white;
   padding: 10px;
   border-radius: 10px;
+}
+.proyectos-opcion a{
+  color: black;
+  font-weight: bold;
 }
