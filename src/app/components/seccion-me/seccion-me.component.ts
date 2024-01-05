@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { Intereses } from '../../seccion.interface';
+import { NgFor } from '@angular/common';
 @Component({
-  selector: 'app-seccion-me',
-  templateUrl: './seccion-me.component.html',
-  styleUrls: ['./seccion-me.component.css', '../../app.component.css'],
+    selector: 'app-seccion-me',
+    templateUrl: './seccion-me.component.html',
+    styleUrls: ['./seccion-me.component.css', '../../app.component.css'],
+    standalone: true,
+    imports: [NgFor],
 })
 export class SeccionMeComponent {
   agrandarCaja() {
