@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { Certificados } from '../../seccion.interface';
+import { NgFor } from '@angular/common';
 @Component({
-  selector: 'app-seccion-certificados',
-  templateUrl: './seccion-certificados.component.html',
-  styleUrls: ['./seccion-certificados.component.css', '../../app.component.css']
+    selector: 'app-seccion-certificados',
+    templateUrl: './seccion-certificados.component.html',
+    styleUrls: ['./seccion-certificados.component.css', '../../app.component.css'],
+    standalone: true,
+    imports: [NgFor]
 })
 export class SeccionCertificadosComponent {
 

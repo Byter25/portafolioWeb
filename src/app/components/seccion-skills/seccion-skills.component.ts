@@ -1,10 +1,13 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { Skills } from '../../seccion.interface';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-seccion-skills',
-  templateUrl: './seccion-skills.component.html',
-  styleUrls: ['./seccion-skills.component.css', '../../app.component.css'],
+    selector: 'app-seccion-skills',
+    templateUrl: './seccion-skills.component.html',
+    styleUrls: ['./seccion-skills.component.css', '../../app.component.css'],
+    standalone: true,
+    imports: [NgFor],
 })
 export class SeccionSkillsComponent implements AfterViewInit {
   constructor() {}
