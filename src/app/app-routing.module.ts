@@ -1,10 +1,10 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './pages/home/home.component';
-import { CalculadoraComponent } from './pages/calculadora/calculadora.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { TaskListComponent } from './components/task-list/task-list.component';
+import { HomeComponent } from './articles/home/home.component';
+import { CalculadoraComponent } from './articles/calculadora/calculadora.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { TaskListComponent } from "./articles/task-list/task-list.component";
 
 const routes: Routes = [
   {path:'',component:HomeComponent},

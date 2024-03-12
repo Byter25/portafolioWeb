@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Intereses } from '../../seccion.interface';
+import { Intereses } from '../../../../core/models/seccion.interface';
 import { NgFor } from '@angular/common';
 @Component({
     selector: 'app-seccion-me',
     templateUrl: './seccion-me.component.html',
-    styleUrls: ['./seccion-me.component.css', '../../app.component.css'],
+    styleUrls: ['./seccion-me.component.css', '../../../../app.component.css'],
     standalone: true,
     imports: [NgFor],
 })

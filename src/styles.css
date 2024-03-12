@@ -3,15 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.cdnfonts.com/css/d3-circuitism?styles=34150'); */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 * {
   margin: 0;
   padding: 0;
-  font-size: 1.3rem;
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Barlow", sans-serif;
   background-color: transparent;
-  border: none;
   color: white;
 }
 html{

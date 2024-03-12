@@ -6,7 +6,7 @@
   text-align: center;
   overflow: hidden;
   height: 100vh;
-  max-width: 100vw;
+  max-width: 100%;
   background-image: var(--fondo);
   background-size: cover;
   transition: 0.5s;

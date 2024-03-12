@@ -1,11 +1,11 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { Skills } from '../../seccion.interface';
+import { Skills } from '../../../../core/models/seccion.interface';
 import { NgFor } from '@angular/common';
 
 @Component({
     selector: 'app-seccion-skills',
     templateUrl: './seccion-skills.component.html',
-    styleUrls: ['./seccion-skills.component.css', '../../app.component.css'],
+    styleUrls: ['./seccion-skills.component.css', '../../../../app.component.css'],
     standalone: true,
     imports: [NgFor],
 })
