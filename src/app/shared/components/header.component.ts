@@ -1,21 +1,20 @@
 import { Component } from '@angular/core';
 import { EscribirMaquinaComponent } from './escribirMaquina.component';
-import { MenuTopComponent } from './menuTop.component';
+import { MenuTopComponent } from './menu-top.component';
+import { MenuRightComponent } from './menu-right.component';
 @Component({
   selector: 'header-menu',
   standalone: true,
-  imports: [EscribirMaquinaComponent, MenuTopComponent],
+  imports: [EscribirMaquinaComponent, MenuTopComponent, MenuRightComponent],
   template: `
     <!--CONTENEDOR DEL MENU DE NAVEGACION-->
-    <header
-      class="fixed flex justify-between items-center z-20 top-0 left-0 w-full border-solid border-2 shadow-xl transition-all bg-black border-transparent hover:border-red-600 hover:shadow-red-600 hover:shadow-lg  font-normal p-1 "
-    >
+    <header  class="fixed flex justify-between items-center z-20 top-0 left-0 w-full h-14 shadow-xl transition-all bg-gray-950 hover:shadow-red-600 hover:shadow-md  text-white font-bold">
       <!--DIVISION PARA EL LOGO-->
       <div class="flex">
         <img src="../../assets/logo.png" class="mx-10 h-10" />
         <escribir-maquina [textos]="textos"></escribir-maquina>
       </div>
-      <menuTop [listaNav]="navList"></menuTop>
+      <menu-top [listaNav]="navList"></menu-top>
       <!-- AJUSTES
       <div>
         <ul class="flex text-2xl uppercase px-6 justify-between">
@@ -26,6 +25,7 @@ import { MenuTopComponent } from './menuTop.component';
       </div>
        -->
     </header>
+    <menu-right [listaNav]="navList"></menu-right>
   `,
 })
 export class HeaderComponent {

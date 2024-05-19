@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { Intereses } from '../../../../core/models/seccion.interface';
 import { NgFor } from '@angular/common';
+import { SeccionMaxComponent } from 'src/app/shared/components/seccion-max.component';
 @Component({
     selector: 'app-seccion-me',
     templateUrl: './seccion-me.component.html',
     styleUrls: ['./seccion-me.component.css', '../../../../app.component.css'],
     standalone: true,
-    imports: [NgFor],
+    imports: [NgFor,SeccionMaxComponent],
 })
 export class SeccionMeComponent {
   agrandarCaja() {

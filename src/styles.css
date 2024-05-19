@@ -1,11 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-/* @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.cdnfonts.com/css/d3-circuitism?styles=34150'); */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 
 * {
@@ -13,46 +10,11 @@
   padding: 0;
   text-decoration: none;
   font-family: "Barlow", sans-serif;
-  background-color: transparent;
-  color: white;
+  color:white;
 }
 
 body {
-  background-color: #2c2c2c;
-  font-family: "Open Sans", sans-serif;
+  min-width:400px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: black;
 }
-
-.titleContend{
-  text-transform: uppercase;
-  font-family: "D3 Circuitism", sans-serif;
-  letter-spacing: 0.5em;
-  font-weight: 400;
-}
-.subtitleContend{
-  text-transform: uppercase;
-}
-
-.titleSection{
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  height: 10%;
-}
-@media (max-widtht: 1000px) {
-  .titleSection{ font-size: 4.5rem;}
-}
-@media (max-width: 600px) {
-  .titleSection{ font-size: 2.5rem;}
-}
-/* ::-webkit-scrollbar{
-    width: 16px;
-}
-body ::-webkit-scrollbar-track´{
-    background: orange;
-}
-::-webkit-scrollbar-thumb{
-    height: 56px;
-    border-radius: 8px;
-    border: 4px solid transparent;
-    background-clip: content-box;
-    background-image: linear-gradient(60deg, yellow , red) ;
-} */

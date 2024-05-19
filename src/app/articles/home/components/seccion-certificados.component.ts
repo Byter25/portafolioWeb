@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { Certificados } from '../../../../core/models/seccion.interface';
+import { Certificados } from '../../../core/models/seccion.interface';
 import {
   NgbCarouselConfig,
   NgbCarouselModule,
 } from '@ng-bootstrap/ng-bootstrap';
+import { SeccionMaxComponent } from 'src/app/shared/components/seccion-max.component';
 @Component({
   selector: 'app-seccion-certificados',
-  imports: [NgbCarouselModule],
+  imports: [NgbCarouselModule, SeccionMaxComponent],
   providers: [NgbCarouselConfig],
   template: `
-    <section
-      class="base scroll-c"
+    <seccion-max
       id="certificados"
-      style="--fondo: url('https://cutewallpaper.org/21/pixel-wallpaper-gif/Pixel-art-wallpaper-gif-GIF-Images-Download.gif')"
+      fondo="https://cdnb.artstation.com/p/assets/images/images/030/555/445/original/runny-run-homegiffy.gif?1600953104&dl=1"
     >
       <div class="contend-max">
         <h2 class="titleSection">certificado</h2>
@@ -34,11 +34,9 @@ import {
           }
         </ngb-carousel>
       </div>
-    </section>
+    </seccion-max>
   `,
-  styleUrls: [
-    '../../../../app.component.css'
-  ],
+  styles:``,
   standalone: true,
 })
 export class SeccionCertificadosComponent {

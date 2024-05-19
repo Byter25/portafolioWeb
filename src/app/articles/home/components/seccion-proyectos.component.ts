@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { SeccionMaxComponent } from 'src/app/shared/components/seccion-max.component';
 
 @Component({
   selector: 'app-seccion-proyectos',
-  imports:[RouterLink],
+  imports:[RouterLink,SeccionMaxComponent],
   template: `
-    <section class="base scroll-c" id="proyectos">
+    <seccion-max id="proyectos">
       <div class="contend-max">
         <p style="font-size:1.6rem;">seccion-proyectos en proceso!</p>
         <ul class="proyectos">
@@ -23,7 +24,7 @@ import { RouterLink } from '@angular/router';
           </li>
         </ul>
       </div>
-    </section>
+    </seccion-max>
   `,
   styleUrls: ['../../../app.component.css',
   ],

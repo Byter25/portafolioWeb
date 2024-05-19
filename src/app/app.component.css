@@ -1,16 +1,4 @@
-.base {
-  font-family: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  height: 100vh;
-  max-width: 100%;
-  background-image: var(--fondo);
-  background-size: cover;
-  transition: 0.5s;
-}
+
 .contend-min {
   display: flex;
   flex-direction: column;
@@ -63,16 +51,6 @@
 }
 .flecha-abajo button i{
   font-size: 1.6em;
-}
-main {
-  position: relative;
-  height: 100vh;
-  overflow: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior:smooth;
-}
-.scroll-c {
-  scroll-snap-align: center;
 }
 
 @media (max-width: 860px) {

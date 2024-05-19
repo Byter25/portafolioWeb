@@ -1,21 +1,35 @@
 import { NgStyle } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  ViewChild,
+} from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'menuTop',
+  selector: 'menu-top',
   standalone: true,
-  imports: [NgStyle],
+  imports: [NgStyle, RouterLink, RouterLinkActive],
   template: `
-    <nav class="uppercase relative">
+    <nav class="uppercase relative hidden md:block">
       <ul class="flex items-center gap-6">
         @for(nav of listaNav;track nav){
-          <li class="py-2 px-4 w-fit"><a href="#{{nav}}">{{nav}}</a></li>
+        <li class="py-2 px-4 w-fit">
+          <a
+            href="#{{nav}}"
+            routerLinkActive="bg-red-600"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ nav }}</a
+          >
+        </li>
         }
       </ul>
     </nav>
     <div
       #backdrop
-      class="fixed backdrop-blur-lg bg-red-600/30 transition-all duration-300 -z-10"
+      class="fixed backdrop-blur-lg bg-gradient-to-br from-red-900 to-red-600 rounded-sm transition-all duration-300 -z-10"
       [ngStyle]="{
         left: 'var(--left)',
         top: 'var(--top)',
@@ -40,7 +54,7 @@ import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular
 })
 export class MenuTopComponent implements AfterViewInit {
   @ViewChild('backdrop') backdrop: ElementRef | undefined;
-  @Input() listaNav:string[] = []
+  @Input() listaNav: string[] = [];
   ngAfterViewInit(): void {
     this.backdroFuntion();
   }
