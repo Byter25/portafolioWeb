@@ -1,48 +1,45 @@
 import { Component } from '@angular/core';
 import { Certificados } from '../../../../core/models/seccion.interface';
-import { NgFor } from '@angular/common';
+import {
+  NgbCarouselConfig,
+  NgbCarouselModule,
+} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-seccion-certificados',
+  imports: [NgbCarouselModule],
+  providers: [NgbCarouselConfig],
   template: `
     <section
       class="base scroll-c"
-      id="curriculum"
+      id="certificados"
       style="--fondo: url('https://cutewallpaper.org/21/pixel-wallpaper-gif/Pixel-art-wallpaper-gif-GIF-Images-Download.gif')"
     >
-      <div class="contend-ma">
+      <div class="contend-max">
         <h2 class="titleSection">certificado</h2>
 
-        <div class="contend-cert">
-          <button><</button>
-
-          <div class="slider">
-            <ul class="slider-view">
-              <li
-                class="slider-view-list"
-                *ngFor="let c of certificados; let i = index"
-              >
-                <div class="slider-img">
-                  <img src="{{ c.url }}" alt="" />
-                </div>
-                <div class="slider-info">
-                  <p class="slider-info-title">{{ c.titulo }}</p>
-                  <p class="slider-info-description">{{ c.descripcion }}</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <button>></button>
-        </div>
+        <ngb-carousel>
+          @for(c of certificados; track c){
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper w-full">
+              <img
+                src="{{ c.url }}"
+                class=" h-[50vh] w-full object-cover object-center p-28 pt-0"
+              />
+            </div>
+            <div class="carousel-caption">
+              <p>{{ c.titulo }}</p>
+              <p>{{ c.descripcion }}</p>
+            </div>
+          </ng-template>
+          }
+        </ngb-carousel>
       </div>
     </section>
   `,
   styleUrls: [
-    './seccion-certificados.component.css',
-    '../../../../app.component.css',
+    '../../../../app.component.css'
   ],
   standalone: true,
-  imports: [NgFor],
 })
 export class SeccionCertificadosComponent {
   certificados: Certificados[] = [
@@ -83,4 +80,12 @@ export class SeccionCertificadosComponent {
       url: '../../assets/certificados/2clmsCertificate_pages-to-jpg-0001.jpg',
     },
   ];
+  constructor(config: NgbCarouselConfig) {
+    // customize default values of carousels used by this component tree
+    config.showNavigationArrows = true;
+    config.interval = 10000;
+    config.wrap = false;
+    config.keyboard = false;
+    config.pauseOnHover = false;
+  }
 }

@@ -52,10 +52,11 @@
 }
 .intereses .card-interes .interes i {
   transition: inherit;
-  font-size: 3rem;
+  font-size:2rem;
 }
 .intereses .card-interes .interes span {
   transition: inherit;
+  font-size: 0.8rem;
 }
 .intereses .card-interes .interes:hover {
   color: var(--color);
@@ -71,7 +72,6 @@
 .boton-descargar {
   color: white;
   text-transform: uppercase;
-  font-size: 1.6rem;
   padding: 10px 20px;
   border: solid white 3px;
   border-radius: 20px;

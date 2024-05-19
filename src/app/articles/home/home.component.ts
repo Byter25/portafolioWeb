@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SeccionContactoComponent } from './components/seccion-contacto/seccion-contacto.component';
-import { SeccionProyectosComponent } from './components/seccion-proyectos/seccion-proyectos.component';
+import { SeccionProyectosComponent } from './components/seccion-proyectos.component';
 import { SeccionCertificadosComponent } from './components/seccion-certificados/seccion-certificados.component';
 import { SeccionSkillsComponent } from './components/seccion-skills/seccion-skills.component';
 import { SeccionMeComponent } from './components/seccion-me/seccion-me.component';
