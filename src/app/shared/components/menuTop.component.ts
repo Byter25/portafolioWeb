@@ -26,8 +26,6 @@ import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular
   `,
   styles: [
     `
-      @import 'tailwindcss/tailwind.css';
-
       #slidebar-checker:checked ~ .slidebar {
         left: -100%;
       }

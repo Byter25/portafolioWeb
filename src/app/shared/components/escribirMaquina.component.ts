@@ -15,8 +15,6 @@ import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
   `,
   styles: [
     `
-      @import 'tailwindcss/tailwind.css';
-
       .animate-typing {
         animation: typing 3s 1s infinite;
       }
