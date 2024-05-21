@@ -3,11 +3,11 @@
   fondo="https://external-preview.redd.it/4VQTEHMfuk_IIn-xMPKlUTyONDGMWJRc3pbI4TIvCuw.jpg?format=pjpg&auto=webp&s=e1a56fd7dfc19b5458fd9eb843a38956d9f5a42b"
 >
   <div
-    class="flex flex-col md:flex-row justify-around items-center md:w-[90vw] w-full md:h-[80vh] p-4 h-4/5 overflow-hidden rounded-lg bg-opacity-50 backdrop-blur-[8px] bg-gray-700 text-white md:gap-10"
+    class="flex flex-col md:flex-row justify-around items-center md:w-2/3 w-full md:h-[80vh] p-4 h-4/5 overflow-hidden rounded-lg bg-opacity-50 backdrop-blur-[8px] bg-gray-700 text-white md:gap-10 "
   >
-    <div>
+    <div class="flex flex-col h-full justify-around">
       <img
-        class="h-52  md:h-72  rounded-md object-cover"
+        class="h-52 w-52  md:h-96 md:w-96  rounded-md object-cover"
         src="https://rare-gallery.com/livewalls/imgpreview/142263-naruto-lofi-live-wallpaper.jpg"
         alt="perfil"
       />
@@ -18,9 +18,24 @@
         <p>Administrador de Base de Datos</p>
       </div>
     </div>
-    <div>
-      <p>Redes Sociales</p>
-      <div class="flex gap-2 md:gap-5 flex-wrap">
+    <div class="flex flex-col justify-around h-full">
+      <div class="flex w-full items-center justify-between">
+        <div class="w-1/2 flex flex-col md:gap-3">
+          <h3>Habilidades Tecnicas</h3>
+          @for(sec of tecnicas;track sec){
+            <process-bar [max]="100" [value]="sec.progreso" [nombre]="sec.skill"/>
+          }
+        </div>
+        <!-- HABILIDADES PROFESIONALES -->
+        <div class="w-1/2 flex flex-col md:gap-3">
+          <h3 class="">Habilidades Profesionales</h3>
+          @for(sec of profesional;track sec){
+            <process-bar [max]="100" [value]="sec.progreso" [nombre]="sec.skill"/>
+          }
+        </div>
+      </div>
+      <div class="flex gap-2 md:gap-5 flex-wrap items-center justify-center">
+        <p class="w-full">Redes Sociales</p>
         <border-icon
           link="https://www.facebook.com/Byter25"
           color="#3b5998"

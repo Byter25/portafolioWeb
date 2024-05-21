@@ -10,7 +10,7 @@ import {
   imports: [],
   template: `
     <div class="p-2 flex flex-col w-full relative items-center justify-center">
-      <span class="uppercase font-bold absolute m-auto">{{ nombre }}</span>
+      <span class="capitalize absolute m-auto">{{ nombre }}</span>
       <progress [id]="nombre" value="0" [max]="max"></progress>
     </div>
   `,

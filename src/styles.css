@@ -11,10 +11,11 @@
   text-decoration: none;
   font-family: "Barlow", sans-serif;
   color:white;
+  overflow:hidden;
 }
 
 body {
-  min-width:400px;
+  min-width:300px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background: black;
 }

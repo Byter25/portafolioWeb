@@ -29,7 +29,7 @@ export class HeaderComponent {
   navList = [
     'inicio',
     'sobremi',
-    'habilidades',
+    'servicios',
     'proyectos',
     'certificados',
     'contacto',

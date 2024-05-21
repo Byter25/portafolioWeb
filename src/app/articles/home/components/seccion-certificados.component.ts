@@ -15,15 +15,15 @@ import { SeccionMaxComponent } from 'src/app/shared/components/seccion-max.compo
       fondo="https://cdnb.artstation.com/p/assets/images/images/030/555/445/original/runny-run-homegiffy.gif?1600953104&dl=1"
     >
       <div class="contend-max">
-        <h2 class="titleSection">certificado</h2>
+        <h2 class="text-2xl uppercase">certificados</h2>
 
         <ngb-carousel>
           @for(c of certificados; track c){
           <ng-template ngbSlide>
-            <div class="picsum-img-wrapper w-full">
+            <div class="picsum-img-wrapper w-full flex items-center justify-center">
               <img
                 src="{{ c.url }}"
-                class=" h-[50vh] w-full object-cover object-center p-28 pt-0"
+                class="w-full md:w-1/2 object-cover object-center p-5 mb-5"
               />
             </div>
             <div class="carousel-caption">
