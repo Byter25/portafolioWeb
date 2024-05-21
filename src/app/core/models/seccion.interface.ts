@@ -20,8 +20,8 @@ export interface Intereses{
 
 export interface Skills{
   id:Number
-  skill:String
-  progreso:String
+  skill:string
+  progreso:number
 }
 
 export interface Certificados{

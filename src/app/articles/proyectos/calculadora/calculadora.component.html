@@ -1,17 +1,17 @@
-<section class="app-cal">
-  <div class="contend-cal">
-    <div class="visor">
-      <p class="resg placeholder"> {{resG || 0}}</p>
-      <p class="op placeholder">{{visor || 0}}</p>
-      <p class="res placeholder">{{result || 0}}</p>
+<seccion-max>
+  <div class="max-w-[400px] border-2 border-gray-700 hover:border-gray-600 rounded-md p-2 font-bold">
+    <div class="flex flex-col gap-1 text-left w-full pl-3 border-2 border-gray-700 hover:border-gray-600 rounded-md">
+      <p class="text-gray-600"> {{resG || 0}}</p>
+      <p>{{visor || 0}}</p>
+      <p>{{result || 0}}</p>
     </div>
-    <div class="control">
+    <div class="pt-2 flex">
       <div class="operacion">
         <button (click)="borrar()">AC</button>
-        <button class="poten" id="poten">p</button>
-        <button class="raiz" id="raiz">r</button>
-        <button class="pi" id="pi">pi</button>
-        <button class="divide" id="divde">/</button>
+        <button id="poten">p</button>
+        <button id="raiz">r</button>
+        <button id="pi">pi</button>
+        <button id="divde">/</button>
       </div>
       <div class="num">
         <button (click)="escribeOp('1')" >1</button>
@@ -36,4 +36,4 @@
       </div>
     </div>
   </div>
-</section>
+</seccion-max>

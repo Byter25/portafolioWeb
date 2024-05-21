@@ -14,9 +14,15 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   standalone: true,
   imports: [NgStyle, RouterLink, RouterLinkActive, MatIconModule],
   template: `
-    <nav class="z-20 fixed md:hidden top-0 right-0 w-72 bg-black h-screen text-white uppercase">
-      <ul>
-        <mat-icon class="m-2">close</mat-icon>
+    <nav class="">
+      <input type="checkbox" class="hidden" id="navright">
+      <label  for="navright">
+          <mat-icon class="m-2">menu</mat-icon>
+        </label>
+      <ul id="rightnav"  class=" -right-full z-20 fixed md:hidden top-0 w-52 bg-black h-screen text-white uppercase ">
+        <label for="navright">
+          <mat-icon class="m-2">close</mat-icon>
+        </label>
         @for(nav of listaNav;track nav){
         <li class="pl-4 py-2 hover:bg-gray-700">
           <a
@@ -32,14 +38,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   `,
   styles: [
     `
-      #slidebar-checker:checked ~ .slidebar {
-        left: -100%;
-      }
-      .backdrop {
-        left: var(--left);
-        top: var(--top);
-        width: var(--width);
-        height: var(--height);
+      #navright:checked ~ #rightnav {
+        right:0;
       }
     `,
   ],

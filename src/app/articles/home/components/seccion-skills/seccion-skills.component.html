@@ -3,35 +3,22 @@
   id="habilidades"
   fondo="https://i.pinimg.com/originals/ed/a5/73/eda5739966cb33768d8ad0d77d7307ce.gif"
 >
-  <div class="contend-max">
-    <h2 class="titleSection">skills</h2>
-
-    <div class="card-contend-flex" id="activa">
-      <!-- HABILIDADES TECNICAS -->
-      <div class="box tecnicas">
-        <h3 class="subtitleContend">technicals skills</h3>
-        <br />
-        <div class="skill" *ngFor="let sec of tecnicas; let i = index">
-          <span>{{ sec.skill }}</span>
-          <div class="barra">
-            <div class="progreso" style="--progreso: {{ sec.progreso }}">
-              <span>{{ sec.progreso }}</span>
-            </div>
-          </div>
-        </div>
+  <div class="contend-max p-2" #vista>
+    <h2 class="text-2xl uppercase">skills</h2>
+    <!-- HABILIDADES TECNICAS -->
+    <div class="flex w-full justify-around items-center">
+      <div class="min-w-[300px]">
+        <h3>technicals</h3>
+        @for(sec of tecnicas;track sec){
+          <process-bar [max]="100" [value]="sec.progreso" [nombre]="sec.skill"/>
+        }
       </div>
       <!-- HABILIDADES PROFESIONALES -->
-      <div class="box profesionals">
-        <h3 class="subtitleContend">profesional skills</h3>
-        <br />
-        <div class="skill" *ngFor="let sec of profesional; let i = index">
-          <span>{{ sec.skill }}</span>
-          <div class="barra">
-            <div class="progreso" style="--progreso: {{ sec.progreso }}">
-              <span>{{ sec.progreso }}</span>
-            </div>
-          </div>
-        </div>
+      <div class="p-2 flex flex-col min-w-[300px]">
+        <h3 class="">profesional skills</h3>
+        @for(sec of profesional;track sec){
+          <process-bar [max]="100" [value]="sec.progreso" [nombre]="sec.skill"/>
+        }
       </div>
     </div>
   </div>

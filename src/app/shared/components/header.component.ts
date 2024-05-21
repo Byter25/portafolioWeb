@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { EscribirMaquinaComponent } from './escribirMaquina.component';
 import { MenuTopComponent } from './menu-top.component';
 import { MenuRightComponent } from './menu-right.component';
@@ -14,7 +14,12 @@ import { MenuRightComponent } from './menu-right.component';
         <img src="../../assets/logo.png" class="mx-10 h-10" />
         <escribir-maquina [textos]="textos"></escribir-maquina>
       </div>
-      <menu-top [listaNav]="navList"></menu-top>
+      @if (anchoPantalla > 1020) {
+        <menu-top [listaNav]="navList"></menu-top>
+      }
+      @else {
+        <menu-right [listaNav]="navList"></menu-right>
+      }
       <!-- AJUSTES
       <div>
         <ul class="flex text-2xl uppercase px-6 justify-between">
@@ -25,7 +30,7 @@ import { MenuRightComponent } from './menu-right.component';
       </div>
        -->
     </header>
-    <menu-right [listaNav]="navList"></menu-right>
+
   `,
 })
 export class HeaderComponent {
@@ -38,4 +43,15 @@ export class HeaderComponent {
     'certificados',
     'contacto',
   ];
+
+  anchoPantalla: number;
+
+  constructor() {
+    this.anchoPantalla = window.innerWidth;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.anchoPantalla = window.innerWidth;
+  }
 }

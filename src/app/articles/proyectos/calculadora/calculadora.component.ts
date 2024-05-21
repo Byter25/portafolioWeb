@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { SeccionMaxComponent } from 'src/app/shared/components/seccion-max.component';
 
 @Component({
     selector: 'app-calculadora',
     templateUrl: './calculadora.component.html',
     styleUrls: ['./calculadora.component.css'],
+    imports:[SeccionMaxComponent],
     standalone: true
 })
 export class CalculadoraComponent {
@@ -70,7 +72,7 @@ export class CalculadoraComponent {
     this.visor = ''
     this.result = ''
   }
-  
+
   retroceder(){
     this.visor = this.visor.slice(0, -1)
   }
