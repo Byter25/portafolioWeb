@@ -20,15 +20,6 @@ import { MenuRightComponent } from './menu-right.component';
       @else {
         <menu-right [listaNav]="navList"></menu-right>
       }
-      <!-- AJUSTES
-      <div>
-        <ul class="flex text-2xl uppercase px-6 justify-between">
-          <li class="p-2 h-16 w-16"><a href="">a</a></li>
-          <li class="p-2 h-16 w-16"><a href="">a</a></li>
-          <li class="p-2 h-16 w-16"><a href="">a</a></li>
-        </ul>
-      </div>
-       -->
     </header>
 
   `,
