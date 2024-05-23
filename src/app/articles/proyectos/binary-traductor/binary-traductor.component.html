@@ -1,0 +1,15 @@
+<div class="">
+  <textarea
+    class="rounded-md border-2 border-red-700 bg-black/50 backdrop-blur-sm w-full h-[100px] p-2"
+    [(ngModel)]="texto"
+    (input)="translateToBinary()"
+    placeholder="Introduce una palabra"
+  ></textarea>
+  <br />
+  <br />
+  <p>Texto Binario:</p>
+  <textarea
+    class="rounded-md border-2 border-red-700 bg-black/50 backdrop-blur-sm w-full h-[300px] p-2"
+    >{{ binario }}</textarea
+  >
+</div>

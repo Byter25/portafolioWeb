@@ -8,13 +8,14 @@ import {
   ViewChild,
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Links } from 'src/app/core/models/seccion.interface';
 
 @Component({
   selector: 'menu-right',
   standalone: true,
   imports: [NgStyle, RouterLink, RouterLinkActive, MatIconModule],
   template: `
-    <nav class="">
+    <nav class="mx-2">
       <input type="checkbox" class="hidden" id="navright">
       <label  for="navright">
           <mat-icon class="m-2">menu</mat-icon>
@@ -24,12 +25,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
           <mat-icon class="m-2">close</mat-icon>
         </label>
         @for(nav of listaNav;track nav){
-        <li class="pl-4 py-2 hover:bg-gray-700">
+        <li class="pl-4 py-2 hover:bg-gray-700" routerLinkActive="bg-red-600/50" [routerLinkActiveOptions]="{ exact: true }">
           <a
-            href="#{{nav}}"
-            routerLinkActive="bg-red-600"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >{{ nav }}</a
+            [routerLink]="nav.link"
+            >{{ nav.nombre }}</a
           >
         </li>
         }
@@ -46,7 +45,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class MenuRightComponent implements AfterViewInit {
   @ViewChild('backdrop') backdrop: ElementRef | undefined;
-  @Input() listaNav: string[] = [];
+  @Input() listaNav: Links[] = [];
 
   ngAfterViewInit(): void {
   }

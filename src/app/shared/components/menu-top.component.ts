@@ -7,6 +7,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Links } from 'src/app/core/models/seccion.interface';
 
 @Component({
   selector: 'menu-top',
@@ -16,12 +17,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     <nav class="uppercase relative hidden md:block">
       <ul class="flex items-center gap-6">
         @for(nav of listaNav;track nav){
-        <li class="py-2 px-4 w-fit">
+        <li class="py-2 px-4 w-fit" routerLinkActive="bg-gradient-to-br from-red-900 to-red-600 h-full" [routerLinkActiveOptions]="{ exact: true }">
           <a
-            href="#{{nav}}"
-            routerLinkActive="bg-red-600"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >{{ nav }}</a
+            [routerLink]="nav.link"
+            >{{ nav.nombre }}</a
           >
         </li>
         }
@@ -29,7 +28,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     </nav>
     <div
       #backdrop
-      class="fixed backdrop-blur-lg bg-gradient-to-br from-red-900 to-red-600 rounded-sm transition-all duration-300 -z-10"
+      class="fixed backdrop-blur-lg bg-red-600/30 rounded-sm transition-all duration-300 -z-10"
       [ngStyle]="{
         left: 'var(--left)',
         top: 'var(--top)',
@@ -54,7 +53,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class MenuTopComponent implements AfterViewInit {
   @ViewChild('backdrop') backdrop: ElementRef | undefined;
-  @Input() listaNav: string[] = [];
+  @Input() listaNav: Links[] = [];
   ngAfterViewInit(): void {
     this.backdroFuntion();
   }

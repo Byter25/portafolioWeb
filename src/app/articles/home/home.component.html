@@ -1,17 +1,68 @@
-<main-max>
-  <app-seccion-start/>
-  <app-seccion-me/>
-  <app-seccion-servicios/>
-  <app-seccion-certificados/>
-  <app-seccion-proyectos/>
-  <app-seccion-contacto/>
-  <!--<div class="scroll-c" *ngFor="let sec of secciones ; let i = index">-->
-  <div class="flecha-abajo">
-    <button (mouseenter)="bajar()">
-      <i class="fa-solid fa-angles-down fa-bounce"></i>
-    </button>
+<div class="flex flex-col lg:gap-y-10 justify-start">
+  <app-seccion-start />
+  <app-seccion-me />
+  <div class="min-w-72 md:1/4">
+    <h3 class="uppercase font-bold text-center">intereses</h3>
+    <br />
+    <ul class="flex flex-wrap gap-3 text-sm items-center justify-center">
+      @for(sec of intereses; track sec){
+        <li
+        class="h-20 w-20 flex flex-col justify-center items-center uppercase bg-black rounded-md shadow-md hover:shadow-[--color] hover:text-[--color]"
+        style="--color: {{ sec.color }}"
+      >
+        <i class="text-2xl {{ sec.icon }}"></i>
+        <span>{{ sec.nombre }}</span>
+      </li>
+      }
+    </ul>
   </div>
-  <footer class="flex justify-around items-center">
-    <p>Derechos de autor y diseño de {{'@ByterDev'}}</p>
-  </footer>
-</main-max>
+  <div class="">
+    <p class="uppercase font-bold">Redes Sociales</p>
+    <br>
+    <div class="flex justify-evenly">
+      <border-icon
+        link="https://www.facebook.com/Byter25"
+        color="#0165E1"
+        nombre="facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </border-icon>
+      <border-icon
+        link="https://github.com/Byter25"
+        color="#333"
+        nombre="github"
+      >
+        <i class="fab fa-github"></i>
+      </border-icon>
+      <border-icon
+        link="https://discord.gg/bqpf664AfF"
+        color="#7289da"
+        nombre="discord"
+      >
+        <i class="fab fa-discord"></i>
+      </border-icon>
+      <border-icon
+        link="https://www.linkedin.com/in/bryan-alexander-chacaliaza-saavedra-217810256"
+        color="#0073B1"
+        nombre="linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </border-icon>
+      <border-icon
+        link="https://youtube.com/@byter25xd?si=IKCfsTR__SH6eAic"
+        color="#ff0000"
+        nombre="youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </border-icon>
+    </div>
+  </div>
+  <a
+  class="border-2 rounded-md bg-black flex p-2 w-44 justify-center items-center gap-3 hover:border-red-700 mx-auto my-4"
+  download="cv-Bryan-Chacaliaza-Saavedra"
+  href="../../assets/CV-Bryan-Chacaliaza.pdf"
+>
+  Descargar CV <i class="fa-sharp fa-solid fa-download"></i>
+</a>
+</div>
+

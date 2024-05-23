@@ -17,6 +17,7 @@ import {
   styles: `
   progress {
   width: 100%;
+  min-width:250px;
   height: 30px;
   color: black;
 }
@@ -26,7 +27,7 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: red;
+  @apply bg-gradient-to-br from-red-700 to-red-600;
   border-radius: 5px;
 }
 

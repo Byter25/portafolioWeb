@@ -1,39 +1,41 @@
-<seccion-max>
-  <div class="max-w-[400px] border-2 border-gray-700 hover:border-gray-600 rounded-md p-2 font-bold">
-    <div class="flex flex-col gap-1 text-left w-full pl-3 border-2 border-gray-700 hover:border-gray-600 rounded-md">
-      <p class="text-gray-600"> {{resG || 0}}</p>
-      <p>{{visor || 0}}</p>
-      <p>{{result || 0}}</p>
+<div
+  class="w-fit border-2 border-gray-700 hover:border-gray-600 rounded-md p-2 font-bold bg-black"
+>
+  <div
+    class="flex flex-col gap-1 text-left w-full pl-3 border-2 border-gray-700 hover:border-gray-600 rounded-md"
+  >
+    <p class="text-gray-600">{{ resG || 0 }}</p>
+    <p>{{ visor || 0 }}</p>
+    <p>{{ result || 0 }}</p>
+  </div>
+  <div class="pt-2 flex">
+    <div class="operacion">
+      <button (click)="borrar()">AC</button>
+      <button id="poten">p</button>
+      <button id="raiz">r</button>
+      <button id="pi">pi</button>
+      <button id="divde">/</button>
     </div>
-    <div class="pt-2 flex">
-      <div class="operacion">
-        <button (click)="borrar()">AC</button>
-        <button id="poten">p</button>
-        <button id="raiz">r</button>
-        <button id="pi">pi</button>
-        <button id="divde">/</button>
-      </div>
-      <div class="num">
-        <button (click)="escribeOp('1')" >1</button>
-        <button (click)="escribeOp('2')" >2</button>
-        <button (click)="escribeOp('3')" >3</button>
-        <button (click)="escribeOp('4')" >4</button>
-        <button (click)="escribeOp('5')" >5</button>
-        <button (click)="escribeOp('6')" >6</button>
-        <button (click)="escribeOp('7')" >7</button>
-        <button (click)="escribeOp('8')" >8</button>
-        <button (click)="escribeOp('9')" >9</button>
-        <button (click)="escribeOp('.')" >.</button>
-        <button (click)="escribeOp('0')" >0</button>
-        <button (click)="escribeRes()" > = </button>
-      </div>
-      <div class="operacion">
-        <button (click)="retroceder()"> <= </button>
-        <button (click)="escribeOp('+')">+</button>
-        <button (click)="escribeOp('-')">-</button>
-        <button (click)="escribeOp('x')">x</button>
-        <button (click)="escribeOp('/')">/</button>
-      </div>
+    <div class="num">
+      <button (click)="escribeOp('1')">1</button>
+      <button (click)="escribeOp('2')">2</button>
+      <button (click)="escribeOp('3')">3</button>
+      <button (click)="escribeOp('4')">4</button>
+      <button (click)="escribeOp('5')">5</button>
+      <button (click)="escribeOp('6')">6</button>
+      <button (click)="escribeOp('7')">7</button>
+      <button (click)="escribeOp('8')">8</button>
+      <button (click)="escribeOp('9')">9</button>
+      <button (click)="escribeOp('.')">.</button>
+      <button (click)="escribeOp('0')">0</button>
+      <button (click)="escribeRes()">=</button>
+    </div>
+    <div class="operacion">
+      <button (click)="retroceder()"><=</button>
+      <button (click)="escribeOp('+')">+</button>
+      <button (click)="escribeOp('-')">-</button>
+      <button (click)="escribeOp('x')">x</button>
+      <button (click)="escribeOp('/')">/</button>
     </div>
   </div>
-</seccion-max>
+</div>

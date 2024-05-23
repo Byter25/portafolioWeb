@@ -8,8 +8,7 @@ export interface Seccion{
 }
 
 export interface Intereses{
-  id:Number
-  interes:String
+  nombre:String
   icon:String
   color:String
   // color:{
@@ -29,4 +28,9 @@ export interface Certificados{
   titulo:String,
   descripcion:String,
   url:String
+}
+
+export interface Links{
+  nombre:string,
+  link:string
 }

@@ -3,14 +3,11 @@ import { SeccionMaxComponent } from 'src/app/shared/components/seccion-max.compo
 import { ProgressBarComponent } from 'src/app/shared/components/process-bar.component';
 
 @Component({
-  selector: 'app-seccion-servicios',
-  templateUrl: './seccion-servicios.component.html',
-  styleUrls: [
-    '../../../../app.component.css',
-  ],
+  selector: 'page-servicios',
+  templateUrl: './servicios.component.html',
   standalone: true,
   imports: [SeccionMaxComponent, ProgressBarComponent],
 })
-export class SeccionServiciosComponent {
+export class ServiciosComponent {
 
 }

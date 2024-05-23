@@ -9,13 +9,15 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: "Barlow", sans-serif;
-  color:white;
-  overflow:hidden;
 }
 
 body {
+  color:white;
   min-width:300px;
+  min-height:100vh;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background: black;
+  background:  url('https://i.pinimg.com/originals/25/bb/0f/25bb0f734d0dfcab4dccabd671decba7.gif');
+  background-size: cover;
+  background-postion: center;
+  background-repeat: no-repeat;
 }

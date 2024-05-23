@@ -1,45 +1,41 @@
 import { Component } from '@angular/core';
-import { Certificados } from '../../../core/models/seccion.interface';
+import { Certificados } from '../core/models/seccion.interface';
 import {
   NgbCarouselConfig,
   NgbCarouselModule,
 } from '@ng-bootstrap/ng-bootstrap';
-import { SeccionMaxComponent } from 'src/app/shared/components/seccion-max.component';
 @Component({
-  selector: 'app-seccion-certificados',
-  imports: [NgbCarouselModule, SeccionMaxComponent],
+  selector: 'page-certificados',
+  imports: [NgbCarouselModule],
   providers: [NgbCarouselConfig],
   template: `
-    <seccion-max
-      id="certificados"
-      fondo="https://cdnb.artstation.com/p/assets/images/images/030/555/445/original/runny-run-homegiffy.gif?1600953104&dl=1"
-    >
-      <div class="contend-max">
-        <h2 class="text-2xl uppercase">certificados</h2>
+    <div class="h-screen lg:h-[745px] flex flex-col ">
+      <h2 class="text-2xl uppercase text-center">certificados</h2>
 
-        <ngb-carousel>
-          @for(c of certificados; track c){
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper w-full flex items-center justify-center">
-              <img
-                src="{{ c.url }}"
-                class="w-full md:w-1/2 object-cover object-center p-5 mb-5"
-              />
-            </div>
-            <div class="carousel-caption">
-              <p>{{ c.titulo }}</p>
-              <p>{{ c.descripcion }}</p>
-            </div>
-          </ng-template>
-          }
-        </ngb-carousel>
-      </div>
-    </seccion-max>
+      <ngb-carousel>
+        @for(c of certificados; track c){
+        <ng-template ngbSlide>
+          <div
+            class="picsum-img-wrapper w-full flex items-center justify-center"
+          >
+            <img
+              src="{{ c.url }}"
+              class="w-full md:h-[500px] md:w-fit object-cover object-center p-5 mb-5"
+            />
+          </div>
+          <div class="carousel-caption">
+            <p>{{ c.titulo }}</p>
+            <p>{{ c.descripcion }}</p>
+          </div>
+        </ng-template>
+        }
+      </ngb-carousel>
+    </div>
   `,
-  styles:``,
+  styles: ``,
   standalone: true,
 })
-export class SeccionCertificadosComponent {
+export class CertificadosComponent {
   certificados: Certificados[] = [
     {
       id: 0,
