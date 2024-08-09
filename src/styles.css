@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 
 * {
@@ -13,8 +12,6 @@
 
 body {
   color:white;
-  min-width:300px;
-  min-height:100vh;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background:  url('https://i.pinimg.com/originals/25/bb/0f/25bb0f734d0dfcab4dccabd671decba7.gif');
   background-size: cover;

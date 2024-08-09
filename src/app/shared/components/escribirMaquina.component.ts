@@ -8,7 +8,6 @@ import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
     <!--ESCRITURA AUTOMATICA-->
     <div
       [ngStyle]="{ width: longitudNomLargo + 5 + 'ch' }"
-      class="flex items-center h-full uppercase font-mono"
     >
       <p>{{ text.substring(0, index) }}<span class="animate-ping">|</span></p>
     </div>
@@ -30,11 +29,10 @@ import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 })
 export class EscribirMaquinaComponent implements OnInit, AfterViewInit {
   @Input() textos: string[] = []; //textos desde el padre
-
-  text = 'ByteDev'; // El texto que se va a mostrar
+  @Input() text = 'ByteDev'; // El texto que se va a mostrar
   index = 0; // El índice de la letra actual
   state = 'tipiar'; // El estado del efecto: tipiar o borrar
-  interval = 100; // El intervalo de tiempo entre cada letra
+  interval = 50; // El intervalo de tiempo entre cada letra
   textIndex = 0; //indice del texto actual
   waitTime = 1000; // El tiempo que se debe esperar antes de borrar el texto
   timePassed = 5000; // El tiempo que ha pasado desde que se terminó de tipiar el texto

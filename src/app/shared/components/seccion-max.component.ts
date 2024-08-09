@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { EscribirMaquinaComponent } from './escribirMaquina.component';
-import { MenuTopComponent } from './menu-top.component';
+import { MenuTopComponent } from './navbar/menu-top.component';
 @Component({
   selector: 'seccion-max',
   standalone: true,

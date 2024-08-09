@@ -1,29 +1,10 @@
-<h2 class="uppercase font-bold text-2xl mb-3">contacto</h2>
-<form
-  name="contacto"
-  class="grid grid-cols-5 h-screen gap-3 w-full auto-rows-max"
-  method="post"
-  action="https://formspree.io/f/mrgwprdj"
->
-  <span>NOMBRES:</span>
-  <input type="text" id="nom" name="NOMBRE" placeholder="Nombre completo" />
-  <span>APELLIDOS</span>
-  <input type="text" name="APELLIDO" placeholder="Apellido completo" id="ape" />
-  <span>E-MAIL</span>
-  <input
-    type="email"
-    name="CORREO"
-    placeholder="ejemplo@gmail.com"
-    name="correo"
-    id="correo"
-  />
-  <span>ASUNTO</span>
-  <textarea name="ASUNTO" class="h-52"></textarea>
-  <p>Ubicaccion</p>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1938.0709648406548!2d-76.15102116949346!3d-13.709852521861494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1690862692256!5m2!1ses!2spe"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-  ></iframe>
-  <button type="submit">Enviar</button>
-</form>
+<main class="p-5 min-h-screen max-h-screen">
+  <form name="contacto" class="flex flex-col gap-4 w-1/2 p-4 bg-slate-950" method="post" action="https://formspree.io/f/mrgwprdj ">
+  <h2 class="uppercase font-bold text-4xl my-2 rounded-md">CONTACTAME</h2>
+    <input type="text" id="nom" name="NOMBRE" placeholder="Nombre completo" class="py-2 px-4 rounded-md bg-gray-800" />
+    <input type="email" name="CORREO" placeholder="ejemplo@gmail.com" name="correo" id="correo"
+      class="py-2 px-4 rounded-md bg-gray-800 " />
+    <textarea name="mensaje" placeholder="Escribe tu mensaje"  class="py-2 px-4 rounded-md min-h-80 bg-gray-800"></textarea>
+    <button class="py-2 px-4  bg-red-700  font-bold" type="submit">Enviar</button>
+  </form>
+</main>

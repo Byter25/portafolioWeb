@@ -15,9 +15,9 @@ import { Links } from 'src/app/core/models/seccion.interface';
   imports: [NgStyle, RouterLink, RouterLinkActive],
   template: `
     <nav class="uppercase relative hidden md:block">
-      <ul class="flex items-center gap-6">
+      <ul class="flex items-center">
         @for(nav of listaNav;track nav){
-        <li class="py-2 px-4 w-fit" routerLinkActive="bg-gradient-to-br from-red-900 to-red-600 h-full" [routerLinkActiveOptions]="{ exact: true }">
+        <li class="py-2 px-4" routerLinkActive="text-red-600 font-bold shadow-md " [routerLinkActiveOptions]="{ exact: true }">
           <a
             [routerLink]="nav.link"
             >{{ nav.nombre }}</a
@@ -28,7 +28,7 @@ import { Links } from 'src/app/core/models/seccion.interface';
     </nav>
     <div
       #backdrop
-      class="fixed backdrop-blur-lg bg-red-600/30 rounded-sm transition-all duration-300 -z-10"
+      class="fixed backdrop-blur-lg bg-black/30 rounded-md transition-all duration-300 -z-10"
       [ngStyle]="{
         left: 'var(--left)',
         top: 'var(--top)',

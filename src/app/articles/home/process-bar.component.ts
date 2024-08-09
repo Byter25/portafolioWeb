@@ -9,7 +9,7 @@ import {
   standalone: true,
   imports: [],
   template: `
-    <div class="p-2 flex flex-col w-full relative items-center justify-center">
+    <div class="flex flex-col w-full relative items-center">
       <span class="capitalize absolute m-auto">{{ nombre }}</span>
       <progress [id]="nombre" value="0" [max]="max"></progress>
     </div>
@@ -23,11 +23,11 @@ import {
 }
 
 progress::-webkit-progress-bar {
-  @apply rounded-md bg-black/50
+  @apply rounded-md bg-gray-800
 }
 
 progress::-webkit-progress-value {
-  @apply bg-gradient-to-br from-red-700 to-red-600;
+  @apply bg-red-700;
   border-radius: 5px;
 }
 
