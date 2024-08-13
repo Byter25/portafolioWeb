@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { SeccionMaxComponent } from 'src/app/shared/components/seccion-max.component';
 import { EscribirMaquinaComponent } from 'src/app/shared/components/escribirMaquina.component';
 @Component({
   selector: 'card-profile',
   template: `
     <aside
-      class="flex flex-col items-center justify-evenly bg-slate-950 p-4 rounded-md shadow-md hover:scale-105 shadow-black hover:shadow-xl  hover:shadow-red-700 transition-all duration-300 ease-in-out h-full w-full min-w-90 max-w-[500px]"
+      class="p-4 z-10 flex flex-col items-center justify-evenly bg-slate-950 rounded-md shadow-md hover:scale-105 shadow-black hover:shadow-xl  hover:shadow-red-700 transition-all duration-300 ease-in-out "
     >
       <img
-        class="h-32 w-32 xl:w-52 xl:h-52 2xl:62 2xl:h-62 rounded-full object-cover"
+        class="aspect-square rounded-full object-cover h-32 md:h-40"
         src="https://rare-gallery.com/livewalls/imgpreview/142263-naruto-lofi-live-wallpaper.jpg"
         alt="perfil"
       />
@@ -30,7 +29,7 @@ import { EscribirMaquinaComponent } from 'src/app/shared/components/escribirMaqu
     </aside>
   `,
   standalone: true,
-  imports: [SeccionMaxComponent, EscribirMaquinaComponent],
+  imports: [EscribirMaquinaComponent],
 })
 export class CardProfileComponent {
   textos: string[] = [

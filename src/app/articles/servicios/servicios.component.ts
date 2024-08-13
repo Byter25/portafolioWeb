@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { SeccionMaxComponent } from 'src/app/shared/components/seccion-max.component';
-import { ProgressBarComponent } from 'src/app/articles/home/process-bar.component';
+
+import { ProgressBarComponent } from 'src/app/articles/home/components/process-bar.component';
 
 @Component({
   selector: 'page-servicios',
   templateUrl: './servicios.component.html',
   standalone: true,
-  imports: [SeccionMaxComponent, ProgressBarComponent],
+  imports: [],
 })
 export class ServiciosComponent {
 

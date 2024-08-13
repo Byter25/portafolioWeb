@@ -4,14 +4,29 @@ import {
   Component,
   Input,
 } from '@angular/core';
+import { Progreso } from '../progreso.interface';
 @Component({
   selector: 'process-bar',
   standalone: true,
   imports: [],
   template: `
-    <div class="flex flex-col w-full relative items-center">
-      <span class="capitalize absolute m-auto">{{ nombre }}</span>
-      <progress [id]="nombre" value="0" [max]="max"></progress>
+    <div
+      [id]="nombre"
+      class="flex flex-col h-full bg-slate-950 p-4 shadow-md shadow-black hover:scale-105 hover:shadow-lg hover:shadow-red-700 transition-all duration-300 justify-evenly uppercase font-bold"
+    >
+      <h3 class="text-2xl text-center p-3">{{ nombre }}</h3>
+      <div class="flex flex-1 flex-col gap-4">
+        @for(sec of progresos;track sec){
+        <div class="flex flex-col w-full relative items-center">
+          <span class="absolute m-auto">{{ sec.nombre }}</span>
+          <progress
+            [id]="sec.nombre"
+            [value]="sec.progreso"
+            [max]="sec.max"
+          ></progress>
+        </div>
+        }
+      </div>
     </div>
   `,
   styles: `
@@ -38,6 +53,7 @@ progress::-moz-progress-bar {
   `,
 })
 export class ProgressBarComponent implements AfterViewInit {
+  @Input() progresos: Progreso[] = [];
   @Input() max: Number = 0;
   @Input() value: number = 0;
   @Input() nombre: string = '';

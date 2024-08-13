@@ -8,17 +8,17 @@ import {
   ViewChild,
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { Links } from 'src/app/core/models/seccion.interface';
+import { Links } from './link.interface';
 
 @Component({
   selector: 'menu-right',
   standalone: true,
   imports: [NgStyle, RouterLink, RouterLinkActive, MatIconModule],
   template: `
-    <nav class="mx-2">
+    <nav>
       <input type="checkbox" class="hidden" id="navright">
-      <label  for="navright">
-          <mat-icon class="m-2">menu</mat-icon>
+      <label class=" text-center flex justify-center items-center"for="navright">
+          <mat-icon >menu</mat-icon>
         </label>
       <ul id="rightnav"  class=" -right-full z-20 fixed md:hidden top-0 w-52 bg-black h-screen text-white uppercase ">
         <label for="navright">

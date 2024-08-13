@@ -1,8 +1,8 @@
 import { Component, HostListener } from '@angular/core';
 import { MenuTopComponent } from './menu-top.component';
 import { MenuRightComponent } from './menu-right.component';
-import { Links } from 'src/app/core/models/seccion.interface';
 import { BorderIconComponent } from "../border-icon.component";
+import { Links } from './link.interface';
 @Component({
   selector: 'app-navbar',
   standalone: true,

@@ -1,5 +1,5 @@
-<main class="block md:grid gap-3 py-5 px-5 md:p-10 lg:p-20 min-w-full md:min-h-screen">
-  <card-profile class="rom-start-1 " />
+<section class="relative -z-30 md:p-10 md:grid md:auto-cols-auto  gap-3 max-w-screen">
+  <card-profile />
   <div class="col-start-1  bg-slate-950 p-4 flex flex-col justify-evenly items-center rounded-md">
     <a class="rounded-md bg-red-700 flex py-2 px-4  justify-center items-center gap-3  uppercase shadow-md shadow-black "
       download="cv-Bryan-Chacaliaza-Saavedra" href="../../assets/CV-Bryan-Chacaliaza.pdf">
@@ -10,19 +10,8 @@
       Descargar CV <i class="fa-sharp fa-solid fa-download"></i>
     </a> -->
   </div>
-  <div
-    class="flex flex-col flex-1 md:gap-3 col-start-2 row-start-1 bg-slate-950 p-4 shadow-md shadow-black hover:scale-105 hover:shadow-lg hover:shadow-red-700 transition-all duration-300 justify-evenly uppercase font-bold">
-    <h3 class="3xl">Habilidades Tecnicas</h3>
-    @for(sec of tecnicas;track sec){
-    <process-bar [max]="100" [value]="sec.progreso" [nombre]="sec.skill" />
-    }
-  </div>
-  <div
-    class="flex flex-col flex-1 md:gap-3 col-start-3 bg-slate-950 p-4 shadow-md shadow-black hover:scale-105 hover:shadow-lg hover:shadow-red-700 transition-all duration-300 justify-evenly uppercase font-bold row-start-1">
-    <h3 class="3xl">Habilidades Profesionales</h3>
-    @for(sec of profesional;track sec){
-    <process-bar [max]="100" [value]="sec.progreso" [nombre]="sec.skill" />
-    }
-  </div>
-  <intereses class="col-start-2  col-span-2"></intereses>
-</main>
+  <process-bar class="row-start-1 col-start-2" nombre="tecnicas" [progresos]="tecnicas" />
+  <process-bar class="row-start-1 col-start-3" nombre="profecional" [progresos]="profesional" />
+  <icon-card class="col-start-2 " nombre="tecnologias" [iconCard]="tecnologias" />
+  <icon-card class="col-start-3" nombre="intereses" [iconCard]="intereses" />
+</section>

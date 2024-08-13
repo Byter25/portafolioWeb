@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { SeccionMaxComponent } from 'src/app/shared/components/seccion-max.component';
 
 @Component({
     selector: 'app-calculadora',
     templateUrl: './calculadora.component.html',
     styleUrls: ['./calculadora.component.css'],
-    imports:[SeccionMaxComponent],
+    imports:[],
     standalone: true
 })
 export class CalculadoraComponent {

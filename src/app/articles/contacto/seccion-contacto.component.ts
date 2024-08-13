@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { SeccionMaxComponent } from 'src/app/shared/components/seccion-max.component';
 
 @Component({
   selector: 'page-contacto',
   templateUrl: './seccion-contacto.component.html',
-  imports: [SeccionMaxComponent],
+  imports: [],
   styles: `
   iframe{
     @apply col-start-4 col-span-2 row-start-2 row-span-3 w-full h-full hidden md:block;
