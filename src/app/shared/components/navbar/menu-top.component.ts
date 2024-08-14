@@ -14,7 +14,7 @@ import { Links } from './link.interface';
   standalone: true,
   imports: [NgStyle, RouterLink, RouterLinkActive],
   template: `
-    <nav class="uppercase relative hidden md:block">
+    <nav class="uppercase relative hidden md:block z-20">
       <ul class="flex items-center">
         @for(nav of listaNav;track nav){
         <li class="py-2 px-4" routerLinkActive="text-red-600 font-bold shadow-md " [routerLinkActiveOptions]="{ exact: true }">
@@ -28,7 +28,7 @@ import { Links } from './link.interface';
     </nav>
     <div
       #backdrop
-      class="fixed backdrop-blur-lg bg-black/30 rounded-md transition-all duration-300 -z-10"
+      class="fixed backdrop-blur-lg  bg-red-600 rounded-md transition-all duration-300 z-10"
       [ngStyle]="{
         left: 'var(--left)',
         top: 'var(--top)',

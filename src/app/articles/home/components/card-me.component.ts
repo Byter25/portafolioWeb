@@ -4,7 +4,7 @@ import { EscribirMaquinaComponent } from 'src/app/shared/components/escribirMaqu
   selector: 'card-profile',
   template: `
     <aside
-      class="p-4 z-10 flex flex-col items-center justify-evenly bg-slate-950 rounded-md shadow-md hover:scale-105 shadow-black hover:shadow-xl  hover:shadow-red-700 transition-all duration-300 ease-in-out "
+      class="p-4 flex flex-col items-center justify-evenly bg-slate-950 rounded-md shadow-md hover:scale-105 shadow-black hover:shadow-xl  hover:shadow-red-700 transition-all duration-300 ease-in-out "
     >
       <img
         class="aspect-square rounded-full object-cover h-32 md:h-40"
