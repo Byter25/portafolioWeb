@@ -1,11 +1,10 @@
-
-<div class="w-full flex items-center justify-center p-4">
-  <form name="contacto" class="flex flex-col gap-4 p-5  md:w-2/4 justify-self-center  bg-slate-950" method="post" action="https://formspree.io/f/mrgwprdj ">
-    <h2 class="uppercase font-bold text-4xl my-2 rounded-md">CONTACTAME</h2>
-      <input type="text" id="nom" name="NOMBRE" placeholder="Nombre completo" class="py-2 px-4 rounded-md bg-gray-800" />
-      <input type="email" name="CORREO" placeholder="ejemplo@gmail.com" name="correo" id="correo"
-        class="py-2 px-4 rounded-md bg-gray-800 " />
-      <textarea name="mensaje" placeholder="Escribe tu mensaje"  class="py-2 px-4 rounded-md resize-y h-36 md:h-80 bg-gray-800 caret-red-700"></textarea>
-      <button class="py-2 px-4  bg-red-700  font-bold" type="submit">Enviar</button>
-    </form>
-</div>
+<form name="contacto" class="flex flex-col gap-4 p-5 md:min-w-[600px]   bg-slate-950" method="post"
+  action="https://formspree.io/f/mrgwprdj ">
+  <h2 class="uppercase font-bold text-4xl my-2 text-center">CONTACTAME</h2>
+  <input type="text" id="nom" name="NOMBRE" placeholder="Nombre completo" class="py-2 px-4 rounded-md bg-gray-800" />
+  <input type="email" name="CORREO" placeholder="ejemplo@gmail.com" name="correo" id="correo"
+    class="py-2 px-4 rounded-md bg-gray-800 " />
+  <textarea name="mensaje" placeholder="Escribe tu mensaje"
+    class="py-2 px-4 rounded-md resize-y min-h-32 h-full bg-gray-800 caret-red-700"></textarea>
+  <button class="py-2 px-4  bg-red-700 rounded-md uppercase font-bold" type="submit">Enviar</button>
+</form>

@@ -14,28 +14,27 @@ import { Links } from './link.interface';
   standalone: true,
   imports: [NgStyle, RouterLink, RouterLinkActive],
   template: `
-    <nav class="uppercase relative hidden md:block z-20">
-      <ul class="flex items-center">
+    <div
+        #backdrop
+        class="fixed backdrop-blur-lg bg-red-600 rounded-md transition-all duration-300 "
+        [ngStyle]="{
+          left: 'var(--left)',
+          top: 'var(--top)',
+          width: 'var(--width)',
+          height: 'var(--height)'
+        }"
+      ></div>
+      <ul class="sticky flex text-red-600 items-center uppercase font-bold tracking-widest">
         @for(nav of listaNav;track nav){
-        <li class="py-2 px-4" routerLinkActive="text-red-600 font-bold shadow-md " [routerLinkActiveOptions]="{ exact: true }">
-          <a
-            [routerLink]="nav.link"
-            >{{ nav.nombre }}</a
-          >
+        <li
+          class="py-2 px-4 hover:text-white transition-all"
+          routerLinkActive="text-white"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="nav.link">{{ nav.nombre }}</a>
         </li>
         }
       </ul>
-    </nav>
-    <div
-      #backdrop
-      class="fixed backdrop-blur-lg  bg-red-600 rounded-md transition-all duration-300 z-10"
-      [ngStyle]="{
-        left: 'var(--left)',
-        top: 'var(--top)',
-        width: 'var(--width)',
-        height: 'var(--height)'
-      }"
-    ></div>
   `,
   styles: [
     `

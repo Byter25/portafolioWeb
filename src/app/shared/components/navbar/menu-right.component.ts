@@ -15,30 +15,35 @@ import { Links } from './link.interface';
   standalone: true,
   imports: [NgStyle, RouterLink, RouterLinkActive, MatIconModule],
   template: `
-    <nav>
-      <input type="checkbox" class="hidden" id="navright">
-      <label class=" text-center flex justify-center items-center"for="navright">
-          <mat-icon >menu</mat-icon>
-        </label>
-      <ul id="rightnav"  class=" -right-full z-20 fixed md:hidden top-0 w-52 bg-black h-screen text-white uppercase ">
-        <label for="navright">
-          <mat-icon class="m-2">close</mat-icon>
+      <input type="checkbox" class="hidden" id="navright" />
+      <label
+        class="text-center flex justify-center items-center"
+        for="navright"
+      >
+        <mat-icon>menu</mat-icon>
+      </label>
+      <ul
+        id="rightnav"
+        class=" -left-full fixed md:hidden top-0 w-52 h-screen uppercase transition-all duration-300 ease-in-out bg-slate-950 z-[999]"
+      >
+        <label for="navright" class="text-center flex items-center px-4 py-2">
+          <mat-icon>close</mat-icon>
         </label>
         @for(nav of listaNav;track nav){
-        <li class="pl-4 py-2 hover:bg-gray-700" routerLinkActive="bg-red-600/50" [routerLinkActiveOptions]="{ exact: true }">
-          <a
-            [routerLink]="nav.link"
-            >{{ nav.nombre }}</a
-          >
+        <li
+          class="pl-4 py-2 border-l-4 border-white hover:border-red-300 transition-all duration-300 ease-in-out"
+          routerLinkActive="border-red-600"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="nav.link">{{ nav.nombre }}</a>
         </li>
         }
       </ul>
-    </nav>
   `,
   styles: [
     `
       #navright:checked ~ #rightnav {
-        right:0;
+        left: 0;
       }
     `,
   ],
@@ -47,6 +52,5 @@ export class MenuRightComponent implements AfterViewInit {
   @ViewChild('backdrop') backdrop: ElementRef | undefined;
   @Input() listaNav: Links[] = [];
 
-  ngAfterViewInit(): void {
-  }
+  ngAfterViewInit(): void {}
 }
