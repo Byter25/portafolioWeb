@@ -4,6 +4,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { ContactoComponent } from './contacto/seccion-contacto.component';
 import { CertificadosComponent } from './certificados.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 
 export const ARTICLES_ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -16,7 +17,7 @@ export const ARTICLES_ROUTES: Routes = [
   },
   { path: 'certify', component: CertificadosComponent },
   { path: 'contact', component: ContactoComponent },
-  { path: 'about', component: ContactoComponent },
+  { path: 'about', component: SobreMiComponent},
   { path: 'privacity', component: HomeComponent },
   { path: 'cookies', component: HomeComponent },
 ];

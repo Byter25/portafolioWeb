@@ -12,10 +12,10 @@ import { Progreso } from '../progreso.interface';
   template: `
     <div
       [id]="nombre"
-      class="flex flex-col h-full bg-slate-950 p-4 shadow-md shadow-black hover:scale-105 hover:shadow-lg hover:shadow-red-700 transition-all duration-300 justify-evenly uppercase font-bold"
+      class="flex flex-col h-full bg-slate-950 p-4 shadow-md shadow-black hover:scale-105 hover:shadow-lg hover:shadow-red-600 transition-all duration-300 justify-evenly uppercase font-bold"
     >
       <h3 class="text-2xl text-center p-3">{{ nombre }}</h3>
-      <div class="flex flex-1 flex-col gap-4">
+      <div class="flex flex-1 flex-col gap-y-4">
         @for(sec of progresos;track sec){
         <div class="flex flex-col w-full relative items-center">
           <span class="absolute m-auto">{{ sec.nombre }}</span>
@@ -42,7 +42,7 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  @apply bg-red-700;
+  @apply bg-red-600;
   border-radius: 5px;
 }
 

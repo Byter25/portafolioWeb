@@ -20,7 +20,7 @@ export class NavbarComponent {
   navList: Links[] = [
     { nombre: 'inicio', link: '' },
     { nombre: 'servicios', link: 'services' },
-    { nombre: 'sober mi', link: 'about-me' },
+    { nombre: 'sobre mi', link: 'about' },
     { nombre: 'contacto', link: 'contact' },
   ];
 
