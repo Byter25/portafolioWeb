@@ -4,12 +4,13 @@ import { CardProfileComponent } from './components/card-me.component';
 import { IconCardComponent } from './components/icon-card.component';
 import { Progreso } from './progreso.interface';
 import { ProgressBarComponent } from './components/process-bar.component';
+import { FloatComponent } from '@shared/components/float.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styles: ``,
   standalone: true,
-  imports: [CardProfileComponent, IconCardComponent, ProgressBarComponent],
+  imports: [CardProfileComponent, IconCardComponent, ProgressBarComponent, FloatComponent],
 })
 export class HomeComponent {
   tecnicas: Progreso[] = [

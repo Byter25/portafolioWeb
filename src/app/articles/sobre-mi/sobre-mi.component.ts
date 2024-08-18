@@ -1,16 +1,33 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { environment } from '@envs/environment.development';
+import { PaypalService } from '@services/paypal.service';
+import { DonacionesComponent } from './donaciones.component';
 
 @Component({
   selector: 'app-sobre-mi',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,DonacionesComponent],
   templateUrl: './sobre-mi.component.html',
-  styles:`.imagen{
-    background: url('../../../assets/DBZ4.webp');
-    @apply bg-cover bg-center
-  }`,
+  styles: ``,
 })
 export class SobreMiComponent {
+  private clientId = environment.PAYPAL_CLIENT_ID; // O cualquier otra forma de obtener el clientId
+  public donationAmount = 1;
 
+  constructor(private paypal: PaypalService) {}
+
+  ngOnInit() {
+    this.initializePayPal();
+  }
+
+  private initializePayPal() {
+    this.paypal.loadPayPalSDK(this.clientId)
+      .then(() => {
+        this.paypal.initializePayPalButton('paypal-button-container', this.donationAmount);
+      })
+      .catch(error => {
+        console.error('Error loading PayPal SDK:', error);
+      });
+  }
 }

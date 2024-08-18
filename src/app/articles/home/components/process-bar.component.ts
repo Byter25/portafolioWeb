@@ -5,20 +5,18 @@ import {
   Input,
 } from '@angular/core';
 import { Progreso } from '../progreso.interface';
+import { FloatComponent } from '@shared/components/float.component';
 @Component({
   selector: 'process-bar',
   standalone: true,
-  imports: [],
+  imports: [FloatComponent],
   template: `
-    <div
-      [id]="nombre"
-      class="flex flex-col h-full bg-slate-950 p-4 shadow-md shadow-black hover:scale-105 hover:shadow-lg hover:shadow-red-600 transition-all duration-300 justify-evenly uppercase font-bold"
-    >
-      <h3 class="text-2xl text-center p-3">{{ nombre }}</h3>
-      <div class="flex flex-1 flex-col gap-y-4">
+    <float class="font-bold uppercase">
+      <h3 class="text-2xl text-center p-3 uppercase tracking-widest">{{ nombre }}</h3>
+      <div class="flex flex-1 flex-col gap-y-4 justify-evenly">
         @for(sec of progresos;track sec){
-        <div class="flex flex-col w-full relative items-center">
-          <span class="absolute m-auto">{{ sec.nombre }}</span>
+        <div class="flex flex-col w-full relative items-center justify-center">
+          <span class="absolute text-white ">{{ sec.nombre }}</span>
           <progress
             [id]="sec.nombre"
             [value]="sec.progreso"
@@ -27,28 +25,23 @@ import { Progreso } from '../progreso.interface';
         </div>
         }
       </div>
-    </div>
+    </float>
   `,
   styles: `
   progress {
-  width: 100%;
-  min-width:250px;
-  height: 30px;
-  color: black;
+    @apply w-[300px] h-9
 }
 
 progress::-webkit-progress-bar {
-  @apply rounded-md bg-gray-800
+  @apply rounded-lg bg-gray-500/70
 }
 
 progress::-webkit-progress-value {
-  @apply bg-red-600;
-  border-radius: 5px;
+  @apply bg-red-600 rounded-lg
 }
 
 progress::-moz-progress-bar {
-  background-color: black;
-  border-radius: 5px;
+  @apply bg-white/50
 }
   `,
 })

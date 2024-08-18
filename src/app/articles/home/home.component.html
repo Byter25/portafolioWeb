@@ -1,6 +1,6 @@
-<section class="relative -z-30 md:z-0 md:grid grid-cols-2 md:auto-cols-auto  gap-3">
+<section class="relative -z-30 md:z-0 md:grid grid-cols-2 md:auto-cols-auto gap-3">
   <card-profile />
-  <div class="col-start-1  bg-slate-950 p-4 flex flex-col justify-evenly items-center rounded-md">
+  <float class="col-start-1">
     <a class="rounded-md bg-red-700 flex py-2 px-4  justify-center items-center gap-3  uppercase shadow-md shadow-black "
       download="cv-Bryan-Chacaliaza-Saavedra" href="../../assets/CV-Bryan-Chacaliaza.pdf">
       Descargar CV <i class="fa-sharp fa-solid fa-download"></i>
@@ -9,7 +9,7 @@
       download="cv-Bryan-Chacaliaza-Saavedra" href="../../assets/CV-Bryan-Chacaliaza.pdf">
       Descargar CV <i class="fa-sharp fa-solid fa-download"></i>
     </a> -->
-  </div>
+  </float>
   <process-bar class="row-start-1 col-start-2" nombre="tecnicas" [progresos]="tecnicas" />
   <process-bar class="row-start-1 col-start-3" nombre="profecional" [progresos]="profesional" />
   <icon-card class="col-start-2 " nombre="tecnologias" [iconCard]="tecnologias" />

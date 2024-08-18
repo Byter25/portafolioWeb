@@ -1,16 +1,33 @@
-<div class="flex flex-col justify-center items-center  md:min-w-[600px] group">
-  <!-- Contenedor con imagen de fondo -->
-  <div class="imagen aspect-video h-full w-full bg-cover bg-center rounded-lg transition-all duration-30 grayscale group-hover:grayscale-0 ">
-    <!-- Gradiente de fondo y contenido -->
-    <div class="h-full hover:bg-gradient-to-b hover:from-transparent hover:to-black flex flex-col justify-end items-center p-4 text-center transition-all duration-300 ease-in-out">
-      <p class="text-white">Donenme para comprarlo pipipi</p>
-      <p class="font-bold text-green-600 text-2xl">$69.99</p>
-      <a class="aspect-square bg-[#003087] text-white p-4 rounded flex justify-center items-center h-10 hover:bg-[#003a87] mt-4"
-        href="https://www.paypal.me/bryan25saavedra" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-paypal text-2xl"></i>
-      </a>
-    </div>
+<section class="flex justify-evenly  p-5">
+  <div class="md:w-1/4">
+    <h2 class="uppercase text-3xl font-bold">Sobre mi</h2>
+    <p>Soy un estudainte de la carrera de ingeneria de software, y anndo en busca de una empresa donde
+      poder trabajar y realizar mis practiacs con todo los conocimientos en desarrollo web fullstack, de apliaciones de escritorio y base de datos. LLevo porgramando ya casi 3 años y desarrollando poryectos propios </p>
+
   </div>
-</div>
-
-
+  <ul class="flex flex-col gap-5  md:w-1/4">
+    <h2 class="uppercase text-3xl font-bold py-2">Donaciones</h2>
+    <li>
+      <donaciones [imageUrl]="'assets/DBZ4.webp'">
+        <p class="font-bold ">Epa, ¡donenme para el Budokai Tenkaichi!</p>
+        <form action="https://www.paypal.com/donate" method="post" target="_top">
+          <input type="hidden" name="campaign_id" value="YG5B7PKR68GHW" />
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
+            name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+      </donaciones>
+    </li>
+    <li >
+      <donaciones [imageUrl]="'assets/pcgamer.webp'" class="flex-1">
+        <p class="font-bold ">Para mi pc gamer, que obviamente usare para programar</p>
+        <form action="https://www.paypal.com/donate" method="post" target="_top">
+          <input type="hidden" name="campaign_id" value="YG5B7PKR68GHW" />
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
+            name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+      </donaciones>
+    </li>
+  </ul>
+</section>

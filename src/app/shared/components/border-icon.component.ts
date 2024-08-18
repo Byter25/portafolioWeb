@@ -13,9 +13,7 @@ import { Component, Input } from '@angular/core';
     >
       <ng-content> </ng-content>
       @if(!nombre){
-      {{
-        nombre
-      }}
+      {{ nombre }}
       }
     </a>
   `,

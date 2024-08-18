@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { FloatComponent } from '@shared/components/float.component';
 import { EscribirMaquinaComponent } from 'src/app/shared/components/escribirMaquina.component';
 @Component({
   selector: 'card-profile',
   template: `
-    <aside
-      class="p-4 flex flex-col items-center justify-evenly bg-slate-950 rounded-md shadow-md hover:scale-105 shadow-black hover:shadow-xl  hover:shadow-red-700 transition-all duration-300 ease-in-out "
+    <float
     >
       <img
         class="aspect-square rounded-full object-cover h-32 md:h-40"
@@ -26,10 +26,10 @@ import { EscribirMaquinaComponent } from 'src/app/shared/components/escribirMaqu
           class="capitalize"
         ></escribir-maquina>
       </div>
-    </aside>
+    </float>
   `,
   standalone: true,
-  imports: [EscribirMaquinaComponent],
+  imports: [EscribirMaquinaComponent ,FloatComponent],
 })
 export class CardProfileComponent {
   textos: string[] = [

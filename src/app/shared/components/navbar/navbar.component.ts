@@ -3,10 +3,11 @@ import { MenuTopComponent } from './menu-top.component';
 import { MenuRightComponent } from './menu-right.component';
 import { BorderIconComponent } from "../border-icon.component";
 import { Links } from './link.interface';
+import { ModeDarkComponent } from './mode-dark.component';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [MenuTopComponent, MenuRightComponent, BorderIconComponent],
+  imports: [MenuTopComponent, MenuRightComponent, BorderIconComponent, ModeDarkComponent],
   templateUrl: './navbar.component.html'
 })
 export class NavbarComponent {
