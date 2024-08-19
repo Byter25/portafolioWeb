@@ -7,7 +7,7 @@ import { MenuTopComponent } from './navbar/menu-top.component';
   imports: [EscribirMaquinaComponent, MenuTopComponent],
   template: `
     <aside
-      class="relative p-2 flex flex-col items-center justify-evenly rounded-md  hover:scale-105 transition-all duration-300 ease-in-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600"
+      class="relative p-5 flex flex-col items-center justify-evenly rounded-md  hover:scale-105 transition-all duration-300 ease-in-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600"
     >
       <div></div>
       <div></div>
@@ -47,7 +47,6 @@ import { MenuTopComponent } from './navbar/menu-top.component';
     height:3px;
     background: linear-gradient(to left, transparent, red);
     animation: right-left 2s linear infinite;
-    animation-delay: 2s;
   }
   aside div:nth-child(4){
     position: absolute;
@@ -58,7 +57,7 @@ import { MenuTopComponent } from './navbar/menu-top.component';
     height:100%;
     background: linear-gradient(to top, transparent, red);
     animation: bottom-top 2s linear infinite;
-    animation-delay: 3s;
+    animation-delay: 1s;
   }
 
   @keyframes left-right {

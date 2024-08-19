@@ -1,13 +1,15 @@
 import { Component, Input } from '@angular/core';
 import Merch from './merch.interface';
+import { FloatComponent } from '@shared/components/float.component';
 
 @Component({
   selector: 'card-character',
+  imports: [FloatComponent],
   template: `
     <h2 class="text-center p-4 text-3xl uppercase font-bold tracking-widest">{{ titulo }}</h2>
-    <div class="flex flex-col md:flex-row md:w-screen flex-1 md:justify-evenly gap-y-5">
+    <div class="flex flex-col gap-5 md:flex-row  flex-1 md:justify-evenly gap-y-5">
       @for(m of merchs; track m ){
-      <div class="bg-black rounded-lg p-4 max-w-80 md:min-h-[500px] flex flex-col justify-evenly">
+      <float class="md:max-w-[600px] flex flex-col justify-evenly">
         <h3 class="uppercase text-2xl font-bold text-center pb-4">
           {{ m.nombre }}
         </h3>
@@ -28,12 +30,11 @@ import Merch from './merch.interface';
           <a class="font-bold text-sm">PRECIO:</a>
           <p class="text-green-400 text-3xl">{{ m.precio }}$</p>
         </div>
-      </div>
+      </float>
       }
     </div>
   `,
-  standalone: true,
-  imports: [],
+  standalone: true
 })
 export class CardCharacterComponent {
   @Input() titulo: string = '';

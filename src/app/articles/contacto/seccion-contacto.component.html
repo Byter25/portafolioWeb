@@ -1,10 +1,12 @@
-<form name="contacto" class="flex flex-col gap-4 p-5 md:min-w-[600px]   bg-slate-950" method="post"
-  action="https://formspree.io/f/mrgwprdj ">
-  <h2 class="uppercase font-bold text-4xl my-2 text-center">CONTACTAME</h2>
-  <input type="text" id="nom" name="NOMBRE" placeholder="Nombre completo" class="py-2 px-4 rounded-md bg-gray-800" />
-  <input type="email" name="CORREO" placeholder="ejemplo@gmail.com" name="correo" id="correo"
-    class="py-2 px-4 rounded-md bg-gray-800 " />
+<form name="contacto"
+  class="flex flex-col gap-4 p-5 md:min-w-[600px]   dark:bg-slate-950 rounded-lg shadow-md hover:shadow-red-600 transition-all duration-300 ease-in-out"
+  method="post" action="https://formspree.io/f/mrgwprdj ">
+  <h2 class="uppercase font-bold text-4xl my-2 text-center tracking-widest">CONTACTAME</h2>
+  <input type="text" id="nom" name="NOMBRE" placeholder="Nombre completo" />
+  <input type="email" name="CORREO" placeholder="ejemplo@gmail.com" name="correo" id="correo" />
   <textarea name="mensaje" placeholder="Escribe tu mensaje"
-    class="py-2 px-4 rounded-md resize-y min-h-32 h-full bg-gray-800 caret-red-700"></textarea>
-  <button class="py-2 px-4  bg-red-700 rounded-md uppercase font-bold" type="submit">Enviar</button>
+    class="resize-y min-h-32 h-full dark:bg-gray-800 caret-red-700"></textarea>
+  <button
+    class="py-2 px-4  bg-red-600  shadow-md hover:shadow-black rounded-md uppercase font-bold text-white transition-all duration-300 active:bg-red-700 ease-in-out"
+    type="submit">Enviar</button>
 </form>
