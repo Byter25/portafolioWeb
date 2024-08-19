@@ -6,19 +6,30 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [NgClass],
   template: `
-<div class="flex items-center">
-  <input type="checkbox" id="darkModeToggle" (change)="toggleDarkMode($event)" [checked]="isDarkMode" class="toggle-checkbox">
-  <label for="darkModeToggle" class="ml-2 cursor-pointer">
-    <span class="material-icons" [ngClass]="{ 'text-yellow-300': isDarkMode, 'text-gray-800': !isDarkMode }">
-      {{ isDarkMode ? 'dark_mode' : 'light_mode' }}
-    </span>
-  </label>
-</div>
+    <div class="flex items-center w-fit">
+      <input
+        type="checkbox"
+        id="darkModeToggle"
+        (change)="toggleDarkMode($event)"
+        [checked]="isDarkMode"
+        class="hidden"
+      />
+      <label for="darkModeToggle" class="cursor-pointer text-center flex items-center">
+        <span
+          class="material-icons"
+          [ngClass]="{
+            'text-white': isDarkMode,
+            'text-black': !isDarkMode
+          }"
+        >
+          {{ isDarkMode ? 'dark_mode' : 'light_mode' }}
+        </span>
+      </label>
+    </div>
   `,
   styles: ``,
 })
 export class ModeDarkComponent {
-
   isDarkMode = false;
 
   ngOnInit() {

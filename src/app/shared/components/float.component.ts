@@ -7,7 +7,7 @@ import { MenuTopComponent } from './navbar/menu-top.component';
   imports: [EscribirMaquinaComponent, MenuTopComponent],
   template: `
     <aside
-      class="relative p-2 flex flex-col items-center justify-evenly rounded-md  hover:scale-105 transition-all duration-300 ease-in-out h-full w-full overflow-hidden"
+      class="relative p-2 flex flex-col items-center justify-evenly rounded-md  hover:scale-105 transition-all duration-300 ease-in-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600"
     >
       <div></div>
       <div></div>

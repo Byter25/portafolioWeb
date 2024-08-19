@@ -6,8 +6,29 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  @apply bg-inherit
 }
 
-body {
-  heigth: 100%;
+li,i,a,span{
+  @apply bg-transparent;
+}
+
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 6px; /* Ancho de la barra */
+}
+
+/* Color del fondo del scroll */
+::-webkit-scrollbar-track {
+  background: inherit; /* Fondo del área de la barra de desplazamiento */
+}
+
+/* Color del 'thumb', la parte que se desplaza */
+::-webkit-scrollbar-thumb {
+  @apply bg-red-600 rounded-lg
+}
+
+/* Color al pasar el cursor */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-red-800
 }

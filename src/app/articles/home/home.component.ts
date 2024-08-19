@@ -14,11 +14,11 @@ import { FloatComponent } from '@shared/components/float.component';
 })
 export class HomeComponent {
   tecnicas: Progreso[] = [
-    { nombre: 'html-css', progreso: 82, max: 100, color: '' },
-    { nombre: 'javascript', progreso: 70, max: 100, color: '' },
-    { nombre: 'python', progreso: 76, max: 100, color: '' },
-    { nombre: 'java', progreso: 63, max: 100, color: '' },
-    { nombre: 'sql', progreso: 72, max: 100, color: '' },
+    { nombre: 'frontend', progreso: 82, max: 100, color: '' },
+    { nombre: 'backend', progreso: 65, max: 100, color: '' },
+    { nombre: 'base de datos', progreso: 76, max: 100, color: '' },
+    { nombre: 'app moviles', progreso: 50, max: 100, color: '' },
+    { nombre: 'app escritorio', progreso: 60, max: 100, color: '' },
   ];
 
   profesional: Progreso[] = [
@@ -26,7 +26,6 @@ export class HomeComponent {
     { nombre: 'adaptabilidad', progreso: 91, max: 100, color: '' },
     { nombre: 'pensamiento analitico', progreso: 89, max: 100, color: '' },
     { nombre: 'empatia', progreso: 90, max: 100, color: '' },
-    { nombre: 'a', progreso: 60, max: 100, color: '' },
   ];
 
   tecnologias: IconCard[] = [

@@ -1,39 +1,31 @@
 <!--CONTENEDOR DEL MENU DE NAVEGACION-->
-<header class="sticky top-0  px-4 py-2 flex justify-between items-center transition-all">
-  <nav class="md:w-1/3">
-    @if (anchoPantalla > 720) {
-      <menu-top [listaNav]="navList"></menu-top>
-      } @else {
-      <menu-right [listaNav]="navList"></menu-right>
-      }
+<header
+  class="sticky top-0 px-4 py-2 flex justify-between items-center transition-all bg-inherit"
+>
+  <nav class="xl:w-1/3">
+    @if (anchoPantalla > 768) {
+    <menu-top [listaNav]="navList"></menu-top>
+    } @else {
+    <menu-right [listaNav]="navList" class="flex flex-wrap w-full">
+      <social-icons
+        [socialIcons]="faIcons"
+        [showNombre]="false"
+        class="p-2"
+      ></social-icons>
+    </menu-right>
+    }
   </nav>
-  <h1 class="text-red-600 dark:text-white text-2xl md:text-4xl font-bold tracking-wide">BYTERDEV</h1>
-  <ul class="hidden lg:flex w-1/3 gap-3 px-2 justify-end ">
-    <li>
-      <border-icon link="https://www.facebook.com/Byter25" color="#0165E1">
-        <i class="fab fa-facebook-f"></i>
-      </border-icon>
-    </li>
-    <li>
-      <border-icon link="https://github.com/Byter25" color="#333">
-        <i class="fab fa-github"></i>
-      </border-icon>
-    </li>
-    <li>
-      <border-icon link="https://discord.gg/bqpf664AfF" color="#7289da">
-        <i class="fab fa-discord"></i>
-      </border-icon>
-    </li>
-    <li>
-      <border-icon link="https://www.linkedin.com/in/bryan-alexander-chacaliaza-saavedra-217810256" color="#0073B1">
-        <i class="fab fa-linkedin-in"></i>
-      </border-icon>
-    </li>
-    <li>
-      <border-icon link="https://youtube.com/@byter25xd?si=IKCfsTR__SH6eAic" color="#ff0000">
-        <i class="fab fa-youtube"></i>
-      </border-icon>
-    </li>
-  </ul>
-  <mode-dark></mode-dark>
+  <h1
+    class="text-red-600 dark:text-white text-2xl md:text-4xl font-bold tracking-wide"
+  >
+    BYTERDEV
+  </h1>
+  <div class="flex gap-4 lg:w-1/3 justify-end items-center">
+    <social-icons
+      [socialIcons]="faIcons"
+      [showNombre]="false"
+      class="hidden lg:block"
+    ></social-icons>
+    <mode-dark></mode-dark>
+  </div>
 </header>

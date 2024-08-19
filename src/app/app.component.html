@@ -1,7 +1,11 @@
-<app-navbar class="sticky top-0 shadow-md shadow-gray-300 dark:bg-slate-950 dark:shadow-gray-900"></app-navbar>
-<main class="flex-1 flex items-center justify-center">
-  <router-outlet/>
+<app-navbar
+  class="sticky top-0 shadow-md shadow-gray-300 bg-inherit dark:shadow-gray-800 z-50"
+></app-navbar>
+<main class="flex-1 flex items-center justify-center z-20 p-4">
+  <router-outlet />
 </main>
-<footer class="flex justify-around items-center p-4 bg-black max-h-10">
+<footer
+  class="flex justify-around items-center p-4 shadow-md shadow-gray-500 dark:shadow-gray-500 max-h-10"
+>
   <p>Derechos de autor y diseño de {{ "@ByterDev" }}</p>
 </footer>
