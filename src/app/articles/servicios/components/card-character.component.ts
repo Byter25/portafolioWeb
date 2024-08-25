@@ -6,10 +6,12 @@ import { FloatComponent } from '@shared/components/float.component';
   selector: 'card-character',
   imports: [FloatComponent],
   template: `
-    <h2 class="text-center p-4 text-3xl uppercase font-bold tracking-widest">{{ titulo }}</h2>
-    <div class="flex flex-col gap-5 md:flex-row  flex-1 md:justify-evenly gap-y-5">
+    <h2 class="text-center p-4 text-3xl uppercase font-bold tracking-widest">
+      {{ titulo }}
+    </h2>
+    <div class="grid grid-cols-responsive gap-5">
       @for(m of merchs; track m ){
-      <float class="md:max-w-[600px] flex flex-col justify-evenly">
+      <float class="grid grid-rows-subgrid">
         <h3 class="uppercase text-2xl font-bold text-center pb-4">
           {{ m.nombre }}
         </h3>
@@ -24,9 +26,7 @@ import { FloatComponent } from '@shared/components/float.component';
           </li>
           }
         </ul>
-        <div
-          class="bottom-0 flex flex-col justify-center items-center p-2"
-        >
+        <div class="bottom-0 flex flex-col justify-center items-center p-2">
           <a class="font-bold text-sm">PRECIO:</a>
           <p class="text-green-400 text-3xl">{{ m.precio }}$</p>
         </div>
@@ -34,7 +34,7 @@ import { FloatComponent } from '@shared/components/float.component';
       }
     </div>
   `,
-  standalone: true
+  standalone: true,
 })
 export class CardCharacterComponent {
   @Input() titulo: string = '';

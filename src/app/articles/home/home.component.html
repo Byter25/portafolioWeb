@@ -1,17 +1,17 @@
-<section class="relative flex flex-col  md:grid md:grid-cols-2 lg:auto-cols-auto gap-3 gap-y-4">
+<section class="relative grid gap-5 p-2 m-auto max-w-screen-2xl grid-cols-responsive">
   <card-profile />
-  <float class="col-start-1">
-    <a class="rounded-md bg-red-700 flex py-2 px-4  justify-center items-center gap-3  uppercase shadow-md shadow-black "
-      download="cv-Bryan-Chacaliaza-Saavedra" href="../../assets/CV-Bryan-Chacaliaza.pdf">
+  <float class="text-white lg:col-start-1">
+    <a class="flex items-center justify-center gap-3 px-4 py-2 uppercase bg-red-600 rounded-md shadow-md shadow-black"
+     [routerLink]="['/certificates']">
+    Descargar CV <i class="fa-sharp fa-solid fa-download"></i>
+  </a>
+    <a class="flex items-center justify-center gap-3 px-4 py-2 uppercase bg-red-600 rounded-md shadow-md shadow-black "
+      download="cv-Bryan-Chacaliaza-Saavedra" href="assets/CV-Bryan-Chacaliaza.pdf">
       Descargar CV <i class="fa-sharp fa-solid fa-download"></i>
     </a>
-    <!-- <a class="rounded-md bg-red-700 flex py-2 px-4  justify-center items-center gap-3  uppercase shadow-md shadow-black"
-      download="cv-Bryan-Chacaliaza-Saavedra" href="../../assets/CV-Bryan-Chacaliaza.pdf">
-      Descargar CV <i class="fa-sharp fa-solid fa-download"></i>
-    </a> -->
   </float>
-  <process-bar class="row-start-1 col-start-2" nombre="tecnicas" [progresos]="tecnicas" />
-  <process-bar class="row-start-1 col-start-3" nombre="profecional" [progresos]="profesional" />
-  <icon-card class="col-start-2 " nombre="tecnologias" [iconCard]="tecnologias" />
-  <icon-card class="col-start-3" nombre="intereses" [iconCard]="intereses" />
+  <process-bar class="lg:col-start-2 lg:row-start-1" nombre="tecnicas" [progresos]="tecnicas" />
+  <process-bar class="lg:col-start-3 lg:row-start-1" nombre="profecional" [progresos]="profesional" />
+  <icon-card class="lg:col-start-2 " nombre="tecnologias" [iconCard]="tecnologias" />
+  <icon-card class="lg:col-start-3" nombre="intereses" [iconCard]="intereses" />
 </section>

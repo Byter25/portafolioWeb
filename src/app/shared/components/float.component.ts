@@ -6,9 +6,7 @@ import { MenuTopComponent } from './navbar/menu-top.component';
   standalone: true,
   imports: [EscribirMaquinaComponent, MenuTopComponent],
   template: `
-    <aside
-      class="relative p-5 flex flex-col items-center justify-evenly rounded-md  hover:scale-105 transition-all duration-300 ease-in-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600"
-    >
+    <aside class="relative p-3 flex flex-col items-center justify-around rounded-md  hover:scale-105 transition-all duration-300 ease-in-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600">
       <div></div>
       <div></div>
       <div></div>
@@ -90,4 +88,4 @@ import { MenuTopComponent } from './navbar/menu-top.component';
   }
   `,
 })
-export class FloatComponent {}
+export class FloatComponent { }

@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { FloatComponent } from '@shared/components/float.component';
-import { EscribirMaquinaComponent } from 'src/app/shared/components/escribirMaquina.component';
+import { EscribirMaquinaComponent } from '@shared/components/escribirMaquina.component';
+
 @Component({
   selector: 'card-profile',
   template: `
-    <float
-    >
+    <float class="">
       <img
-        class="aspect-square rounded-full object-cover h-32 md:h-40"
-        src="https://rare-gallery.com/livewalls/imgpreview/142263-naruto-lofi-live-wallpaper.jpg"
+        class="aspect-square rounded-full object-cover w-[150px] border-4 border-gray-800"
+        src="assets/perfil.webp"
         alt="perfil"
       />
-      <div>
+      <div class="flex flex-col justify-center items-center">
         <p class="text-gray-600">{{ '@ByterDev' }}</p>
         <p class="capitalize">Bryan Saavedra</p>
         <p class="text-gray-600">20 años</p>
@@ -23,13 +23,14 @@ import { EscribirMaquinaComponent } from 'src/app/shared/components/escribirMaqu
         <escribir-maquina
           [text]="'Desarrolador'"
           [textos]="textos"
-          class="capitalize"
+          class="capitalize text-center"
         ></escribir-maquina>
       </div>
     </float>
   `,
+  styles: ``,
   standalone: true,
-  imports: [EscribirMaquinaComponent ,FloatComponent],
+  imports: [EscribirMaquinaComponent, FloatComponent],
 })
 export class CardProfileComponent {
   textos: string[] = [
@@ -40,4 +41,10 @@ export class CardProfileComponent {
     'Goku God',
     'Que la fuerza te acompañe',
   ];
+
+  isOpen = false;
+
+  toggle() {
+    this.isOpen = !this.isOpen;
+  }
 }

@@ -12,8 +12,8 @@ import { FloatComponent } from '@shared/components/float.component';
   imports: [FloatComponent],
   template: `
     <float class="font-bold uppercase">
-      <h3 class="text-2xl text-center p-3 uppercase tracking-widest">{{ nombre }}</h3>
-      <div class="flex flex-1 flex-col gap-y-4 justify-evenly">
+      <h3 class="text-2xl text-center p-2 uppercase tracking-widest">{{ nombre }}</h3>
+      <div class="flex flex-1 flex-col gap-y-6 md:justify-evenly">
         @for(sec of progresos;track sec){
         <div class="flex flex-col w-full relative items-center justify-center">
           <span class="absolute text-white ">{{ sec.nombre }}</span>
@@ -29,7 +29,7 @@ import { FloatComponent } from '@shared/components/float.component';
   `,
   styles: `
   progress {
-    @apply w-[300px] h-9
+    @apply min-w-[250px] h-9
 }
 
 progress::-webkit-progress-bar {

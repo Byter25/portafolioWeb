@@ -24,7 +24,7 @@ import { Links } from './link.interface';
           height: 'var(--height)'
         }"
       ></div>
-      <ul class="sticky flex  items-center uppercase font-bold tracking-widest bg-transparent">
+      <ul class="sticky flex items-center uppercase font-bold tracking-widest bg-transparent">
         @for(nav of listaNav;track nav){
         <li
           class="py-2 px-4 hover:text-red-600 transition-all"

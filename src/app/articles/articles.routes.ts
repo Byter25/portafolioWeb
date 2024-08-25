@@ -15,7 +15,7 @@ export const ARTICLES_ROUTES: Routes = [
     loadChildren: () =>
       import('./proyectos/proyectos.routes').then((n) => n.PROYECTOS_ROUTES),
   },
-  { path: 'certify', component: CertificadosComponent },
+  { path: 'certificates', component: CertificadosComponent },
   { path: 'contact', component: ContactoComponent },
   { path: 'about', component: SobreMiComponent},
   { path: 'privacity', component: HomeComponent },

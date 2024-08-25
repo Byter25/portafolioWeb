@@ -6,7 +6,7 @@ import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
   imports: [NgStyle],
   template: `
     <!--ESCRITURA AUTOMATICA-->
-    <div [ngStyle]="{ width: longitudNomLargo + 5 + 'ch' }">
+    <div [ngStyle]="{ width: longitudNomLargo + 'ch' }">
       <p>{{ text.substring(0, index) }}<span class="animate-ping">|</span></p>
     </div>
   `,

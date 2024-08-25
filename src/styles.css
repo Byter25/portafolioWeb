@@ -8,7 +8,6 @@
   text-decoration: none;
   @apply bg-inherit
 }
-
 li,i,a,span{
   @apply bg-transparent;
 }

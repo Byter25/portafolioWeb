@@ -1,27 +1,22 @@
 {
-  "cSpell.words": [
-    "Byter",
-    "Saavedra",
-    "seccion"
-  ],
-  "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#ff0121",
-    "activityBar.background": "#ff0121",
-    "activityBar.foreground": "#e7e7e7",
-    "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#1cdf00",
-    "activityBarBadge.foreground": "#15202b",
-    "commandCenter.border": "#e7e7e799",
-    "sash.hoverBorder": "#ff0121",
-    "statusBar.background": "#cd001a",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#ff0121",
-    "statusBarItem.remoteBackground": "#cd001a",
-    "statusBarItem.remoteForeground": "#e7e7e7",
-    "titleBar.activeBackground": "#cd001a",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#cd001a99",
-    "titleBar.inactiveForeground": "#e7e7e799"
-  },
-  "peacock.color": "#CD001A"
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#353535",
+        "activityBar.foreground": "#ffffff",
+        "activityBar.inactiveForeground": "#ffffff99",
+        "activityBarBadge.background": "#ff0000",
+        "activityBarBadge.foreground": "#ffffff",
+        "commandCenter.border": "#ff000099",
+        "sash.hoverBorder": "#ff0121",
+        "statusBar.background": "#cd001a",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#ff0121",
+        "statusBarItem.remoteBackground": "#cd001a",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeForeground": "#ffffff",
+        "titleBar.inactiveBackground": "#cd001a99",
+        "titleBar.inactiveForeground": "#e7e7e799",
+        "terminal.background": "#00000000",
+        "minimap.background": "#00000000",
+        "scrollbar.shadow": "#00000000"
+    }
 }

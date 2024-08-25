@@ -5,12 +5,13 @@ import { IconCardComponent } from './components/icon-card.component';
 import { Progreso } from './progreso.interface';
 import { ProgressBarComponent } from './components/process-bar.component';
 import { FloatComponent } from '@shared/components/float.component';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styles: ``,
   standalone: true,
-  imports: [CardProfileComponent, IconCardComponent, ProgressBarComponent, FloatComponent],
+  imports: [CardProfileComponent, IconCardComponent, ProgressBarComponent, FloatComponent, RouterLink],
 })
 export class HomeComponent {
   tecnicas: Progreso[] = [

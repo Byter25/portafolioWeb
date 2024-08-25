@@ -4,6 +4,7 @@ import { MenuTopComponent } from './menu-top.component';
 import { MenuRightComponent } from './menu-right.component';
 import { Links } from './link.interface';
 import { ModeDarkComponent } from './mode-dark.component';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
