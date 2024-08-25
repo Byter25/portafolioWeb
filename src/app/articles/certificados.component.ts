@@ -9,18 +9,17 @@ import {
   imports: [NgbCarouselModule],
   providers: [NgbCarouselConfig],
   template: `
-    <div class="h-screen lg:h-[745px] flex flex-col ">
-      <h2 class="text-2xl uppercase text-center">certificados</h2>
-
-      <ngb-carousel>
+    <div class="flex flex-col justify-center items-center gap-3">
+      <h1 class="text-2xl uppercase font-bold tracking-widest">certificados</h1>
+      <ngb-carousel class="bg-transparent py-0 p-5" >
         @for(c of certificados; track c){
-        <ng-template ngbSlide>
+        <ng-template ngbSlide >
           <div
-            class="picsum-img-wrapper w-full flex items-center justify-center"
+            class="picsum-img-wrapper flex items-center justify-center"
           >
             <img
               src="{{ c.url }}"
-              class="w-full md:h-[500px] md:w-fit object-cover object-center p-5 mb-5"
+              class=" md:h-[400px] md:w-fit object-cover object-center pt-0  p-5 mb-5"
             />
           </div>
           <div class="carousel-caption">
