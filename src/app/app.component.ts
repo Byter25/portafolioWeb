@@ -53,7 +53,7 @@ export class AppComponent{
         if (title) {
           this.titleService.setTitle(title); // Cambia el título
         } else {
-          this.titleService.setTitle('Mi Aplicación Angular'); // Título por defecto
+          this.titleService.setTitle('ByterDev'); // Título por defecto
         }
       });
   }
