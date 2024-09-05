@@ -9,7 +9,8 @@ import {
   imports: [NgbCarouselModule],
   providers: [NgbCarouselConfig],
   template: `
-    <div class="flex flex-col justify-center items-center gap-3">
+  <section>
+  <div class="flex flex-col justify-center items-center gap-3">
       <h1 class="text-2xl uppercase font-bold tracking-widest">certificados</h1>
       <ngb-carousel class="bg-transparent py-0 p-5" >
         @for(c of certificados; track c){
@@ -30,6 +31,7 @@ import {
         }
       </ngb-carousel>
     </div>
+  </section>
   `,
   styles: ``,
   standalone: true,
