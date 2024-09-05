@@ -5,7 +5,7 @@ import { ContactoComponent } from './contacto/seccion-contacto.component';
 import { CertificadosComponent } from './certificados.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
-import { Title } from '@angular/platform-browser';
+
 
 export const ARTICLES_ROUTES: Routes = [
   { path: '', component: HomeComponent },
