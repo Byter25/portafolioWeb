@@ -33,7 +33,7 @@ import { FloatComponent } from '@shared/components/float.component';
 }
 
 progress::-webkit-progress-bar {
-  @apply rounded-lg bg-gray-100 black:bg-gray-800
+  @apply rounded-lg bg-gray-100 dark:bg-gray-800;
 }
 
 progress::-webkit-progress-value {
