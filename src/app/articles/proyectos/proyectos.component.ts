@@ -5,8 +5,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   selector: 'page-proyectos',
   imports:[RouterLink, RouterOutlet],
   template: `
-      <p class="text-2xl font-bold p-2 w-full text-center pb-5">Proyectos</p>
-      <div class="flex flex-col md:flex-row gap-5 h-screen">
+      <p class=" text-4xl font-bold p-2 w-full text-center pb-5 uppercase">Proyectos</p>
+      <div class="flex flex-1 flex-col md:flex-row gap-5">
         <ul class="flex flex-col gap-3">
         <li>
             <a routerLink="binaryTraductor">binaryTraductor</a>
@@ -18,7 +18,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             <a routerLink="tasklist">to do web</a>
           </li>
         </ul>
-        <div class="flex-1">
+        <div class="flex-1 ">
           <router-outlet/>
         </div>
       </div>

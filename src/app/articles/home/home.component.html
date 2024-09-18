@@ -1,17 +1,27 @@
 <section class="relative grid gap-5 p-2 m-auto max-w-screen-2xl grid-cols-responsive">
   <card-profile />
-  <float class="gap-4 font-bold text-white lg:col-start-1 ">
-    <a class="flex items-center justify-center gap-3 px-4 py-2 uppercase transition-all duration-300 ease-in-out bg-red-600 rounded-md shadow-md hover:bg-red-500 active:bg-red-700 shadow-black"
-     [routerLink]="['/certificates']">
-    Ver Cerficados<i class="fa fa-solid fa-file-alt"></i>
-  </a>
-    <a class="flex items-center justify-center gap-3 px-4 py-2 uppercase transition-all duration-300 ease-in-out bg-red-600 rounded-md shadow-md hover:bg-red-500 active:bg-red-700 shadow-black"
+  <float class="gap-10 font-bold text-white lg:col-start-1">
+    <aside class="flex flex-col items-center justify-center w-full h-full gap-3">
+      <a class="flex items-center w-1/2 py-2 uppercase transition-all duration-300 ease-in-out bg-red-600 rounded-md shadow-md justify-evenly hover:bg-red-500 active:bg-red-700 shadow-black"
+      [routerLink]="['/certificates']">
+      Cerficados<i class="fa fa-solid fa-file-alt"></i>
+    </a>
+    <a class="flex items-center w-1/2 py-2 uppercase transition-all duration-300 ease-in-out bg-red-600 rounded-md shadow-md justify-evenly hover:bg-red-500 active:bg-red-700 shadow-black"
+    [routerLink]="['/proyects']">
+      Proyectos <i class="fas fa-folder"></i>
+    </a>
+    <a class="flex items-center w-1/2 py-2 uppercase transition-all duration-300 ease-in-out bg-red-600 rounded-md shadow-md justify-evenly hover:bg-red-500 active:bg-red-700 shadow-black"
       download="cv-Bryan-Chacaliaza-Saavedra" href="assets/CV-Bryan-Chacaliaza.pdf">
       Descargar CV <i class="fa-sharp fa-solid fa-download"></i>
     </a>
+    <a class="flex items-center w-1/2 py-2 uppercase transition-all duration-300 ease-in-out bg-red-600 rounded-md shadow-md justify-evenly hover:bg-red-500 active:bg-red-700 shadow-black"
+    [routerLink]="['/stream']">
+      Streams <i class="fas fa-folder"></i>
+    </a>
+    </aside>
   </float>
   <process-bar class="lg:col-start-2 lg:row-start-1" nombre="tecnicas" [progresos]="tecnicas" />
-  <process-bar class="lg:col-start-3 lg:row-start-1" nombre="profecional" [progresos]="profesional" />
+  <process-bar class="lg:col-start-3 lg:row-start-1" nombre="profesional" [progresos]="profesional" />
   <icon-card class="lg:col-start-2 " nombre="tecnologias" [iconCard]="tecnologias" />
   <icon-card class="lg:col-start-3" nombre="intereses" [iconCard]="intereses" />
 </section>
