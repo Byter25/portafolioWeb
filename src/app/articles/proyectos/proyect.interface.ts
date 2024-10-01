@@ -3,5 +3,8 @@ export interface Proyect{
   name:string
   img:string
   descripcion:string
-  idFrameworks:number
+  idTipo:number
+  idFrameworks:number[]
+  repositorioGit:string
+  url:string
 }

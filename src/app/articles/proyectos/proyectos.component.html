@@ -1,5 +1,5 @@
 <div class="container mx-auto p-4">
-  <h1 class="text-xl font-bold mb-4">Selecciona Frameworks</h1>
+  <h1 class="text-xl font-bold mb-4">Frameworks</h1>
 
   <nav class="flex flex-wrap mb-6 p-4 bg-gray-100 dark:bg-gray-800 rounded-md shadow-md">
     @for(framework of frameworks; track framework.id) {
@@ -21,7 +21,7 @@
   </nav>
 
 
-  <h2 class="mt-4 text-lg font-semibold">Lenguajes Correspondientes:</h2>
+  <h2 class="mt-4 text-lg font-semibold">Lenguajes:</h2>
   <ul class="flex flex-wrap list-disc pl-5">
     @for(lenguaje of lenguajes; track lenguaje.id) {
       <li class="flex items-center mr-6 mt-2"
@@ -32,10 +32,11 @@
     }
   </ul>
   <h2 class="mt-4 text-lg font-semibold">Proyectos</h2>
-  <ul>
-    proximo
+  <ul class="flex gap-5 mr-6 pl-5">
+    @for(p of proyectos; track p.id){
+      <card-proyect [dataP]="p" [frameworks]="frameworks" [lenguajes]="lenguajes"/>
+    }
   </ul>
-
 </div>
 
 
