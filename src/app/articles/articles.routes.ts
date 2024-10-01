@@ -22,5 +22,5 @@ export const ARTICLES_ROUTES: Routes = [
   { path: 'about', component: SobreMiComponent, data: {title: 'ByterDev/AcercaDe'}},
   { path: 'cookies', component: HomeComponent, data: {title: 'ByterDev'} },
   { path: 'privacity', component: HomeComponent, data: {title: 'ByterDev'} },
-  { path: 'stream', component: StreamComponent, data: {title: 'ByterDev/streams'} },
+  { path: 'stream', component: StreamComponent, data: {title: 'ByterDev/stream'} },
 ];
