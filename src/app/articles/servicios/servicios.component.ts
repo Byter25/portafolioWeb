@@ -20,7 +20,7 @@ export class ServiciosComponent {
         'Incluye formularios y botones de acción.',
         'Enfocado en convertir visitantes en leads o ventas.',
       ],
-      precio: 500,
+      precio: [100,500],
     },
     {
       nombre: 'Blog',
@@ -32,7 +32,7 @@ export class ServiciosComponent {
         'Elementos como títulos, resúmenes y botones para compartir.',
         'Enfocado en generar tráfico y participación.',
       ],
-      precio: 1000,
+      precio: [500,1500],
     },
     {
       nombre: 'E-commerce',
@@ -43,7 +43,7 @@ export class ServiciosComponent {
         'Elementos como imágenes, descripciones y opciones de pago.',
         'Enfocado en convertir visitantes en compradores.',
       ],
-      precio: 2000,
+      precio: [1000,2500],
     },
   ];
 }

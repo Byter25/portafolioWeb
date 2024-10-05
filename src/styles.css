@@ -3,10 +3,8 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
   text-decoration: none;
-  @apply bg-inherit
+  @apply bg-inherit p-0 m-0
 }
 li,i,a,span{
   @apply bg-transparent;

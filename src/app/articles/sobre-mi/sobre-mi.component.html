@@ -1,29 +1,71 @@
-<section class="flex flex-col md:flex-row justify-evenly gap-5">
-  <div class="md:w-1/3 shadow-md p-5 dark:shadow-black">
+<section class=" md:grid md:grid-cols-3 gap-5">
+  <div class="shadow-md p-5 dark:shadow-black col-span-2 dark:bg-zinc-900">
     <h2 class="uppercase text-3xl font-bold py-2">Sobre mi</h2>
-    <p>Soy estudiante de Ingeniería de Software y actualmente estoy en búsqueda de una empresa donde pueda realizar mis prácticas profesionales. Cuento con casi 3 años de experiencia en programación, durante los cuales he trabajado en proyectos propios y adquirido sólidos conocimientos en desarrollo web fullstack, aplicaciones de escritorio y gestión de bases de datos. Estoy entusiasmado por aplicar mis habilidades y aprender aún más en un entorno profesional.</p>
+    <p>
+      Soy estudiante de Ingeniería de Software y actualmente estoy en búsqueda
+      de una empresa donde pueda realizar mis prácticas profesionales. Cuento
+      con casi 3 años de experiencia en programación, durante los cuales he
+      trabajado en proyectos propios y adquirido sólidos conocimientos en
+      desarrollo web fullstack, aplicaciones de escritorio y gestión de bases de
+      datos. Estoy entusiasmado por aplicar mis habilidades y aprender aún más
+      en un entorno profesional.
+    </p>
   </div>
-  <ul class="flex flex-col md:w-1/3 shadow-md p-5 dark:shadow-black">
+  <ul class="flex flex-col  shadow-md p-5 dark:shadow-black dark:bg-zinc-900">
     <h2 class="uppercase text-3xl font-bold py-2">Donaciones</h2>
     <li>
       <donaciones [imageUrl]="'assets/DBZ4.webp'">
-        <p class="font-bold ">Epa, ¡donenme para el Budokai Tenkaichi!</p>
-        <form action="https://www.paypal.com/donate" method="post" target="_top">
+        <p class="font-bold">Epa, ¡donenme para el Budokai Tenkaichi!</p>
+        <form
+          action="https://www.paypal.com/donate"
+          method="post"
+          target="_top"
+        >
           <input type="hidden" name="campaign_id" value="YG5B7PKR68GHW" />
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
-            name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+          <input
+            type="image"
+            src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+            border="0"
+            name="submit"
+            title="PayPal - The safer, easier way to pay online!"
+            alt="Donate with PayPal button"
+          />
+          <img
+            alt=""
+            border="0"
+            src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+            width="1"
+            height="1"
+          />
         </form>
       </donaciones>
     </li>
-    <li >
+    <li>
       <donaciones [imageUrl]="'assets/pcgamer.webp'" class="flex-1">
-        <p class="font-bold ">Para mi pc gamer, que obviamente usare para programar</p>
-        <form action="https://www.paypal.com/donate" method="post" target="_top">
+        <p class="font-bold">
+          Para mi pc gamer, que obviamente usare para programar
+        </p>
+        <form
+          action="https://www.paypal.com/donate"
+          method="post"
+          target="_top"
+        >
           <input type="hidden" name="campaign_id" value="YG5B7PKR68GHW" />
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
-            name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+          <input
+            type="image"
+            src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+            border="0"
+            name="submit"
+            title="PayPal - The safer, easier way to pay online!"
+            alt="Donate with PayPal button"
+          />
+          <img
+            alt=""
+            border="0"
+            src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+            width="1"
+            height="1"
+          />
         </form>
       </donaciones>
     </li>

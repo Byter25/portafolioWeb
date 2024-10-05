@@ -3,11 +3,12 @@ import { RouterLink } from '@angular/router';
 import { environment } from '@envs/environment.development';
 import { PaypalService } from '@services/paypal.service';
 import { DonacionesComponent } from './donaciones.component';
+import { FloatComponent } from '@shared/components/float.component';
 
 @Component({
   selector: 'app-sobre-mi',
   standalone: true,
-  imports: [RouterLink,DonacionesComponent],
+  imports: [RouterLink,DonacionesComponent, FloatComponent],
   templateUrl: './sobre-mi.component.html',
   styles: ``,
 })

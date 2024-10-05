@@ -9,7 +9,7 @@ import { FloatComponent } from '@shared/components/float.component';
     <h2 class="text-center p-4 text-3xl uppercase font-bold tracking-widest">
       {{ titulo }}
     </h2>
-    <div class="grid grid-cols-responsive gap-5">
+    <div class="grid grid-cols-responsive gap-5 ">
       @for(m of merchs; track m ){
       <float class="grid grid-rows-subgrid">
         <h3 class="uppercase text-2xl font-bold text-center pb-4">
@@ -28,7 +28,7 @@ import { FloatComponent } from '@shared/components/float.component';
         </ul>
         <div class="bottom-0 flex flex-col justify-center items-center p-2">
           <a class="font-bold text-sm">PRECIO:</a>
-          <p class="text-green-400 text-3xl">{{ m.precio }}$</p>
+          <p class="text-green-400 text-3xl">{{ m.precio[0] }}$ - {{ m.precio[1] }}$</p>
         </div>
       </float>
       }

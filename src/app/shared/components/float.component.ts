@@ -17,7 +17,7 @@ import { MenuTopComponent } from './navbar/menu-top.component';
   styles: `
   aside div:nth-child(1){
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     top: 0;
     left: 0;
     width:100%;
@@ -27,7 +27,7 @@ import { MenuTopComponent } from './navbar/menu-top.component';
   }
   aside div:nth-child(2){
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     top: 0;
     right: 0;
     width:3px;
@@ -38,7 +38,7 @@ import { MenuTopComponent } from './navbar/menu-top.component';
   }
   aside div:nth-child(3){
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     bottom: 0;
     right: 0;
     width:100%;
@@ -48,7 +48,7 @@ import { MenuTopComponent } from './navbar/menu-top.component';
   }
   aside div:nth-child(4){
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     bottom: 0;
     left: 0;
     width: 3px;

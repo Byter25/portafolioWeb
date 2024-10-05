@@ -11,7 +11,7 @@ import { FloatComponent } from '@shared/components/float.component';
   standalone: true,
   imports: [FloatComponent],
   template: `
-    <float class="font-bold uppercase">
+    <float class="font-bold uppercase ">
       <h3 class="text-2xl text-center p-2 uppercase tracking-widest">{{ nombre }}</h3>
       <div class="flex flex-1 flex-col gap-y-6 md:justify-evenly">
         @for(sec of progresos;track sec){
@@ -33,7 +33,7 @@ import { FloatComponent } from '@shared/components/float.component';
 }
 
 progress::-webkit-progress-bar {
-  @apply rounded-lg bg-gray-100 dark:bg-gray-800;
+  @apply rounded-lg bg-zinc-400 dark:bg-zinc-800;
 }
 
 progress::-webkit-progress-value {
@@ -41,7 +41,7 @@ progress::-webkit-progress-value {
 }
 
 progress::-moz-progress-bar {
-  @apply bg-white/50
+  @apply bg-zinc-400
 }
   `,
 })

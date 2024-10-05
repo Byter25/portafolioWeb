@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   styles: `
   input,textarea{
-    @apply bg-gray-200 dark:bg-gray-800 py-2 px-4 rounded-md
+    @apply bg-zinc-200 dark:bg-zinc-800 py-2 px-4 rounded-md
   }
     `,
   standalone: true,
