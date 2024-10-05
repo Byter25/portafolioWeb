@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink, NgStyle],
   template: `
     <div
-      class="mb-5 aspect-video h-44 bg-cover bg-center rounded-3xl overflow-hidden transition-all duration-e300 text-white shadow-md shadow-black" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')' }"
+      class="mb-5 aspect-video h-36  md:h-44 bg-cover bg-center rounded-3xl overflow-hidden transition-all duration-e300 text-white shadow-md shadow-black" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')' }"
     >
       <!-- Gradiente de fondo y contenido -->
       <div

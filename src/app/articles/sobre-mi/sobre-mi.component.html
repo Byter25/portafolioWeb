@@ -14,7 +14,7 @@
   <ul class="flex flex-col  shadow-md p-5 dark:shadow-black dark:bg-zinc-900">
     <h2 class="uppercase text-3xl font-bold py-2">Donaciones</h2>
     <li>
-      <donaciones [imageUrl]="'assets/DBZ4.webp'">
+      <donaciones [imageUrl]="'assets/DBZ4.webp'" >
         <p class="font-bold">Epa, ¡donenme para el Budokai Tenkaichi!</p>
         <form
           action="https://www.paypal.com/donate"
@@ -68,6 +68,9 @@
           />
         </form>
       </donaciones>
+    </li>
+    <li>
+      <div id="paypal-button-container"></div>
     </li>
   </ul>
 </section>

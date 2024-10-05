@@ -43,7 +43,7 @@ export class ServiciosComponent {
         'Elementos como imágenes, descripciones y opciones de pago.',
         'Enfocado en convertir visitantes en compradores.',
       ],
-      precio: [1000,2500],
+      precio: [1500,2500],
     },
   ];
 }

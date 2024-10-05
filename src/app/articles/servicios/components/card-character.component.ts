@@ -11,7 +11,7 @@ import { FloatComponent } from '@shared/components/float.component';
     </h2>
     <div class="grid grid-cols-responsive gap-5 ">
       @for(m of merchs; track m ){
-      <float class="grid grid-rows-subgrid">
+      <float class="grid grid-rows-subgrid bg-zinc-900">
         <h3 class="uppercase text-2xl font-bold text-center pb-4">
           {{ m.nombre }}
         </h3>
