@@ -8,8 +8,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { Links } from './link.interface';
-import { SocialIcons } from '../social-icons.component';
+import { Links } from '@core/models/link.interface';
 
 @Component({
   selector: 'menu-right',

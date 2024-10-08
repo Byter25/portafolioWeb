@@ -6,7 +6,7 @@
   text-decoration: none;
   @apply bg-inherit p-0 m-0
 }
-li,i,a,span{
+ul,li,i,a,span,p{
   @apply bg-transparent;
 }
 

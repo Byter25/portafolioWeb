@@ -1,5 +1,5 @@
-<section class=" md:grid md:grid-cols-3 gap-5">
-  <div class="shadow-md p-5 dark:shadow-black col-span-2 dark:bg-zinc-900">
+<section class="md:grid md:grid-cols-7 gap-10">
+  <div class="bg-gray-200 dark:shadow-black dark:bg-zinc-900 shadow-md p-6 rounded-lg col-span-5 flex flex-col gap-3">
     <h2 class="uppercase text-3xl font-bold py-2">Sobre mi</h2>
     <p>
       Soy estudiante de Ingeniería de Software y actualmente estoy en búsqueda
@@ -11,11 +11,11 @@
       en un entorno profesional.
     </p>
   </div>
-  <ul class="flex flex-col  shadow-md p-5 dark:shadow-black dark:bg-zinc-900">
-    <h2 class="uppercase text-3xl font-bold py-2">Donaciones</h2>
+  <ul class="bg-gray-200 dark:shadow-black dark:bg-zinc-900 shadow-md p-6 rounded-lg col-start-6 col-span-2 flex flex-col items-center gap-3">
+    <h2 class="uppercase text-3xl font-bold py-2 w-full">Donaciones</h2>
     <li>
-      <donaciones [imageUrl]="'assets/DBZ4.webp'" >
-        <p class="font-bold">Epa, ¡donenme para el Budokai Tenkaichi!</p>
+      <donaciones imageUrl="assets/DBZ4.webp" >
+        <p class="font-bold">Epa, ¡El Sparking Zero!</p>
         <form
           action="https://www.paypal.com/donate"
           method="post"
@@ -25,14 +25,12 @@
           <input
             type="image"
             src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
-            border="0"
             name="submit"
             title="PayPal - The safer, easier way to pay online!"
             alt="Donate with PayPal button"
           />
           <img
             alt=""
-            border="0"
             src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
             width="1"
             height="1"
@@ -41,9 +39,9 @@
       </donaciones>
     </li>
     <li>
-      <donaciones [imageUrl]="'assets/pcgamer.webp'" class="flex-1">
+      <donaciones imageUrl="assets/pcgamer.webp">
         <p class="font-bold">
-          Para mi pc gamer, que obviamente usare para programar
+          Pc gamer pa programar
         </p>
         <form
           action="https://www.paypal.com/donate"

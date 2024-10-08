@@ -4,7 +4,7 @@ import {
   Component,
   Input,
 } from '@angular/core';
-import { Progreso } from '../progreso.interface';
+import { Progreso } from '../../../core/models/progreso.interface';
 import { FloatComponent } from '@shared/components/float.component';
 @Component({
   selector: 'process-bar',
@@ -12,7 +12,9 @@ import { FloatComponent } from '@shared/components/float.component';
   imports: [FloatComponent],
   template: `
     <float class="font-bold uppercase ">
-      <h3 class="text-2xl text-center p-2 uppercase tracking-widest">{{ nombre }}</h3>
+      <h3 class="text-2xl text-center p-2 uppercase tracking-widest">
+        {{ nombre }}
+      </h3>
       <div class="flex flex-1 flex-col gap-y-6 md:justify-evenly">
         @for(sec of progresos;track sec){
         <div class="flex flex-col w-full relative items-center justify-center">

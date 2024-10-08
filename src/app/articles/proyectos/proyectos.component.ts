@@ -1,10 +1,10 @@
-import { Lenguaje } from './lenguaje';
-import { Framework } from './framework';
+import { Lenguaje } from '../../core/models/lenguaje';
+import { Framework } from '../../core/models/framework';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule aquí
 import { NgClass } from '@angular/common';
-import { Proyect } from './proyect.interface';
+import { Proyect } from '../../core/models/proyect.interface';
 import { CardProyectComponent } from './components/card-proyects.component';
 
 @Component({

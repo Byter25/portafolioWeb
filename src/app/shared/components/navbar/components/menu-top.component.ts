@@ -7,7 +7,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { Links } from './link.interface';
+import { Links } from '@core/models/link.interface';
 
 @Component({
   selector: 'menu-top',

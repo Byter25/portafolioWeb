@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { EscribirMaquinaComponent } from './escribirMaquina.component';
-import { MenuTopComponent } from './navbar/menu-top.component';
 @Component({
   selector: 'float',
   standalone: true,
-  imports: [EscribirMaquinaComponent, MenuTopComponent],
+  imports: [EscribirMaquinaComponent],
   template: `
-    <aside class="relative p-3 flex flex-col items-center justify-around rounded-md  hover:scale-105 transition-all duration-300 ease-in-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600">
+    <aside class="relative p-3 flex flex-col items-center justify-around rounded-md  hover:scale-105 transition-all duration-300 ease-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600">
       <div></div>
       <div></div>
       <div></div>

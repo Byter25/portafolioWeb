@@ -11,14 +11,14 @@ import { FloatComponent } from '@shared/components/float.component';
     </h2>
     <div class="grid grid-cols-responsive gap-5 ">
       @for(m of merchs; track m ){
-      <float class="grid grid-rows-subgrid bg-zinc-900">
+      <float class="bg-gray-100 hover:bg-gray-200 dark:bg-zinc-900 dark:hover:bg-zinc-800">
         <h3 class="uppercase text-2xl font-bold text-center pb-4">
           {{ m.nombre }}
         </h3>
         <p class="font-bold text-xl">PROPOSITO</p>
         <p class="pb-4 text-sm">{{ m.proposito }}</p>
         <p class="font-bold">CARACTERISTICAS</p>
-        <ul class="text-sm">
+        <ul class="text-sm flex-grow">
           @for(c of m.caracteristicas; track c){
           <li class="flex  gap-3">
             <i class="fas fa-check text-green-500"></i>

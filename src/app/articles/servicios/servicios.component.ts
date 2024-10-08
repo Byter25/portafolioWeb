@@ -11,39 +11,53 @@ import Merch from './components/merch.interface';
 export class ServiciosComponent {
   merchs: Merch[] = [
     {
-      nombre: 'Landing Page',
+      nombre: 'Básicas',
       proposito:
-        'Capturar la atención y guiar a los visitantes hacia una acción específica, como registrarse o comprar.',
+        'Son páginas web sencillas y funcionales. Generalmente son sitios informativos con pocas secciones (Inicio, Acerca de, Servicios, Contacto).',
       caracteristicas: [
-        'Diseño simple con un CTA claro.',
-        'Contenido breve resaltando beneficios.',
-        'Incluye formularios y botones de acción.',
-        'Enfocado en convertir visitantes en leads o ventas.',
+        'Diseño básico o plantillas predefinidas',
+        'Generalmente una sola página o hasta 5 secciones',
+        'Sin funcionalidades avanzadas (formularios simples, galerías de imágenes)',
+        'Optimización básica para SEO',
       ],
-      precio: [100,500],
+      usuarios: [],
+      ejemplos: [],
+      precio: [100, 500],
     },
     {
-      nombre: 'Blog',
+      nombre: 'Intermedias',
       proposito:
-        'Compartir contenido y fomentar la interacción con la audiencia.',
+        'Son páginas más personalizadas con un nivel medio de desarrollo y diseño. A menudo tienen funcionalidades interactivas y múltiples secciones.',
       caracteristicas: [
-        'Diseño para publicación de artículos.',
-        'Contenido con textos, imágenes y comentarios.',
-        'Elementos como títulos, resúmenes y botones para compartir.',
-        'Enfocado en generar tráfico y participación.',
+        'Diseño personalizado',
+        'Hasta 10 secciones o más, con navegación compleja',
+        'Integración de funcionalidades como formularios avanzados, tiendas básicas (e-commerce), blogs, etc',
+        'Integración con herramientas de análisis y SEO más avanzado',
+        'Mayor soporte para dispositivos móviles (responsive)',
       ],
-      precio: [500,1500],
+      usuarios: [],
+      ejemplos: [],
+      precio: [500, 1500],
     },
     {
-      nombre: 'E-commerce',
-      proposito: 'Permitir la compra de productos o servicios en línea.',
+      nombre: 'Avanzadas',
+      proposito:
+        'Son páginas más personalizadas con un nivel medio de desarrollo y diseño. A menudo tienen funcionalidades interactivas y múltiples secciones.',
       caracteristicas: [
-        'Diseño centrado en la venta de productos.',
-        'Incluye páginas de productos, descripciones y proceso de compra.',
-        'Elementos como imágenes, descripciones y opciones de pago.',
-        'Enfocado en convertir visitantes en compradores.',
+        'Diseño único y avanzado, con animaciones o elementos gráficos especiales.',
+        'Funcionalidades avanzadas (e-commerce con muchas funciones, membresías, plataformas interactivas).',
+        'Desarrollo backend robusto para gestionar bases de datos, usuarios, pagos, etc.',
+        'Integración con CRM, ERP u otros sistemas de negocio.',
+        'Optimización avanzada para SEO, velocidad y seguridad.',
       ],
-      precio: [1500,2500],
+      usuarios: [],
+      ejemplos: [
+        'E-commerce',
+        'plataformas educativas',
+        'redes sociales',
+        'marketplaces',
+      ],
+      precio: [1500, 2500],
     },
   ];
 }

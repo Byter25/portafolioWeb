@@ -1,17 +1,19 @@
-import { IconCard } from './icon-card.interface';
+import { IconCard } from '../../core/models/icon-card.interface';
 import { Component } from '@angular/core';
 import { CardProfileComponent } from './components/card-me.component';
 import { IconCardComponent } from './components/icon-card.component';
-import { Progreso } from './progreso.interface';
+import { Progreso } from '../../core/models/progreso.interface';
 import { ProgressBarComponent } from './components/process-bar.component';
 import { FloatComponent } from '@shared/components/float.component';
 import { RouterLink } from '@angular/router';
+import { IconLink } from '@core/models/icon-link';
+import { BtnRefComponent } from "./components/btn-ref.component";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styles: ``,
   standalone: true,
-  imports: [CardProfileComponent, IconCardComponent, ProgressBarComponent, FloatComponent, RouterLink],
+  imports: [CardProfileComponent, IconCardComponent, ProgressBarComponent, FloatComponent, RouterLink, BtnRefComponent],
 })
 export class HomeComponent {
   tecnicas: Progreso[] = [
@@ -42,4 +44,11 @@ export class HomeComponent {
     { nombre: 'juegos', icon: 'fa-brands fa-xbox', color: '#52b043' },
     { nombre: 'futbol', icon: 'fa-solid fa-futbol', color: '#Efb810' },
   ];
+
+  btnLinks: IconLink[] = [
+    {nombre:"certificados",link:"certificates", icon:"fa fa-solid fa-file-alt"},
+    {nombre:"proyectos",link:"proyects", icon:"fas fa-folder"},
+    {nombre:"streams",link:"stream", icon:"fas fa-folder"},
+    {nombre:"descargar cv",link:"cv-byter", icon:"fa-sharp fa-solid fa-download"},
+  ]
 }

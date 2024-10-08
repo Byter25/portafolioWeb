@@ -1,9 +1,9 @@
 import { SocialIconComponent, SocialIcons } from './../social-icons.component';
 import { Component, HostListener } from '@angular/core';
-import { MenuTopComponent } from './menu-top.component';
-import { MenuRightComponent } from './menu-right.component';
-import { Links } from './link.interface';
-import { ModeDarkComponent } from './mode-dark.component';
+import { MenuTopComponent } from './components/menu-top.component';
+import { MenuRightComponent } from './components/menu-right.component';
+import { Links } from '@core/models/link.interface';
+import { ModeDarkComponent } from './components/mode-dark.component';
 
 @Component({
   selector: 'app-navbar',

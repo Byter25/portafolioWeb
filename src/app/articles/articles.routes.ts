@@ -6,6 +6,7 @@ import { CertificadosComponent } from './certificados.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 import { StreamComponent } from './transmiciones/stream.component';
+import { PdfViewerComponent } from './home/components/pdf-viewer.component';
 
 
 export const ARTICLES_ROUTES: Routes = [
@@ -18,6 +19,7 @@ export const ARTICLES_ROUTES: Routes = [
       import('./proyectos/proyectos.routes').then((n) => n.PROYECTOS_ROUTES),data: {title: 'ByterDev/Proyectos'}
   },
   { path: 'certificates', component: CertificadosComponent, data: {title: 'ByterDev/Certifiacdos'}},
+  { path: 'cv-byter', component: PdfViewerComponent, data: {title: 'ByterDev/CV'}},
   { path: 'contact', component: ContactoComponent, data: {title: 'ByterDev/Contacto'}},
   { path: 'about', component: SobreMiComponent, data: {title: 'ByterDev/AcercaDe'}},
   { path: 'cookies', component: HomeComponent, data: {title: 'ByterDev'} },

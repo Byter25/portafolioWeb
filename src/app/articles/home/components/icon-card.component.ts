@@ -1,5 +1,5 @@
 import { FloatComponent } from '@shared/components/float.component';
-import { IconCard } from '../icon-card.interface';
+import { IconCard } from '../../../core/models/icon-card.interface';
 import { Component, Input } from '@angular/core';
 @Component({
   selector: 'icon-card',
@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
     <ul class="flex flex-wrap gap-3 text-sm items-center justify-evenly">
       @for(sec of iconCard; track sec){
       <li
-        class="h-20 w-20 flex flex-col justify-center items-center uppercase  rounded-md shadow-md hover:shadow-[--color] hover:text-[--color] transition-all duration-300 ease-in-out"
+        class="size-20 flex flex-col justify-center items-center uppercase  rounded-md shadow-md hover:shadow-[--color] hover:text-[--color] transition-colors duration-300 ease-in-out"
         style="--color: {{ sec.color }}"
       >
         <i class="text-2xl {{ sec.icon }}"></i>

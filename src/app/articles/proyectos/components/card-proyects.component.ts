@@ -1,7 +1,7 @@
-import { Lenguaje } from './../lenguaje';
-import { Framework } from './../framework';
+import { Lenguaje } from '../../../core/models/lenguaje';
+import { Framework } from '../../../core/models/framework';
 import { Component, Input, OnInit } from '@angular/core';
-import { Proyect } from '../proyect.interface';
+import { Proyect } from '../../../core/models/proyect.interface';
 
 @Component({
   selector: 'card-proyect',
