@@ -5,24 +5,31 @@ import { Proyect } from '../../../core/models/proyect.interface';
 
 @Component({
   selector: 'card-proyect',
-  template: ` <div class=" dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex-col py-4 px-6 flex gap-3 w-96 rounded-lg shadow-lg transition-all">
-  <h3 class="uppercase font-bold text-xl dark:text-gray-100">{{ dataP.name }}</h3>
-  <img [src]="dataP.img" alt="imagen alzada" class="rounded-lg shadow-md transition-transform duration-300 hover:scale-105" />
-  <p class="text-gray-700 dark:text-gray-300">{{ dataP.descripcion }}</p>
-  <p class="font-semibold text-gray-800 dark:text-gray-300">Frameworks:</p>
-  <div class="flex gap-5">
-    @for(f of frameworksProyect; track f.id){
-    <img [src]="f.icon" [alt]="f.name" class="w-8 h-8" />
-    }
-  </div>
-  <p class="font-semibold text-gray-800 dark:text-gray-300">Lenguaje:</p>
-  <div class="flex gap-5 flex-wrap">
-    @for(l of lenguajesProyect; track l.id){
-    <img [src]="l.icon" [alt]="l.name" class="w-8 h-8" />
-    }
-  </div>
-</div>
-`,
+  template: `
+    <article
+      class="h-full dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex-col p-3 flex gap-y-3 md:w-80 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+    >
+      <h3 class="uppercase font-bold text-xl dark:text-gray-100">
+        {{ dataP.name }}
+      </h3>
+      <img [src]="dataP.img" alt="imagen alzada" class="rounded-lg shadow-md aspect-video" />
+      <p class="text-gray-700 dark:text-gray-300">{{ dataP.descripcion }}</p>
+      <p class="font-semibold text-gray-800 dark:text-gray-300">Frameworks:</p>
+      <div class="flex gap-5">
+
+        @for(f of frameworksProyect; track f.id){
+
+        <img [src]="f.icon" [alt]="f.name" class="size-" />
+        }
+      </div>
+      <p class="font-semibold text-gray-800 dark:text-gray-300">Lenguajes:</p>
+      <div class="flex gap-5 flex-wrap">
+        @for(l of lenguajesProyect; track l.id){
+        <img [src]="l.icon" [alt]="l.name" class="w-8 h-8" />
+        }
+      </div>
+    </article>
+  `,
   styles: ``,
   imports: [],
   standalone: true,
