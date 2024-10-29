@@ -1,5 +1,10 @@
 <section class="container grid md:grid-cols-[1fr_6fr] gap-2">
-  <nav class="rounded-md">
+  <input type="checkbox" class="peer hidden" id="peer">
+  <label for="peer" class="md:hidden">Filtros</label>
+  <nav class="rounded-md absolute top-0 -left-full md:relative md:left-0 p-3 h-full md:h-auto peer-checked:left-0 transition-allt duration-300 ease-in-out md:bg-transparent">
+    <label for="peer" class="md:hidden">
+      <mat-icon class="mat-18">close</mat-icon>
+    </label>
     <h2 class="text-xl font-bold">Frameworks</h2>
     <ul>
       @for(framework of frameworks; track framework.id) {
@@ -27,7 +32,7 @@
       }
     </ul>
   </nav>
-  <div class="col-start-2 grid grid-rows-[auto_1fr] h-full">
+  <div class="md:col-start-2 grid grid-rows-[auto_1fr] h-full">
     <h1 class="text-2xl font-semibold text-center">Proyectos</h1>
     <ul class="row-start-2 flex flex-wrap justify-center gap-3 overflow-x-scroll md:max-h-[720px]">
       @for(p of proyectos; track p.id){

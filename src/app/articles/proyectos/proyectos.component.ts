@@ -1,11 +1,15 @@
 import { Lenguaje } from '../../core/models/lenguaje';
 import { Framework } from '../../core/models/framework';
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {MatTreeModule} from '@angular/material/tree';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule aquí
 import { NgClass } from '@angular/common';
 import { Proyect } from '../../core/models/proyect.interface';
 import { CardProyectComponent } from './components/card-proyects.component';
+import { MenuRightComponent } from '@shared/components/navbar/components/menu-right.component';
 
 @Component({
   selector: 'page-proyectos',
@@ -15,6 +19,8 @@ import { CardProyectComponent } from './components/card-proyects.component';
     FormsModule,
     NgClass,
     CardProyectComponent,
+    MenuRightComponent,
+    MatIcon
   ],
   templateUrl: 'proyectos.component.html',
   styles: `
@@ -78,7 +84,7 @@ export class ProyectosComponent implements OnInit {
         id: 7,
         name: 'Express',
         icon: 'assets/svg/frameworks/express-js.svg',
-        LenguajesId: [1,2,3],
+        LenguajesId: [3],
       },
     ];
 
@@ -98,7 +104,7 @@ export class ProyectosComponent implements OnInit {
         img: 'https://concepto.de/wp-content/uploads/2023/01/Programa-de-computadora.jpg',
         descripcion: 'esto es una descripcion',
         idTipo: 1,
-        idFrameworks: [1, 2],
+        idFrameworks: [4],
         repositorioGit: '',
         url: '',
       },
@@ -108,7 +114,7 @@ export class ProyectosComponent implements OnInit {
         img: 'https://erestecno.com/wp-content/uploads/2019/10/maxresdefault-3-1024x576.jpg',
         descripcion: '',
         idTipo: 1,
-        idFrameworks: [2, 3, 4],
+        idFrameworks: [1,2,5],
         repositorioGit: '',
         url: '',
       },
@@ -118,7 +124,7 @@ export class ProyectosComponent implements OnInit {
         img: 'https://seolearners.com/wp-content/uploads/2021/12/discord-bot-with-node-js-1.jpg',
         descripcion: '',
         idTipo: 1,
-        idFrameworks: [5],
+        idFrameworks: [7],
         repositorioGit: '',
         url: '',
       },
