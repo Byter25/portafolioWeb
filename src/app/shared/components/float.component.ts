@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { EscribirMaquinaComponent } from './escribirMaquina.component';
 @Component({
   selector: 'float',
   standalone: true,
-  imports: [EscribirMaquinaComponent],
   template: `
-    <aside class="relative p-3 flex flex-col items-center justify-around rounded-md  hover:scale-105 transition-all duration-300 ease-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600">
+    <aside
+      class="relative p-3 flex flex-col items-center justify-around rounded-md  hover:scale-[105%] ease-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600"
+    >
       <div></div>
       <div></div>
       <div></div>
       <div></div>
+      @if(titulo!=''){
+      <h3 class="uppercase font-bold p-2 text-2xl">{{ titulo }}</h3>
+      }
       <ng-content> </ng-content>
     </aside>
   `,
@@ -87,4 +91,6 @@ import { EscribirMaquinaComponent } from './escribirMaquina.component';
   }
   `,
 })
-export class FloatComponent { }
+export class FloatComponent {
+  @Input() titulo?: string;
+}

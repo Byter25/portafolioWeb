@@ -34,11 +34,10 @@ import { EscribirMaquinaComponent } from '@shared/components/escribirMaquina.com
 })
 export class CardProfileComponent {
   textos: string[] = [
-    'desarrollador web',
-    'gestor de base de datos',
+    'Programador',
+    'Analista',
+    'Streamer',
     'Gamer',
-    'Musico',
-    'Goku God',
     'Que la fuerza te acompañe',
   ];
 

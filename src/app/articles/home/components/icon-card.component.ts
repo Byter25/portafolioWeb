@@ -4,16 +4,21 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'icon-card',
   template: `
-  <float>
-    <h3 class="uppercase font-bold p-2 text-2xl">{{nombre}}</h3>
-    <ul class="flex flex-wrap gap-3 text-sm items-center justify-evenly">
+  <float class="" [titulo]="nombre">
+    <ul class="flex flex-col flex-wrap gap-2 text-sm px-2">
       @for(sec of iconCard; track sec){
       <li
-        class="size-20 flex flex-col justify-center items-center uppercase  rounded-md shadow-md hover:shadow-[--color] hover:text-[--color] transition-colors duration-300 ease-in-out"
+        class="w-full p-2 flex gap-2 items-center rounded-md shadow-md hover:shadow-[--color]   hover:text-[--color] transition-colors duration-300 ease-in-out peer group"
         style="--color: {{ sec.color }}"
       >
-        <i class="text-2xl {{ sec.icon }}"></i>
+        @if(sec.icon!.startsWith("assets")){
+          <img [src]="sec.icon" alt="svg" style="--color: {{ sec.color }}" class=" size-[1.875rem] group-hover:bg-[--color] transition-all duration-100  bg-zinc-800 dark:bg-transparent duration-500">
+          <span>{{ sec.nombre }}</span>
+        }
+        @else{
+        <i class="text-3xl {{ sec.icon }}"></i>
         <span>{{ sec.nombre }}</span>
+        }
       </li>
       }
     </ul>

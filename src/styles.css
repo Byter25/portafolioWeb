@@ -7,9 +7,14 @@
   @apply bg-inherit p-0 m-0
 }
 ul,li,i,a,span,p{
-  @apply bg-transparent;
+  @apply bg-transparent ;
 }
-
+body{
+  @apply bg-gray-100 dark:text-gray-400 text-gray-700;
+}
+aside{
+  @apply bg-white hover:bg-gray-100 dark:bg-zinc-900 dark:hover:bg-zinc-800 transition-all duration-500
+}
 /* Estilo para la barra de desplazamiento */
 ::-webkit-scrollbar {
   width: 6px; /* Ancho de la barra */

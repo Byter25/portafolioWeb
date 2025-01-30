@@ -13,7 +13,7 @@ import { Links } from '@core/models/link.interface';
 @Component({
   selector: 'menu-right',
   standalone: true,
-  imports: [NgStyle, RouterLink, RouterLinkActive, MatIconModule],
+  imports: [ RouterLink, RouterLinkActive, MatIconModule],
   template: `
     <input type="checkbox" class="hidden" id="navright" />
     <label class="text-center flex justify-center items-center" for="navright">

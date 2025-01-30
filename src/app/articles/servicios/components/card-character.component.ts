@@ -11,11 +11,8 @@ import { FloatComponent } from '@shared/components/float.component';
     </h2>
     <div class="grid grid-cols-responsive gap-5 ">
       @for(m of merchs; track m ){
-      <float class="bg-gray-100 hover:bg-gray-200 dark:bg-zinc-900 dark:hover:bg-zinc-800">
-        <h3 class="uppercase text-2xl font-bold text-center pb-4">
-          {{ m.nombre }}
-        </h3>
-        <p class="font-bold text-xl">PROPOSITO</p>
+      <float [titulo]="m.nombre">
+        <p class="font-bold">PROPOSITO</p>
         <p class="pb-4 text-sm">{{ m.proposito }}</p>
         <p class="font-bold">CARACTERISTICAS</p>
         <ul class="text-sm flex-grow">
@@ -28,7 +25,9 @@ import { FloatComponent } from '@shared/components/float.component';
         </ul>
         <div class="bottom-0 flex flex-col justify-center items-center p-2">
           <a class="font-bold text-sm">PRECIO:</a>
-          <p class="text-green-400 text-3xl">{{ m.precio[0] }}$ - {{ m.precio[1] }}$</p>
+          <p class="text-green-400 text-3xl">
+            {{ m.precio[0] }}$ - {{ m.precio[1] }}$
+          </p>
         </div>
       </float>
       }

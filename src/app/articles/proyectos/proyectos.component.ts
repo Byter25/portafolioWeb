@@ -10,7 +10,8 @@ import { NgClass } from '@angular/common';
 import { Proyect } from '../../core/models/proyect.interface';
 import { CardProyectComponent } from './components/card-proyects.component';
 import { MenuRightComponent } from '@shared/components/navbar/components/menu-right.component';
-
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
 @Component({
   selector: 'page-proyectos',
   imports: [
@@ -20,7 +21,9 @@ import { MenuRightComponent } from '@shared/components/navbar/components/menu-ri
     NgClass,
     CardProyectComponent,
     MenuRightComponent,
-    MatIcon
+    MatIcon,
+    MatExpansionModule,
+    MatCardModule
   ],
   templateUrl: 'proyectos.component.html',
   styles: `

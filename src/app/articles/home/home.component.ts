@@ -13,7 +13,7 @@ import { BtnRefComponent } from "./components/btn-ref.component";
   templateUrl: './home.component.html',
   styles: ``,
   standalone: true,
-  imports: [CardProfileComponent, IconCardComponent, ProgressBarComponent, FloatComponent, RouterLink, BtnRefComponent],
+  imports: [CardProfileComponent, IconCardComponent, FloatComponent, BtnRefComponent,FloatComponent],
 })
 export class HomeComponent {
   tecnicas: Progreso[] = [
@@ -32,17 +32,17 @@ export class HomeComponent {
   ];
 
   tecnologias: IconCard[] = [
-    { nombre: 'node', icon: 'fa-brands fa-node-js', color: '#68A063' },
-    { nombre: 'sql', icon: 'fa-solid fa-database', color: '#FCF443' },
-    { nombre: 'github', icon: 'fa-brands fa-github', color: '#4078c0' },
-    { nombre: 'angular', icon: 'fa-brands fa-angular', color: '#ff0000' },
+    { nombre: 'Angular Framework', icon: 'fa-brands fa-angular', color: '#ff0000' },
+    { nombre: 'Microsoft Sql Server', icon: 'fa-solid fa-database', color: '#FCF443' },
+    { nombre: 'Dot-Net 8.0', icon: 'assets/svg/dotnet.svg', color: '#512BD4' },
+    { nombre: 'Github', icon: 'fa-brands fa-github', color: '#4078c0' },
   ];
 
   intereses: IconCard[] = [
-    { nombre: 'youtube', icon: 'fa-brands fa-youtube', color: '#FF0000' },
-    { nombre: 'musica', icon: 'fa-solid fa-headphones', color: '#DF01D7' },
-    { nombre: 'juegos', icon: 'fa-brands fa-xbox', color: '#52b043' },
-    { nombre: 'futbol', icon: 'fa-solid fa-futbol', color: '#Efb810' },
+    { nombre: 'Desarrollo de Paginas Web', icon: 'fa-solid fa-pager', color: '#Efb810' },
+    { nombre: 'Analista de Base de datos', icon: 'fa-solid fa-database', color: '#52b043' },
+    { nombre: 'Desarrollo de Apis', icon: 'fa-solid fa-server', color: '#FFFFFF' },
+    { nombre: 'Desarrollo de aplicaciones de Escritorio', icon: 'fa-solid fa-desktop', color: '#DF01D7' },
   ];
 
   btnLinks: IconLink[] = [

@@ -1,36 +1,46 @@
 <section class="container grid md:grid-cols-[1fr_6fr] gap-2">
   <input type="checkbox" class="peer hidden" id="peer">
   <label for="peer" class="md:hidden">Filtros</label>
-  <nav class="rounded-md absolute top-0 -left-full md:relative md:left-0 p-3 h-full md:h-auto peer-checked:left-0 transition-allt duration-300 ease-in-out md:bg-transparent">
+  <nav
+    class="rounded-md absolute top-0 -left-full md:relative md:left-0 p-3 h-full md:h-auto peer-checked:left-0 transition-allt duration-300 ease-in-out md:bg-transparent">
     <label for="peer" class="md:hidden">
       <mat-icon class="mat-18">close</mat-icon>
     </label>
-    <h2 class="text-xl font-bold">Frameworks</h2>
-    <ul>
-      @for(framework of frameworks; track framework.id) {
-      <li class="flex items-center w-full p-2 mr-6 rounded-md"
-        [ngClass]="{'bg-blue-100 dark:bg-blue-700': selectedFrameworkIds.includes(framework.id)}">
-        <input type="checkbox" [id]="'framework-' + framework.id"
-          [checked]="selectedFrameworkIds.includes(framework.id)" (change)="toggleFramework(framework.id, $event)"
-          class="mr-2" />
-        <label [for]="'framework-' + framework.id" class="flex items-center">
-          <img [src]="framework.icon" alt="{{ framework.name }}" class="inline-block w-5 h-5 mr-2" />
-          {{ framework.name }}
-        </label>
-      </li>
-      }
-    </ul>
-
-    <h2 class="text-lg font-semibold">Lenguajes:</h2>
-    <ul>
-      @for(lenguaje of lenguajes; track lenguaje.id) {
-      <li class="flex items-center w-full"
-        [ngClass]="{'bg-blue-100 dark:bg-blue-700': isLenguajeSelected(lenguaje.id)}">
-        <img [src]="lenguaje.icon" alt="{{ lenguaje.name }}" class="inline-block w-5 h-5 mr-2" />
-        {{ lenguaje.name }}
-      </li>
-      }
-    </ul>
+    <mat-accordion multi>
+      <mat-expansion-panel class="bg-transparent text-white">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="text-white">Frameworks </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul>
+          @for(framework of frameworks; track framework.id) {
+          <li class="flex items-center w-full p-2 mr-6 rounded-md"
+            [ngClass]="{'bg-blue-100 dark:bg-blue-700': selectedFrameworkIds.includes(framework.id)}">
+            <input type="checkbox" [id]="'framework-' + framework.id"
+              [checked]="selectedFrameworkIds.includes(framework.id)" (change)="toggleFramework(framework.id, $event)"
+              class="mr-2" />
+            <label [for]="'framework-' + framework.id" class="flex items-center">
+              <img [src]="framework.icon" alt="{{ framework.name }}" class="inline-block w-5 h-5 mr-2" />
+              {{ framework.name }}
+            </label>
+          </li>
+          }
+        </ul>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="bg-transparent text-white">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="text-white">Lenguajes</mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul>
+          @for(lenguaje of lenguajes; track lenguaje.id) {
+          <li class="flex items-center w-full"
+            [ngClass]="{'bg-blue-100 dark:bg-blue-700': isLenguajeSelected(lenguaje.id)}">
+            <img [src]="lenguaje.icon" alt="{{ lenguaje.name }}" class="inline-block w-5 h-5 mr-2" />
+            {{ lenguaje.name }}
+          </li>
+          }
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>
   </nav>
   <div class="md:col-start-2 grid grid-rows-[auto_1fr] h-full">
     <h1 class="text-2xl font-semibold text-center">Proyectos</h1>

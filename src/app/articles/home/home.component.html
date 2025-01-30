@@ -1,12 +1,8 @@
-<section class="relative grid gap-5 container grid-cols-1 md:grid-cols-[1fr_2fr_2fr] bg-transparent">
+<section class="relative grid gap-5 container grid-cols-1 md:grid-cols-[1fr_2fr_2fr_2fr] bg-transparent">
   <card-profile />
-  <float class="gap-10 font-bold text-white lg:col-start-1 ">
-    <aside class="flex flex-col w-full h-full">
-      <btn-ref [links]="btnLinks"></btn-ref>
-    </aside>
-  </float>
-  <process-bar class="lg:col-start-2 lg:row-start-1" nombre="tecnicas" [progresos]="tecnicas" />
-  <process-bar class="lg:col-start-3 lg:row-start-1" nombre="profesional" [progresos]="profesional" />
   <icon-card class="lg:col-start-2 " nombre="tecnologias" [iconCard]="tecnologias" />
   <icon-card class="lg:col-start-3" nombre="intereses" [iconCard]="intereses" />
+  <float class="gap-10 font-bold" titulo="ACCIONES">
+      <btn-ref [links]="btnLinks"></btn-ref>
+  </float>
 </section>
