@@ -12,7 +12,7 @@ import { Component, Input } from '@angular/core';
         style="--color: {{ sec.color }}"
       >
         @if(sec.icon!.startsWith("assets")){
-          <img [src]="sec.icon" alt="svg" style="--color: {{ sec.color }}" class=" size-[1.875rem] group-hover:bg-[--color] transition-all duration-100  bg-zinc-800 dark:bg-transparent duration-500">
+          <img [src]="sec.icon" alt="svg" style="--color: {{ sec.color }}" class=" size-[1.875rem] group-hover:bg-[--color] transition-all  bg-zinc-800 dark:bg-transparent duration-500">
           <span>{{ sec.nombre }}</span>
         }
         @else{
