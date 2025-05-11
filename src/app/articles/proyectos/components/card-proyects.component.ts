@@ -6,15 +6,24 @@ import { Proyect } from '../../../core/models/proyect.interface';
 @Component({
   selector: 'card-proyect',
   template: `
-    <article
-      class="h-full dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex-col p-3 flex gap-y-3 md:w-80 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
-    >
-      <h3 class="uppercase font-bold text-xl dark:text-gray-100">
-        {{ dataP.name }}
-      </h3>
-      <img [src]="dataP.img" alt="imagen alzada" class="rounded-lg shadow-md aspect-video" />
-      <p class="text-gray-700 dark:text-gray-300">{{ dataP.descripcion }}</p>
-      <p class="font-semibold text-gray-800 dark:text-gray-300">Frameworks:</p>
+    <ng-container>
+      <img
+        [src]="dataP.img"
+        alt="imagen alzada"
+        class="rounded-lg shadow-md aspect-video object-cover w-full"
+      />
+      <div class="p-5">
+        <h2 class="uppercase font-bold text-2xl dark:text-gray-100">
+          {{ dataP.name }}
+        </h2>
+        <p class="text-neutral-800 dark:text-neutral-100">
+          {{ dataP.descripcion }}
+        </p>
+        <ul class="inline-flex flex-wrap gap-2"></ul>
+        <ul class="flex flex-wrap gap-2 mt-4"></ul>
+      </div>
+
+      <!--<p class="font-semibold text-neutral-800 dark:text-gray-300">Frameworks:</p>
       <div class="flex gap-5">
 
         @for(f of frameworksProyect; track f.id){
@@ -27,8 +36,8 @@ import { Proyect } from '../../../core/models/proyect.interface';
         @for(l of lenguajesProyect; track l.id){
         <img [src]="l.icon" [alt]="l.name" class="w-8 h-8" />
         }
-      </div>
-    </article>
+      </div> -->
+    </ng-container>
   `,
   styles: ``,
   imports: [],

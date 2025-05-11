@@ -8,7 +8,7 @@ import { FloatComponent } from '@shared/components/float.component';
 @Component({
   selector: 'app-sobre-mi',
   standalone: true,
-  imports: [RouterLink,DonacionesComponent, FloatComponent],
+  imports: [DonacionesComponent],
   templateUrl: './sobre-mi.component.html',
   styles: ``,
 })

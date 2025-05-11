@@ -1,8 +1,8 @@
-<section class="relative grid gap-5 container grid-cols-1 md:grid-cols-[1fr_2fr_2fr_2fr] bg-transparent">
+<section class="relative grid gap-8 px-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-transparent">
   <card-profile />
-  <icon-card class="lg:col-start-2 " nombre="tecnologias" [iconCard]="tecnologias" />
-  <icon-card class="lg:col-start-3" nombre="intereses" [iconCard]="intereses" />
-  <float class="gap-10 font-bold" titulo="ACCIONES">
+  <icon-card class="lg:col-start-2 " [nombre]="'home-tec' |transloco" [iconCard]="tecnologias" />
+  <icon-card class="lg:col-start-3" [nombre]="'home-interes' |transloco" [iconCard]="intereses" />
+  <float class="gap-10 font-bold" [titulo]="'home-acciones' |transloco">
       <btn-ref [links]="btnLinks"></btn-ref>
   </float>
 </section>

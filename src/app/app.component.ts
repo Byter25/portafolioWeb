@@ -1,5 +1,5 @@
 import { Component  } from '@angular/core';
-import { RouterOutlet,Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { RouterOutlet,Router, NavigationEnd } from '@angular/router';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import {
   trigger,
@@ -10,6 +10,7 @@ import {
 } from '@angular/animations';
 import { Title } from '@angular/platform-browser';
 import { filter, map } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',

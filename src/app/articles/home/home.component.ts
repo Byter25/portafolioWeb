@@ -3,17 +3,17 @@ import { Component } from '@angular/core';
 import { CardProfileComponent } from './components/card-me.component';
 import { IconCardComponent } from './components/icon-card.component';
 import { Progreso } from '../../core/models/progreso.interface';
-import { ProgressBarComponent } from './components/process-bar.component';
 import { FloatComponent } from '@shared/components/float.component';
-import { RouterLink } from '@angular/router';
 import { IconLink } from '@core/models/icon-link';
 import { BtnRefComponent } from "./components/btn-ref.component";
+import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styles: ``,
   standalone: true,
-  imports: [CardProfileComponent, IconCardComponent, FloatComponent, BtnRefComponent,FloatComponent],
+  imports: [CardProfileComponent, IconCardComponent, FloatComponent, BtnRefComponent,FloatComponent,TranslocoModule],
+  providers: [TranslocoService],
 })
 export class HomeComponent {
   tecnicas: Progreso[] = [

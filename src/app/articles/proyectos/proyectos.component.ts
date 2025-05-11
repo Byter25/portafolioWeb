@@ -1,29 +1,18 @@
 import { Lenguaje } from '../../core/models/lenguaje';
 import { Framework } from '../../core/models/framework';
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {MatTreeModule} from '@angular/material/tree';
-import {MatIcon, MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule aquí
-import { NgClass } from '@angular/common';
 import { Proyect } from '../../core/models/proyect.interface';
 import { CardProyectComponent } from './components/card-proyects.component';
-import { MenuRightComponent } from '@shared/components/navbar/components/menu-right.component';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 @Component({
   selector: 'page-proyectos',
   imports: [
-    RouterLink,
-    RouterOutlet,
     FormsModule,
-    NgClass,
     CardProyectComponent,
-    MenuRightComponent,
-    MatIcon,
     MatExpansionModule,
-    MatCardModule
+    MatCardModule,
   ],
   templateUrl: 'proyectos.component.html',
   styles: `
@@ -75,7 +64,7 @@ export class ProyectosComponent implements OnInit {
         id: 5,
         name: 'Angular',
         icon: 'assets/svg/frameworks/angular.svg',
-        LenguajesId: [1,2,6],
+        LenguajesId: [1, 2, 6],
       },
       {
         id: 6,
@@ -94,10 +83,18 @@ export class ProyectosComponent implements OnInit {
     this.lenguajes = [
       { id: 1, name: 'HTML', icon: 'assets/svg/lenguajes/html.svg' },
       { id: 2, name: 'CSS', icon: 'assets/svg/lenguajes/css.svg' },
-      { id: 3, name: 'JavaScript', icon: 'assets/svg/lenguajes/javascript.svg' },
+      {
+        id: 3,
+        name: 'JavaScript',
+        icon: 'assets/svg/lenguajes/javascript.svg',
+      },
       { id: 4, name: 'Java', icon: 'assets/svg/lenguajes/java.svg' },
       { id: 5, name: 'C#', icon: 'assets/svg/lenguajes/csharp.svg' },
-      { id: 6, name: 'TypeScript', icon: 'assets/svg/lenguajes/typescript.svg' },
+      {
+        id: 6,
+        name: 'TypeScript',
+        icon: 'assets/svg/lenguajes/typescript.svg',
+      },
     ];
 
     this.proyectos = [
@@ -117,7 +114,7 @@ export class ProyectosComponent implements OnInit {
         img: 'https://erestecno.com/wp-content/uploads/2019/10/maxresdefault-3-1024x576.jpg',
         descripcion: '',
         idTipo: 1,
-        idFrameworks: [1,2,5],
+        idFrameworks: [1, 2, 5],
         repositorioGit: '',
         url: '',
       },
@@ -163,38 +160,39 @@ export class ProyectosComponent implements OnInit {
       },
     ];
   }
-  toggleFramework(frameworkId: number, event: Event) {
-    const checked = (event.target as HTMLInputElement).checked;
-    if (checked) {
-      this.selectedFrameworkIds.push(frameworkId);
-    } else {
-      this.selectedFrameworkIds = this.selectedFrameworkIds.filter(
-        (id) => id !== frameworkId
-      );
-    }
-  }
+  // toggleFramework(frameworkId: number, event: Event) {
+  //   const checked = (event.target as HTMLInputElement).checked;
+  //   if (checked) {
+  //     this.selectedFrameworkIds.push(frameworkId);
+  //   } else {
+  //     this.selectedFrameworkIds = this.selectedFrameworkIds.filter(
+  //       (id) => id !== frameworkId
+  //     );
+  //   }
+  // }
 
-  getSelectedLenguajes() {
-    const selectedLenguajes: Lenguaje[] = [];
-    this.selectedFrameworkIds.forEach((frameworkId) => {
-      const selectedFramework = this.frameworks.find(
-        (framework) => framework.id === frameworkId
-      );
-      if (selectedFramework) {
-        selectedFramework.LenguajesId.forEach((lenguajeId) => {
-          const lenguaje = this.lenguajes.find((l) => l.id === lenguajeId);
-          if (lenguaje) {
-            selectedLenguajes.push(lenguaje);
-          }
-        });
-      }
-    });
-    return selectedLenguajes;
-  }
-  isLenguajeSelected(lenguajeId: number): boolean {
-    return this.selectedFrameworkIds.some((frameworkId) => {
-      const framework = this.frameworks.find((f) => f.id === frameworkId);
-      return framework ? framework.LenguajesId.includes(lenguajeId) : false;
-    });
-  }
+  // getSelectedLenguajes() {
+  //   const selectedLenguajes: Lenguaje[] = [];
+  //   this.selectedFrameworkIds.forEach((frameworkId) => {
+  //     const selectedFramework = this.frameworks.find(
+  //       (framework) => framework.id === frameworkId
+  //     );
+  //     if (selectedFramework) {
+  //       selectedFramework.LenguajesId.forEach((lenguajeId) => {
+  //         const lenguaje = this.lenguajes.find((l) => l.id === lenguajeId);
+  //         if (lenguaje) {
+  //           selectedLenguajes.push(lenguaje);
+  //         }
+  //       });
+  //     }
+  //   });
+  //   return selectedLenguajes;
+  // }
+
+  // isLenguajeSelected(lenguajeId: number): boolean {
+  //   return this.selectedFrameworkIds.some((frameworkId) => {
+  //     const framework = this.frameworks.find((f) => f.id === frameworkId);
+  //     return framework ? framework.LenguajesId.includes(lenguajeId) : false;
+  //   });
+  // }
 }

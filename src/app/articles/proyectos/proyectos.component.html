@@ -1,7 +1,7 @@
-<section class="container grid md:grid-cols-[1fr_6fr] gap-2">
-  <input type="checkbox" class="peer hidden" id="peer">
-  <label for="peer" class="md:hidden">Filtros</label>
-  <nav
+<section class="container">
+  <!-- <input type="checkbox" class="peer hidden" id="peer">
+  <label for="peer" class="md:hidden">Filtros</label> -->
+  <!-- <nav
     class="rounded-md absolute top-0 -left-full md:relative md:left-0 p-3 h-full md:h-auto peer-checked:left-0 transition-allt duration-300 ease-in-out md:bg-transparent">
     <label for="peer" class="md:hidden">
       <mat-icon class="mat-18">close</mat-icon>
@@ -41,15 +41,18 @@
         </ul>
       </mat-expansion-panel>
     </mat-accordion>
-  </nav>
-  <div class="md:col-start-2 grid grid-rows-[auto_1fr] h-full">
-    <h1 class="text-2xl font-semibold text-center">Proyectos</h1>
-    <ul class="row-start-2 flex flex-wrap justify-center gap-3 overflow-x-scroll md:max-h-[720px]">
+  </nav> -->
+    <h1 class="text-4xl font-semibold text-center py-4">PROYECTOS</h1>
+    <div class="grid gap-8 mb-6 lg:mb-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+      <article class="w-full min-h-60 bg-red-100 dark:bg-red-600/10 hover:scale-110 transition-all duration-500 relative justify-center rounded-md">
+          <a href="" class="flex flex-col items-center justify-center h-full text-center">
+            <p class="text-red-600 font-semibold text-xl">Proximamente <br> mas proyectos...</p>
+          </a>
+      </article>
       @for(p of proyectos; track p.id){
-      <card-proyect [dataP]="p" [frameworks]="frameworks" [lenguajes]="lenguajes" />
+      <card-proyect [dataP]="p" [frameworks]="frameworks" [lenguajes]="lenguajes" class="hover:scale-110 transition-all duration-300 bg-neutral-100  dark:bg-neutral-900 rounded-md"/>
       }
-    </ul>
-  </div>
+    </div>
 </section>
 
 
