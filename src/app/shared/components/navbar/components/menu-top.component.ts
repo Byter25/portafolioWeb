@@ -16,7 +16,7 @@ import { Links } from '@core/models/link.interface';
   template: `
     <div
         #backdrop
-        class="fixed backdrop-blur-lg bg-gray-100 dark:bg-zinc-900 shadow-md rounded-md transition-all duration-300 "
+        class="fixed backdrop-blur-lg bg-gray-200 dark:bg-zinc-800 border-1 border-red-300 dark:border-red-800 rounded-2xl transition-all duration-300 "
         [ngStyle]="{
           left: 'var(--left)',
           top: 'var(--top)',
@@ -24,10 +24,10 @@ import { Links } from '@core/models/link.interface';
           height: 'var(--height)'
         }"
       ></div>
-      <ul class="sticky flex items-center uppercase font-bold tracking-widest bg-transparent">
+      <ul class="sticky flex items-center uppercase font-bold tracking-widest bg-transparent gap-2">
         @for(nav of listaNav;track nav){
         <li
-          class="py-2 px-4 hover:text-red-600 transition-all"
+          class="px-4 py-2 hover:text-red-600 transition-all"
           routerLinkActive="text-red-600"
           [routerLinkActiveOptions]="{ exact: true }"
         >

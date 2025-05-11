@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { EscribirMaquinaComponent } from './escribirMaquina.component';
 @Component({
   selector: 'float',
   standalone: true,
@@ -24,20 +23,20 @@ import { EscribirMaquinaComponent } from './escribirMaquina.component';
     top: 0;
     left: 0;
     width:100%;
-    height:3px;
+    height:2px;
     background: linear-gradient(to right, transparent, red);
-    animation: left-right 2s linear infinite;
+    animation: left-right 4s linear infinite;
   }
   aside div:nth-child(2){
     position: absolute;
     z-index: 10;
     top: 0;
     right: 0;
-    width:3px;
+    width:2px;
     height:100%;
     background: linear-gradient(to bottom, transparent, red);
-    animation: top-bottom 2s linear infinite;
-    animation-delay: 1s;
+    animation: top-bottom 4s linear infinite;
+    animation-delay: 2s;
   }
   aside div:nth-child(3){
     position: absolute;
@@ -45,20 +44,20 @@ import { EscribirMaquinaComponent } from './escribirMaquina.component';
     bottom: 0;
     right: 0;
     width:100%;
-    height:3px;
+    height:2px;
     background: linear-gradient(to left, transparent, red);
-    animation: right-left 2s linear infinite;
+    animation: right-left 4s linear infinite;
   }
   aside div:nth-child(4){
     position: absolute;
     z-index: 10;
     bottom: 0;
     left: 0;
-    width: 3px;
+    width: 2px;
     height:100%;
     background: linear-gradient(to top, transparent, red);
-    animation: bottom-top 2s linear infinite;
-    animation-delay: 1s;
+    animation: bottom-top 4s linear infinite;
+    animation-delay: 2s;
   }
 
   @keyframes left-right {
