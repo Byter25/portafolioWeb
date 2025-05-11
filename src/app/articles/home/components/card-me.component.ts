@@ -14,7 +14,7 @@ import { EscribirMaquinaComponent } from '@shared/components/escribirMaquina.com
       <div class="flex flex-col justify-center items-center">
         <p class="text-gray-600">{{ '@ByterDev' }}</p>
         <p class="capitalize">Bryan Saavedra</p>
-        <p class="text-gray-600">20 años</p>
+        <p class="text-gray-600">{{calcularEdad('2003-09-11')}} años</p>
         <p>🟥🟥⬜⬜🟥🟥</p>
         <p>🟥🟥⬜⬜🟥🟥</p>
         <p>🟥🟥⬜⬜🟥🟥</p>
@@ -46,4 +46,16 @@ export class CardProfileComponent {
   toggle() {
     this.isOpen = !this.isOpen;
   }
+  calcularEdad(fechaNacimiento: string | Date): number {
+  const hoy = new Date();
+  const nacimiento = new Date(fechaNacimiento);
+  let edad = hoy.getFullYear() - nacimiento.getFullYear();
+  const mes = hoy.getMonth() - nacimiento.getMonth();
+
+  if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+    edad--; // aún no ha cumplido años este año
+  }
+
+  return edad;
+}
 }

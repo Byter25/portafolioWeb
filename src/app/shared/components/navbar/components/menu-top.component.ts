@@ -16,7 +16,7 @@ import { Links } from '@core/models/link.interface';
   template: `
     <div
         #backdrop
-        class="fixed backdrop-blur-lg bg-gray-200 dark:bg-zinc-800 border-1 border-red-300 dark:border-red-800 rounded-2xl transition-all duration-300 "
+        class="fixed backdrop-blur-lg bg-gray-100  dark:bg-neutral-900 border-1 border-red-300 dark:border-red-800 rounded-2xl transition-all duration-300 "
         [ngStyle]="{
           left: 'var(--left)',
           top: 'var(--top)',

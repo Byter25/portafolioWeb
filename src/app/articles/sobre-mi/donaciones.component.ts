@@ -5,10 +5,10 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'donaciones',
   standalone: true,
-  imports: [RouterLink, NgStyle],
+  imports: [ NgStyle],
   template: `
     <div
-      class="aspect-video h-36  md:h-40 bg-cover bg-center rounded-3xl overflow-hidden transition-all duration-e300 text-white shadow-md shadow-black" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')' }"
+      class="aspect-video h-28 bg-cover bg-center rounded-3xl overflow-hidden transition-all duration-e300 text-white shadow-md shadow-black" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')' }"
     >
       <!-- Gradiente de fondo y contenido -->
       <div

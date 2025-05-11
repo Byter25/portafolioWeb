@@ -21,14 +21,14 @@ import { Links } from '@core/models/link.interface';
     </label>
     <ul
       id="rightnav"
-      class=" -left-full fixed md:hidden border-r-2 bg-inherit border-red-600 top-0 w-2/5 h-screen uppercase transition-all duration-300 ease-in-out font-bold "
+      class=" -left-full fixed md:hidden bg-inherit top-0 w-2/3 h-screen uppercase transition-all duration-300 ease-in-out font-bold"
     >
       <label for="navright" class="text-center flex items-center px-4 py-2">
         <mat-icon>close</mat-icon>
       </label>
       @for(nav of listaNav;track nav){
       <li
-        class="pl-4 py-2 border-l-8 border-gray-200 dark:border-gray-700 hover:border-red-400 dark:hover:border-red-800 transition-all duration-300 ease-in-out"
+        class="pl-4 py-2 border-l-4  border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out"
         routerLinkActive="dark:border-red-600 border-red-600"
         [routerLinkActiveOptions]="{ exact: true }"
       >
