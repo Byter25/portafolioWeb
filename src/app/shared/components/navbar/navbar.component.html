@@ -39,7 +39,7 @@
 
           <label class="p-2 cursor-pointer" [ngClass]="{
       'bg-red-500 text-white': activeLang === 'en',
-      'bg-transparent hover:bg-red-100 dark:hover:bg-red-900': activeLang !== 'es'
+      'bg-transparent hover:bg-red-100 dark:hover:bg-red-900': activeLang !== 'en'
     }">
             <input type="radio" name="lang" value="en" (change)="changeLang('en')" [(ngModel)]="activeLang"
               class="hidden" />
