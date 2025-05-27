@@ -1,11 +1,11 @@
 import { IconCard } from '../../core/models/icon-card.interface';
 import { Component } from '@angular/core';
-import { CardProfileComponent } from './components/card-me.component';
-import { IconCardComponent } from './components/icon-card.component';
+import { CardProfileComponent } from '../sobre-mi/components/card-me.component';
+import { IconCardComponent } from '../sobre-mi/components/icon-card.component';
 import { Progreso } from '../../core/models/progreso.interface';
 import { FloatComponent } from '@shared/components/float.component';
 import { IconLink } from '@core/models/icon-link';
-import { BtnRefComponent } from "./components/btn-ref.component";
+import { BtnRefComponent } from "../sobre-mi/components/btn-ref.component";
 import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
 @Component({
   selector: 'app-home',
@@ -16,20 +16,20 @@ import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
   providers: [TranslocoService],
 })
 export class HomeComponent {
-  tecnicas: Progreso[] = [
-    { nombre: 'frontend', progreso: 82, max: 100, color: '' },
-    { nombre: 'backend', progreso: 65, max: 100, color: '' },
-    { nombre: 'base de datos', progreso: 76, max: 100, color: '' },
-    { nombre: 'app moviles', progreso: 50, max: 100, color: '' },
-    { nombre: 'app escritorio', progreso: 60, max: 100, color: '' },
-  ];
+  // tecnicas: Progreso[] = [
+  //   { nombre: 'frontend', progreso: 82, max: 100, color: '' },
+  //   { nombre: 'backend', progreso: 65, max: 100, color: '' },
+  //   { nombre: 'base de datos', progreso: 76, max: 100, color: '' },
+  //   { nombre: 'app moviles', progreso: 50, max: 100, color: '' },
+  //   { nombre: 'app escritorio', progreso: 60, max: 100, color: '' },
+  // ];
 
-  profesional: Progreso[] = [
-    { nombre: 'trabajo en equipo', progreso: 83, max: 100, color: '' },
-    { nombre: 'adaptabilidad', progreso: 91, max: 100, color: '' },
-    { nombre: 'pensamiento analitico', progreso: 89, max: 100, color: '' },
-    { nombre: 'empatia', progreso: 90, max: 100, color: '' },
-  ];
+  // profesional: Progreso[] = [
+  //   { nombre: 'trabajo en equipo', progreso: 83, max: 100, color: '' },
+  //   { nombre: 'adaptabilidad', progreso: 91, max: 100, color: '' },
+  //   { nombre: 'pensamiento analitico', progreso: 89, max: 100, color: '' },
+  //   { nombre: 'empatia', progreso: 90, max: 100, color: '' },
+  // ];
 
   tecnologias: IconCard[] = [
     { nombre: 'Angular Framework', icon: 'fa-brands fa-angular', color: '#ff0000' },

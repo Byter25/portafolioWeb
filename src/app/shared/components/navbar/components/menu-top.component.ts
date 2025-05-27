@@ -8,15 +8,16 @@ import {
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Links } from '@core/models/link.interface';
+import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
   selector: 'menu-top',
   standalone: true,
-  imports: [NgStyle, RouterLink, RouterLinkActive],
+  imports: [NgStyle, RouterLink, RouterLinkActive , TranslocoModule],
   template: `
     <div
         #backdrop
-        class="fixed backdrop-blur-lg bg-gray-100  dark:bg-neutral-900 border-1 border-red-300 dark:border-red-800 rounded-2xl transition-all duration-300 "
+        class="fixed backdrop-blur-lg bg-red-100/30 dark:bg-red-900/30 rounded-2xl transition-all duration-300 z-100"
         [ngStyle]="{
           left: 'var(--left)',
           top: 'var(--top)',
@@ -31,7 +32,7 @@ import { Links } from '@core/models/link.interface';
           routerLinkActive="text-red-600"
           [routerLinkActiveOptions]="{ exact: true }"
         >
-          <a [routerLink]="nav.link">{{ nav.nombre }}</a>
+          <a [routerLink]="nav.link">{{ nav.nombre | transloco }}</a>
         </li>
         }
       </ul>

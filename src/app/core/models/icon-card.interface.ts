@@ -1,7 +1,7 @@
 export interface IconCard{
-  nombre:String
-  icon:String
-  color:String
+  nombre:string
+  icon:string
+  color:string
   // color:{
   //   color1:String,
   //   color2:String

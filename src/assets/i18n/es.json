@@ -1,6 +1,39 @@
 {
-  "home-tec": "tecnologías",
-  "home-interes": "intereses",
-  "home-acciones":"acciones",
-  "edad":"años"
+  "tecnologies": "tecnologías",
+  "interets": "intereses",
+  "actions": "acciones",
+  "years": "años",
+  "donate": "donar",
+  "nav": {
+    "inicio": "inicio",
+    "servicios": "servicios",
+    "sobre_mi": "sobre mi",
+    "contacto": "contacto"
+  },
+  "perfil": {
+    "descripcion": "Soy estudiante de Ingeniería de Software y actualmente estoy en búsqueda de una empresa donde pueda realizar mis prácticas profesionales. Cuento con casi 3 años de experiencia en programación, durante los cuales he trabajado en proyectos propios y adquirido sólidos conocimientos en desarrollo web fullstack, aplicaciones de escritorio y gestión de bases de datos. Estoy entusiasmado por aplicar mis habilidades y aprender aún más en un entorno profesional."
+  },
+  "btnLinks": {
+    "certificados": "certificados",
+    "proyectos": "proyectos",
+    "streams": "streams",
+    "cv": "descargar cv"
+  },
+  "intereses": {
+    "web": "Desarrollo de Páginas Web",
+    "bd": "Analista de Base de Datos",
+    "apis": "Desarrollo de APIs",
+    "desktop": "Desarrollo de aplicaciones de Escritorio"
+  },
+  "textos": {
+    "programador": "Programador",
+    "analista": "Analista",
+    "streamer": "Streamer",
+    "gamer": "Gamer",
+    "fuerza": "Que la fuerza te acompañe"
+  },
+  "modo": {
+    "oscuro": "Oscuro",
+    "claro": "Claro"
+  }
 }

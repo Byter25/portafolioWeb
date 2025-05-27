@@ -9,11 +9,12 @@ import {
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Links } from '@core/models/link.interface';
+import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
   selector: 'menu-right',
   standalone: true,
-  imports: [ RouterLink, RouterLinkActive, MatIconModule],
+  imports: [ RouterLink, RouterLinkActive, MatIconModule, TranslocoModule],
   template: `
     <input type="checkbox" class="hidden" id="navright" />
     <label class="text-center flex justify-center items-center" for="navright">
@@ -32,7 +33,7 @@ import { Links } from '@core/models/link.interface';
         routerLinkActive="dark:border-red-600 border-red-600"
         [routerLinkActiveOptions]="{ exact: true }"
       >
-        <a [routerLink]="nav.link">{{ nav.nombre }}</a>
+        <a [routerLink]="nav.link">{{ nav.nombre | transloco }}</a>
       </li>
       }
       <ng-content> </ng-content>

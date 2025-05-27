@@ -7,7 +7,7 @@ import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
   template: `
     <!--ESCRITURA AUTOMATICA-->
     <div [ngStyle]="{ width: longitudNomLargo + 'ch' }">
-      <p>{{ text.substring(0, index) }}<span class="animate-ping">|</span></p>
+      <p>{{ text.substring(0, index)}}<span class="animate-ping">|</span></p>
     </div>
   `,
   styles: [
@@ -27,7 +27,7 @@ import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 })
 export class EscribirMaquinaComponent implements OnInit, AfterViewInit {
   @Input() textos: string[] = []; //textos desde el padre
-  @Input() text = 'ByteDev'; // El texto que se va a mostrar
+  @Input() text = 'ByterDev'; // El texto que se va a mostrar
   index = 0; // El índice de la letra actual
   state = 'tipiar'; // El estado del efecto: tipiar o borrar
   interval = 50; // El intervalo de tiempo entre cada letra

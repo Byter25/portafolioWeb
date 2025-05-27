@@ -1,10 +1,11 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
   selector: 'mode-dark',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, TranslocoModule],
   template: `
     <div class="flex items-center w-fit">
       <input
@@ -14,9 +15,12 @@ import { Component } from '@angular/core';
         [checked]="isDarkMode"
         class="hidden"
       />
-      <label for="darkModeToggle" class="cursor-pointer text-center flex items-center">
+      <label
+        for="darkModeToggle"
+        class="cursor-pointer flex items-center gap-2"
+      >
         <span
-          class="material-icons"
+          class="material-icons mr-1"
           [ngClass]="{
             'text-white': isDarkMode,
             'text-black': !isDarkMode
@@ -24,6 +28,7 @@ import { Component } from '@angular/core';
         >
           {{ isDarkMode ? 'dark_mode' : 'light_mode' }}
         </span>
+        <p>{{ isDarkMode ? ('modo.oscuro'| transloco) : ('modo.claro' | transloco) }}</p>
       </label>
     </div>
   `,

@@ -1,17 +1,23 @@
+import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
 @Component({
   selector: 'float',
   standalone: true,
+  imports: [NgClass],
   template: `
     <aside
-      class="relative p-3 flex flex-col items-center justify-around rounded-md  hover:scale-[105%] ease-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600"
-    >
+      class="relative py-2 px-4 rounded-md  hover:scale-105 ease-in-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600 z-10"
+        [ngClass]="{
+    'flex flex-col items-center justify-center': estaCentrado,
+    'block': !estaCentrado
+  }"
+      >
       <div></div>
       <div></div>
       <div></div>
       <div></div>
       @if(titulo!=''){
-      <h3 class="uppercase font-bold p-2 text-2xl">{{ titulo }}</h3>
+      <h3 class="uppercase font-bold mb-4 text-2xl text-center">{{ titulo }}</h3>
       }
       <ng-content> </ng-content>
     </aside>
@@ -92,4 +98,10 @@ import { Component, Input } from '@angular/core';
 })
 export class FloatComponent {
   @Input() titulo?: string;
+  @Input() centrar: boolean = true;
+
+  get estaCentrado(): boolean {
+    return this.centrar !== false;
+  }
+
 }

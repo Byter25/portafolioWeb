@@ -6,7 +6,7 @@ import { CertificadosComponent } from './certificados.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 import { StreamComponent } from './transmiciones/stream.component';
-import { PdfViewerComponent } from './home/components/pdf-viewer.component';
+import { PdfViewerComponent } from './sobre-mi/components/pdf-viewer.component';
 
 
 export const ARTICLES_ROUTES: Routes = [

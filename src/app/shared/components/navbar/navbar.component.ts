@@ -4,6 +4,10 @@ import { MenuTopComponent } from './components/menu-top.component';
 import { MenuRightComponent } from './components/menu-right.component';
 import { Links } from '@core/models/link.interface';
 import { ModeDarkComponent } from './components/mode-dark.component';
+import { MatIcon } from '@angular/material/icon';
+import { TranslocoService } from '@ngneat/transloco';
+import { NgClass } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',
@@ -13,23 +17,28 @@ import { ModeDarkComponent } from './components/mode-dark.component';
     MenuRightComponent,
     ModeDarkComponent,
     SocialIconComponent,
+    MatIcon,
+    NgClass,
+    FormsModule
   ],
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent {
   textos = [
-    'hola soy byter',
-    'developer',
-    'programador',
-    'amante de los videojuegos',
-    'ByterDev',
+    'textos.saludo',
+    'textos.developer',
+    'textos.programador',
+    'textos.gamer',
+    'textos.nombre',
   ];
+
   navList: Links[] = [
-    { nombre: 'inicio', link: '' },
-    { nombre: 'servicios', link: 'services' },
-    { nombre: 'sobre mi', link: 'about' },
-    { nombre: 'contacto', link: 'contact' },
+    { nombre: 'nav.inicio', link: '' },
+    { nombre: 'nav.servicios', link: 'services' },
+    { nombre: 'nav.sobre_mi', link: 'about' },
+    { nombre: 'nav.contacto', link: 'contact' },
   ];
+
   faIcons: SocialIcons[] = [
     {
       nombre: 'Facebook',
@@ -65,12 +74,17 @@ export class NavbarComponent {
 
   anchoPantalla: number;
 
-  constructor() {
+  constructor(private translocoService: TranslocoService) {
     this.anchoPantalla = window.innerWidth;
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
     this.anchoPantalla = window.innerWidth;
+  }
+
+  activeLang = this.translocoService.getActiveLang();
+  changeLang(lang: string) {
+    this.translocoService.setActiveLang(lang);
   }
 }
