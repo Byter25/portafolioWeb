@@ -1,21 +1,32 @@
 <!--CONTENEDOR DEL MENU DE NAVEGACION-->
-<header class="sticky top-0 flex items-center p-4 transition-all justify-evenly bg-inherit dark:bg-neutral-900">
+<header
+  class="sticky top-0 flex items-center p-4 transition-all justify-evenly bg-inherit dark:bg-neutral-900"
+>
   <nav class="sm:order-2">
     @if (anchoPantalla > 768) {
     <menu-top [listaNav]="navList"></menu-top>
     } @else {
     <menu-right [listaNav]="navList" class="flex flex-wrap w-full">
-      <social-icons [socialIcons]="faIcons" [showNombre]="false" class="p-2"></social-icons>
+      <social-icons
+        [socialIcons]="faIcons"
+        [showNombre]="false"
+        class="p-2"
+      ></social-icons>
     </menu-right>
     }
   </nav>
   <h1
-    class="text-3xl tracking-wide text-red-600 transition-all duration-500 ease-in-out bg-transparent sm:order-1 hover:scale-105 dark:text-white dark:hover:text-red-600">
+    class="text-3xl tracking-wide text-red-600 transition-all duration-500 ease-in-out bg-transparent sm:order-1 hover:scale-105 dark:text-white dark:hover:text-red-600"
+  >
     BYTERDEV
   </h1>
 
   <div class="flex items-center justify-end order-3 gap-4 lg:order-3">
-    <social-icons [socialIcons]="faIcons" [showNombre]="false" class="hidden lg:block"></social-icons>
+    <social-icons
+      [socialIcons]="faIcons"
+      [showNombre]="false"
+      class="hidden lg:block"
+    ></social-icons>
     <!-- Checkbox como trigger con peer -->
     <div>
       <input type="checkbox" class="hidden peer" id="config" />
@@ -24,25 +35,48 @@
         <mat-icon>settings</mat-icon>
       </label>
       <!-- Menú desplegable con animación -->
-      <div name="config" id="config"
-        class="absolute right-0 z-50 w-40 mt-2 overflow-hidden transition-all duration-300 ease-in-out origin-top transform translate-y-0 bg-white rounded-md shadow-md md:right-auto dark:bg-zinc-900 max-h-0 peer-checked:max-h-60 peer-checked:translate-y-2 peer-checked:p-2">
+      <div
+        name="config"
+        id="config"
+        class="absolute right-0 z-50 w-40 mt-2 overflow-hidden transition-all duration-300 ease-in-out origin-top transform translate-y-0 bg-white rounded-md shadow-md md:right-auto dark:bg-zinc-900 max-h-0 peer-checked:max-h-60 peer-checked:translate-y-2 peer-checked:p-2"
+      >
         <p class="font-bold">Lenguajes:</p>
-        <div class="flex flex-col text-sm ">
-          <label class="p-2 cursor-pointer" [ngClass]="{
-      'bg-red-500 text-white': activeLang === 'es',
-      'bg-transparent hover:bg-red-100 dark:hover:bg-red-900': activeLang !== 'es'
-    }">
-            <input type="radio" name="lang" value="es" (change)="changeLang('es')" [(ngModel)]="activeLang"
-              class="hidden" />
+        <div class="flex flex-col text-sm">
+          <label
+            class="p-2 cursor-pointer"
+            [ngClass]="{
+              'bg-red-500 text-white': activeLang === 'es',
+              'bg-transparent hover:bg-red-100 dark:hover:bg-red-900':
+                activeLang !== 'es'
+            }"
+          >
+            <input
+              type="radio"
+              name="lang"
+              value="es"
+              (change)="changeLang('es')"
+              [(ngModel)]="activeLang"
+              class="hidden"
+            />
             Español
           </label>
 
-          <label class="p-2 cursor-pointer" [ngClass]="{
-      'bg-red-500 text-white': activeLang === 'en',
-      'bg-transparent hover:bg-red-100 dark:hover:bg-red-900': activeLang !== 'en'
-    }">
-            <input type="radio" name="lang" value="en" (change)="changeLang('en')" [(ngModel)]="activeLang"
-              class="hidden" />
+          <label
+            class="p-2 cursor-pointer"
+            [ngClass]="{
+              'bg-red-500 text-white': activeLang === 'en',
+              'bg-transparent hover:bg-red-100 dark:hover:bg-red-900':
+                activeLang !== 'en'
+            }"
+          >
+            <input
+              type="radio"
+              name="lang"
+              value="en"
+              (change)="changeLang('en')"
+              [(ngModel)]="activeLang"
+              class="hidden"
+            />
             English
           </label>
         </div>

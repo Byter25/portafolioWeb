@@ -14,7 +14,7 @@ import { TranslocoModule } from '@ngneat/transloco';
 @Component({
   selector: 'app-sobre-mi',
   standalone: true,
-  imports: [DonacionesComponent, CardProfileComponent, IconCardComponent, FloatComponent, BtnRefComponent, TranslocoModule],
+  imports: [DonacionesComponent, CardProfileComponent, IconCardComponent, FloatComponent, BtnRefComponent, TranslocoModule,],
   templateUrl: './sobre-mi.component.html',
   styles: ``,
 })
@@ -54,10 +54,10 @@ export class SobreMiComponent {
 
 
   btnLinks: IconLink[] = [
-    { nombre: 'btnLinks.certificados', link: 'certificates', icon: 'fa fa-solid fa-file-alt' },
-    { nombre: 'btnLinks.proyectos', link: 'proyects', icon: 'fas fa-folder' },
-    { nombre: 'btnLinks.streams', link: 'stream', icon: 'fas fa-folder' },
-    { nombre: 'btnLinks.cv', link: 'cv-byter', icon: 'fa-sharp fa-solid fa-download' },
+    { nombre: 'btnLinks.certificados', link: '/certificates', icon: 'fa fa-solid fa-file-alt' },
+    { nombre: 'btnLinks.proyectos', link: '/proyects', icon: 'fas fa-folder' },
+    { nombre: 'btnLinks.streams', link: '/stream', icon: 'fas fa-folder' },
+    { nombre: 'btnLinks.cv', link: '/cv-byter', icon: 'fa-sharp fa-solid fa-download' },
   ];
 
 }

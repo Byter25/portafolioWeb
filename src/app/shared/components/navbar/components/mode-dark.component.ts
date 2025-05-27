@@ -17,7 +17,7 @@ import { TranslocoModule } from '@ngneat/transloco';
       />
       <label
         for="darkModeToggle"
-        class="cursor-pointer flex items-center gap-2"
+        class="cursor-pointer flex items-center gap-2 p-2"
       >
         <span
           class="material-icons mr-1"
