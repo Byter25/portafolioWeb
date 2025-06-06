@@ -11,6 +11,7 @@
     "contacto": "contacto"
   },
   "perfil": {
+    "mas-mi":"mas sobre mi",
     "descripcion": "Soy estudiante de Ingeniería de Software y actualmente estoy en búsqueda de una empresa donde pueda realizar mis prácticas profesionales. Cuento con casi 3 años de experiencia en programación, durante los cuales he trabajado en proyectos propios y adquirido sólidos conocimientos en desarrollo web fullstack, aplicaciones de escritorio y gestión de bases de datos. Estoy entusiasmado por aplicar mis habilidades y aprender aún más en un entorno profesional."
   },
   "btnLinks": {

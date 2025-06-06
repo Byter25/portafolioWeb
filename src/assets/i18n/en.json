@@ -11,6 +11,7 @@
     "contacto": "contact"
   },
   "perfil": {
+    "mas-mi":"more about me",
     "descripcion": "I am a Software Engineering student currently seeking a company where I can undertake my professional internship. I have nearly 3 years of programming experience, during which I have worked on personal projects and acquired solid knowledge in fullstack web development, desktop applications, and database management. I am excited to apply my skills and learn even more in a professional environment."
   },
   "btnLinks": {

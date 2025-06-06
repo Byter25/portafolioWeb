@@ -1,8 +1,73 @@
-<section class="container m-auto  relative grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-transparent">
-  <card-profile />
-  <icon-card class="lg:col-start-2 " [nombre]="'home-tec' |transloco" [iconCard]="tecnologias" />
-  <icon-card class="lg:col-start-3" [nombre]="'home-interes' |transloco" [iconCard]="intereses" />
-  <float class="gap-10 font-bold" [titulo]="'home-acciones' |transloco">
-      <btn-ref [links]="btnLinks"></btn-ref>
-  </float>
+<section
+  class="container relative z-20 h-screen p-4 m-auto bg-white shadow-sm md:w-2/3 lg:w-2/5 dark:bg-black"
+>
+  <div class="h-auto p-2 border rounded-md dark:border-neutral-600">
+    <div class="flex gap-4 mb-2">
+      <img
+        src="../../../assets/perfil.webp"
+        alt=""
+        class="object-cover object-center h-12 rounded-full aspect-square"
+      />
+      <div class="relative">
+        <h2 class="text-xl font-semibold">Byter</h2>
+        <span class="text-sm text-neutral-300">11h</span>
+        <mat-icon
+          class="absolute pl-1 overflow-visible text-[16px] pt-1 text-neutral-300"
+          >public</mat-icon
+        >
+      </div>
+      <div class="flex items-center self-start justify-start ml-auto gap-x-2">
+        <button
+          class="w-8 h-8 pt-1 rounded-full aspect-square hover:bg-neutral-200 dark:hover:bg-neutral-700"
+        >
+          <mat-icon fontIcon="more_horiz" />
+        </button>
+        <button
+          class="w-8 h-8 pt-1 rounded-full aspect-square hover:bg-neutral-200 dark:hover:bg-neutral-700"
+        >
+          <mat-icon fontIcon="close" />
+        </button>
+      </div>
+    </div>
+    <hr class="h-px border-0 bg-neutral-600" />
+    <h2 class="text-xl">TITULO</h2>
+    <p class="pb-2 text-sm text-justify text-gray-700 dark:text-neutral-200">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ratione
+      neque. Placeat, repellendus vitae illo accusantium unde, excepturi est
+      dolorum assumenda officiis itaque eius iure, odit non soluta cupiditate
+      minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel ipsam a aliquid cum deserunt, culpa nostrum tempore numquam eligendi totam excepturi, et suscipit molestias pariatur qui beatae vero. Cupiditate?
+    </p>
+    <img
+      src="../../../assets/pcgamer.webp"
+      alt=""
+      width="100%"
+      class="max-h-[700px] ounded-md"
+    />
+    <hr class="h-px border-0 bg-neutral-600" />
+    <div class="grid grid-cols-3 text-center text-neutral-400">
+      <span> 121 likes</span>
+      <span>100 comentarios</span>
+      <span>10k compartidos</span>
+    </div>
+    <footer class="grid grid-cols-3 col-span-3 text-sm text-neutral-400">
+      <button
+        class="flex items-center justify-center gap-2 px-4 py-2 transition-all duration-100 rounded hover:text-neutral-200"
+      >
+        <mat-icon>thumb_up</mat-icon>
+        Me gusta
+      </button>
+      <button
+        class="flex items-center justify-center gap-2 px-4 py-2 transition-all duration-100 rounded hover:text-neutral-200"
+      >
+        <mat-icon>comment</mat-icon>
+        Comentar
+      </button>
+      <button
+        class="flex items-center justify-center gap-2 px-4 py-2 transition-all duration-100 rounded hover:text-neutral-200"
+      >
+        <mat-icon>share</mat-icon>
+        Compartir
+      </button>
+    </footer>
+  </div>
 </section>

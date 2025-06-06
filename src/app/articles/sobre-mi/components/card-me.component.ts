@@ -36,15 +36,15 @@ import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
   imports: [EscribirMaquinaComponent, FloatComponent, TranslocoModule],
 })
 export class CardProfileComponent {
-  textosClaves : string[] = [
- 'textos.programador',
-  'textos.analista',
-  'textos.streamer',
-  'textos.gamer',
-  'textos.fuerza',
+  textosClaves: string[] = [
+    'textos.programador',
+    'textos.analista',
+    'textos.streamer',
+    'textos.gamer',
+    'textos.fuerza',
   ];
   textosTraducidos: string[] = [];
-  constructor(private translocoService: TranslocoService) {}
+  constructor(private translocoService: TranslocoService) { }
 
   ngOnInit() {
     this.traducirTextos();
@@ -54,17 +54,22 @@ export class CardProfileComponent {
     });
   }
 
-  traducirTextos() {
-    this.textosTraducidos = this.textosClaves.map(clave =>
-      this.translocoService.translate(clave)
-    );
-  }
+traducirTextos() {
+  this.textosTraducidos = [];
+
+  this.textosClaves.forEach(clave => {
+    this.translocoService.selectTranslate(clave).subscribe(traduccion => {
+      this.textosTraducidos.push(traduccion);
+    });
+  });
+}
 
   isOpen = false;
 
   toggle() {
     this.isOpen = !this.isOpen;
   }
+  
   calcularEdad(fechaNacimiento: string | Date): number {
     const hoy = new Date();
     const nacimiento = new Date(fechaNacimiento);

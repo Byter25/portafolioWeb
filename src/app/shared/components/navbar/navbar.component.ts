@@ -8,6 +8,7 @@ import { MatIcon } from '@angular/material/icon';
 import { TranslocoService } from '@ngneat/transloco';
 import { NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { SelectLenguajeComponent } from './components/select-lenguajes.component';
 
 @Component({
   selector: 'app-navbar',
@@ -18,9 +19,9 @@ import { FormsModule } from '@angular/forms';
     ModeDarkComponent,
     SocialIconComponent,
     MatIcon,
-    NgClass,
-    FormsModule
-  ],
+    FormsModule,
+    SelectLenguajeComponent
+],
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent {
@@ -74,7 +75,7 @@ export class NavbarComponent {
 
   anchoPantalla: number;
 
-  constructor(private translocoService: TranslocoService) {
+  constructor() {
     this.anchoPantalla = window.innerWidth;
   }
 
@@ -83,8 +84,5 @@ export class NavbarComponent {
     this.anchoPantalla = window.innerWidth;
   }
 
-  activeLang = this.translocoService.getActiveLang();
-  changeLang(lang: string) {
-    this.translocoService.setActiveLang(lang);
-  }
+
 }

@@ -13,7 +13,7 @@ import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
   styles: [
     `
       .animate-typing {
-        animation: typing 3s 1s infinite;
+        animation: typing 1s 1s infinite;
       }
 
       @keyframes typing {
