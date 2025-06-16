@@ -5,8 +5,6 @@ import { MenuRightComponent } from './components/menu-right.component';
 import { Links } from '@core/models/link.interface';
 import { ModeDarkComponent } from './components/mode-dark.component';
 import { MatIcon } from '@angular/material/icon';
-import { TranslocoService } from '@ngneat/transloco';
-import { NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SelectLenguajeComponent } from './components/select-lenguajes.component';
 

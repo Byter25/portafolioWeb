@@ -1,73 +1,90 @@
 <section
-  class="container relative z-20 h-screen p-4 m-auto bg-white shadow-sm md:w-2/3 lg:w-2/5 dark:bg-black"
+  class="container relative h-screen p-4 m-auto shadow-sm bg-neutral-50/50 md:w-2/3 lg:w-2/5 dark:bg-neutral-800/50 backdrop:blur-sm"
 >
-  <div class="h-auto p-2 border rounded-md dark:border-neutral-600">
-    <div class="flex gap-4 mb-2">
-      <img
-        src="../../../assets/perfil.webp"
-        alt=""
-        class="object-cover object-center h-12 rounded-full aspect-square"
-      />
-      <div class="relative">
-        <h2 class="text-xl font-semibold">Byter</h2>
-        <span class="text-sm text-neutral-300">11h</span>
-        <mat-icon
-          class="absolute pl-1 overflow-visible text-[16px] pt-1 text-neutral-300"
-          >public</mat-icon
-        >
-      </div>
-      <div class="flex items-center self-start justify-start ml-auto gap-x-2">
-        <button
-          class="w-8 h-8 pt-1 rounded-full aspect-square hover:bg-neutral-200 dark:hover:bg-neutral-700"
-        >
-          <mat-icon fontIcon="more_horiz" />
-        </button>
-        <button
-          class="w-8 h-8 pt-1 rounded-full aspect-square hover:bg-neutral-200 dark:hover:bg-neutral-700"
-        >
-          <mat-icon fontIcon="close" />
-        </button>
-      </div>
-    </div>
-    <hr class="h-px border-0 bg-neutral-600" />
-    <h2 class="text-xl">TITULO</h2>
-    <p class="pb-2 text-sm text-justify text-gray-700 dark:text-neutral-200">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ratione
-      neque. Placeat, repellendus vitae illo accusantium unde, excepturi est
-      dolorum assumenda officiis itaque eius iure, odit non soluta cupiditate
-      minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel ipsam a aliquid cum deserunt, culpa nostrum tempore numquam eligendi totam excepturi, et suscipit molestias pariatur qui beatae vero. Cupiditate?
-    </p>
+<div class="h-auto p-4 transition-colors duration-300 bg-white border shadow-md rounded-xl text-neutral-900 dark:bg-neutral-900 dark:text-white border-neutral-300 dark:border-neutral-700 shadow-gray-600/50 dark:shadow-black">
+  <!-- Encabezado -->
+  <div class="flex gap-4 mb-3">
     <img
-      src="../../../assets/pcgamer.webp"
+      src="perfil.webp"
       alt=""
-      width="100%"
-      class="max-h-[700px] ounded-md"
+      class="object-cover object-center h-12 rounded-full aspect-square"
     />
-    <hr class="h-px border-0 bg-neutral-600" />
-    <div class="grid grid-cols-3 text-center text-neutral-400">
-      <span> 121 likes</span>
-      <span>100 comentarios</span>
-      <span>10k compartidos</span>
+    <div class="relative">
+      <h2 class="text-lg font-bold text-zinc-800 dark:text-zinc-100">Byter</h2>
+      <span class="relative text-xs text-neutral-500 dark:text-neutral-400">
+        11h
+        <mat-icon
+          class="absolute top-0 right-[-30px] text-[16px] text-neutral-500 dark:text-neutral-300"
+        >
+          public
+        </mat-icon>
+      </span>
     </div>
-    <footer class="grid grid-cols-3 col-span-3 text-sm text-neutral-400">
-      <button
-        class="flex items-center justify-center gap-2 px-4 py-2 transition-all duration-100 rounded hover:text-neutral-200"
-      >
-        <mat-icon>thumb_up</mat-icon>
-        Me gusta
+
+    <!-- Acciones -->
+    <div class="flex items-center ml-auto gap-x-2">
+      <button class="w-8 h-8 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700">
+        <mat-icon fontIcon="more_horiz"></mat-icon>
       </button>
-      <button
-        class="flex items-center justify-center gap-2 px-4 py-2 transition-all duration-100 rounded hover:text-neutral-200"
-      >
-        <mat-icon>comment</mat-icon>
-        Comentar
+      <button class="w-8 h-8 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700">
+        <mat-icon fontIcon="close"></mat-icon>
       </button>
-      <button
-        class="flex items-center justify-center gap-2 px-4 py-2 transition-all duration-100 rounded hover:text-neutral-200"
-      >
-        <mat-icon>share</mat-icon>
-        Compartir
-      </button>
-    </footer>
+    </div>
   </div>
+
+  <!-- Línea -->
+  <hr class="h-px mb-3 border-0 bg-neutral-300 dark:bg-neutral-700" />
+
+  <!-- Título del post -->
+  <h2 class="mb-2 text-2xl font-extrabold text-zinc-800 dark:text-zinc-100">TITULO</h2>
+
+  <!-- Contenido -->
+  <p class="mb-4 text-sm leading-relaxed text-justify text-neutral-700 dark:text-neutral-300">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ratione
+    neque. Placeat, repellendus vitae illo accusantium unde, excepturi est
+    dolorum assumenda officiis itaque eius iure, odit non soluta cupiditate
+    minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel
+    ipsam a aliquid cum deserunt, culpa nostrum tempore numquam eligendi totam
+    excepturi, et suscipit molestias pariatur qui beatae vero. Cupiditate?
+  </p>
+
+  <!-- Imagen del post -->
+  <img
+    src="pcgamer.webp"
+    alt=""
+    class="w-full max-h-[700px] rounded-md mb-4 object-cover"
+  />
+
+  <!-- Línea -->
+  <hr class="h-px mb-2 border-0 bg-neutral-300 dark:bg-neutral-700" />
+
+  <!-- Métricas -->
+  <div class="grid grid-cols-3 mb-2 text-sm text-center text-neutral-500 dark:text-neutral-400">
+    <span class="cursor-default hover:text-black dark:hover:text-white">121 likes</span>
+    <span class="cursor-default hover:text-black dark:hover:text-white">10k comentarios</span>
+    <span class="cursor-default hover:text-black dark:hover:text-white">10 compartidos</span>
+  </div>
+
+  <!-- Botones -->
+  <footer class="grid grid-cols-3 text-sm text-neutral-600 dark:text-neutral-400">
+    <button
+      class="flex items-center justify-center gap-2 py-2 transition-colors rounded hover:text-red-500 dark:hover:text-white"
+    >
+      <mat-icon>thumb_up</mat-icon>
+      Me gusta
+    </button>
+    <button
+      class="flex items-center justify-center gap-2 py-2 transition-colors rounded hover:text-red-500 dark:hover:text-white"
+    >
+      <mat-icon>comment</mat-icon>
+      Comentar
+    </button>
+    <button
+      class="flex items-center justify-center gap-2 py-2 transition-colors rounded hover:text-red-500 dark:hover:text-white"
+    >
+      <mat-icon>share</mat-icon>
+      Compartir
+    </button>
+  </footer>
+</div>
 </section>

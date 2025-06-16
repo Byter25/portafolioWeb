@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   imports: [NgClass],
   template: `
     <aside
-      class="relative py-2 px-4 rounded-md  hover:scale-105 ease-in-out h-full w-full overflow-hidden shadow-md dark:shadow-black hover:shadow-red-600 z-10"
+      class="relative py-2 px-4 rounded-md  hover:scale-105 ease-in-out h-full w-full overflow-hidden shadow-md shadow-gray-500/50  dark:shadow-black  z-10"
         [ngClass]="{
     'flex flex-col items-center justify-center': estaCentrado,
     'block': !estaCentrado

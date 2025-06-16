@@ -1,5 +1,54 @@
-<h1>TRANSMICIONES</h1>
-<div>
-<!-- <yt-stream></yt-stream> -->
+<section class="container flex flex-col m-auto lg:flex-row">
+  <nav class="p-4 bg-white rounded-l-lg shadow-md dark:bg-neutral-900">
+    <ul class="grid grid-cols-3 gap-2 lg:w-32 lg:grid-cols-1">
+      <!-- Twitch -->
+      <li class="z-20">
+        <button
+          aria-label="Twitch"
+          class="flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[#6441a5] text-white hover:scale-105 transition-transform duration-200 w-full"
+        >
+          <i class="text-xl fab fa-twitch"></i>
+          <span class="text-sm font-semibold">Twitch</span>
+        </button>
+      </li>
 
-</div>
+      <!-- YouTube -->
+      <li>
+        <button
+          aria-label="YouTube"
+          class="flex items-center justify-center w-full gap-2 px-4 py-2 text-white transition-transform duration-200 bg-red-600 rounded-full hover:scale-105"
+        >
+          <i class="text-xl fab fa-youtube"></i>
+          <span class="text-sm font-semibold">YouTube</span>
+        </button>
+      </li>
+
+      <!-- Kick -->
+      <li>
+        <button
+          aria-label="Kick"
+          class="flex items-center justify-center w-full gap-2 px-4 py-2 text-white transition-transform duration-200 bg-green-500 rounded-full hover:scale-105"
+        >
+          <i class="text-xl fa-solid fa-play"></i>
+          <span class="text-sm font-semibold">Kick</span>
+        </button>
+      </li>
+
+      <!-- TikTok -->
+      <li>
+        <button
+          aria-label="TikTok"
+          class="flex items-center justify-center w-full gap-2 px-4 py-2 text-white transition-transform duration-200 bg-black rounded-full hover:scale-105"
+        >
+          <i class="text-xl fab fa-tiktok"></i>
+          <span class="text-sm font-semibold">TikTok</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <div
+    class="container flex items-center justify-center m-auto text-4xl text-white border border-gray-500 shadow-md aspect-video bg-black/50 backdrop-blur-lg"
+  >
+    <i class="m-10 fa-solid fa-eye-slash text-white/50"></i>
+  </div>
+</section>

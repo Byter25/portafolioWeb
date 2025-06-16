@@ -9,7 +9,8 @@ import { Component, Input } from '@angular/core';
       <li>
         <a
           [href]="s.link"
-          class="hover:shadow-md p-1 h-7 w-7  rounded-md flex items-center justify-center text-white"
+          class="hover:shadow-md p-1 h-7 w-7  rounded-md flex items-center justify-center text-white hover:scale-150 transition-all duration-300 ease-in-out"
+          target="_blank" 
           [style.background-color]="s.color"
         >
           <i [class]="s.classIcon"></i>

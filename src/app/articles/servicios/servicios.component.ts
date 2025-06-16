@@ -9,55 +9,109 @@ import Merch from './components/merch.interface';
   imports: [CardCharacterComponent],
 })
 export class ServiciosComponent {
-  merchs: Merch[] = [
+  paginas: Merch[] =[
+  {
+    nombre: 'Sitio Web Informativo',
+    proposito: 'Páginas diseñadas para mostrar información estática o básica de una empresa, producto o persona.',
+    caracteristicas: [
+      'Carga rápida y diseño responsive',
+      'Optimización para buscadores (SEO)',
+      'Fácil navegación y estructura clara'
+    ],
+    ejemplos: ['Landing page', 'Portafolio personal', 'Página institucional'],
+    precio: [300, 1200]
+  },
+  {
+    nombre: 'Sitio Web Administrable (CMS)',
+    proposito: 'Páginas que permiten gestionar contenido fácilmente sin saber programar.',
+    caracteristicas: [
+      'Panel de administración (WordPress, Strapi, etc.)',
+      'Creación de blogs, páginas o productos sin código',
+      'Plugins y personalización sencilla'
+    ],
+    ejemplos: ['Blog personal', 'Página de noticias', 'Web de productos'],
+    precio: [800, 3000]
+  },
+  {
+    nombre: 'Web Aplicación (WebApp)',
+    proposito: 'Aplicaciones que funcionan en el navegador con funcionalidades dinámicas, autenticación y base de datos.',
+    caracteristicas: [
+      'Desarrolladas con Angular, React o Vue',
+      'Interactividad avanzada (formularios, filtros, dashboards)',
+      'Conexión a APIs o bases de datos remotas'
+    ],
+    ejemplos: ['Sistema de reservas', 'Panel de administración', 'App de tareas'],
+    precio: [2000, 10000]
+  }
+]
+  desktop: Merch[] = [
+  {
+    nombre: 'Aplicación de Escritorio Nativa',
+    proposito: 'Aplicaciones diseñadas para ejecutarse directamente en sistemas operativos específicos como Windows, macOS o Linux.',
+    caracteristicas: [
+      'Acceso completo al sistema de archivos y hardware',
+      'Mayor rendimiento en tareas intensivas',
+      'Integración profunda con el sistema operativo'
+    ],
+    ejemplos: ['Editor de video', 'Software contable', 'IDE como Visual Studio'],
+    precio: [4000, 12000]
+  },
+  {
+    nombre: 'Aplicación de Escritorio Multiplataforma',
+    proposito: 'Aplicaciones construidas con tecnologías que permiten ejecutarlas en múltiples sistemas operativos con el mismo código.',
+    caracteristicas: [
+      'Desarrolladas con Electron, .NET MAUI o Tauri',
+      'Código base compartido para Windows, macOS y Linux',
+      'Ideal para herramientas administrativas o paneles'
+    ],
+    ejemplos: ['Slack', 'VS Code', 'Apps de gestión personal'],
+    precio: [3000, 9000]
+  },
+  {
+    nombre: 'Aplicación de Escritorio Empresarial',
+    proposito: 'Software robusto para gestión interna, conectado a bases de datos o sistemas ERP.',
+    caracteristicas: [
+      'Orientadas a usuarios internos o administrativos',
+      'Seguridad avanzada y control de acceso',
+      'Procesamiento local de datos con conexión remota'
+    ],
+    ejemplos: ['Sistema de inventario', 'Control de producción', 'Software de RRHH'],
+    precio: [5000, 15000]
+  }
+]
+  moviles: Merch[] = [
     {
-      nombre: 'Básicas',
-      proposito:
-        'Son páginas web sencillas y funcionales. Generalmente son sitios informativos con pocas secciones (Inicio, Acerca de, Servicios, Contacto).',
+      nombre: 'Aplicación Nativa',
+      proposito: 'Aplicaciones diseñadas específicamente para Android o iOS con máximo rendimiento.',
       caracteristicas: [
-        'Diseño básico o plantillas predefinidas',
-        'Generalmente una sola página o hasta 5 secciones',
-        'Sin funcionalidades avanzadas (formularios simples, galerías de imágenes)',
-        'Optimización básica para SEO',
+        'Desempeño optimizado',
+        'Acceso completo a APIs y sensores del dispositivo',
+        'Mejor experiencia de usuario y fluidez'
       ],
-      usuarios: [],
-      ejemplos: [],
-      precio: [100, 500],
+      ejemplos: ['App bancaria', 'Red social de alto rendimiento', 'Juegos móviles'],
+      precio: [3000, 10000]
     },
     {
-      nombre: 'Intermedias',
-      proposito:
-        'Son páginas más personalizadas con un nivel medio de desarrollo y diseño. A menudo tienen funcionalidades interactivas y múltiples secciones.',
+      nombre: 'Aplicación Híbrida',
+      proposito: 'Apps desarrolladas con tecnologías web que funcionan dentro de una webview nativa.',
       caracteristicas: [
-        'Diseño personalizado',
-        'Hasta 10 secciones o más, con navegación compleja',
-        'Integración de funcionalidades como formularios avanzados, tiendas básicas (e-commerce), blogs, etc',
-        'Integración con herramientas de análisis y SEO más avanzado',
-        'Mayor soporte para dispositivos móviles (responsive)',
+        'Código reutilizable para Android e iOS',
+        'Desarrollo rápido y económico',
+        'Ideal para MVPs o aplicaciones con lógica simple'
       ],
-      usuarios: [],
-      ejemplos: [],
-      precio: [500, 1500],
+      ejemplos: ['App informativa', 'Catálogo de productos', 'Blog móvil'],
+      precio: [2000, 6000]
     },
     {
-      nombre: 'Avanzadas',
-      proposito:
-        'Son páginas más personalizadas con un nivel medio de desarrollo y diseño. A menudo tienen funcionalidades interactivas y múltiples secciones.',
+      nombre: 'Aplicación Multiplataforma',
+      proposito: 'Aplicaciones con un solo código base que se compilan como nativas en múltiples plataformas.',
       caracteristicas: [
-        'Diseño único y avanzado, con animaciones o elementos gráficos especiales.',
-        'Funcionalidades avanzadas (e-commerce con muchas funciones, membresías, plataformas interactivas).',
-        'Desarrollo backend robusto para gestionar bases de datos, usuarios, pagos, etc.',
-        'Integración con CRM, ERP u otros sistemas de negocio.',
-        'Optimización avanzada para SEO, velocidad y seguridad.',
+        'Desarrolladas con Flutter, React Native o .NET MAUI',
+        'Aspecto y comportamiento casi nativo',
+        'Menor mantenimiento que apps separadas'
       ],
-      usuarios: [],
-      ejemplos: [
-        'E-commerce',
-        'plataformas educativas',
-        'redes sociales',
-        'marketplaces',
-      ],
-      precio: [1500, 2500],
-    },
-  ];
+      ejemplos: ['App de delivery', 'App de reservas', 'Red social básica'],
+      precio: [2500, 8000]
+    }
+  ]
 }

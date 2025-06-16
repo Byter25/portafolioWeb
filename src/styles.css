@@ -9,9 +9,7 @@
   @apply p-0 m-0 ;
 
 }
-ul,li,i,a,span,p{
-  @apply bg-transparent ;
-}
+
 body{
   @apply bg-neutral-200 ;
 }

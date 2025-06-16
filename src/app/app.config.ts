@@ -13,14 +13,14 @@ export const appConfig: ApplicationConfig = {
     provideRouter(appRoutes, withViewTransitions()),
     provideAnimations(),
     provideAnimationsAsync(), provideHttpClient(), provideTransloco({
-        config: {
-          availableLangs: ['en', 'es'],
-          defaultLang: 'en',
-          // Remove this option if your application doesn't support changing language in runtime.
-          reRenderOnLangChange: true,
-          prodMode: !isDevMode(),
-        },
-        loader: TranslocoHttpLoader
-      }),
+      config: {
+        availableLangs: ['en', 'es'],
+        defaultLang: 'en',
+        // Remove this option if your application doesn't support changing language in runtime.
+        reRenderOnLangChange: true,
+        prodMode: !isDevMode(),
+      },
+      loader: TranslocoHttpLoader
+    }),
   ],
 };

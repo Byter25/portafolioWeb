@@ -25,7 +25,7 @@ import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
               [(ngModel)]="activeLang"
               class="hidden"
             />
-            Español
+            {{ 'idioma.es' | transloco }}
           </label>
 
           <label
@@ -44,7 +44,7 @@ import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
               [(ngModel)]="activeLang"
               class="hidden"
             />
-            English
+            {{ 'idioma.en' | transloco }}
           </label>
         </div>
   `,

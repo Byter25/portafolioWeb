@@ -1,7 +1,8 @@
 import { FloatComponent } from '@shared/components/float.component';
-import { IconCard } from '../../../core/models/icon-card.interface';
+import { IconCard } from '@core/models/icon-card.interface';
 import { Component, Input } from '@angular/core';
 import { TranslocoModule } from '@ngneat/transloco';
+import { SvgIconComponent } from "../../../shared/components/svg-icon.component";
 @Component({
   selector: 'icon-card',
   template: `
@@ -12,8 +13,8 @@ import { TranslocoModule } from '@ngneat/transloco';
         class="w-full p-2 flex gap-2 items-center rounded-md shadow-md hover:shadow-[--color]   hover:text-[--color] transition-colors duration-300 ease-in-out peer group"
         style="--color: {{ sec.color }}"
       >
-        @if(sec.icon!.startsWith("assets")){
-          <img [src]="sec.icon" alt="svg" style="--color: {{ sec.color }}" class=" size-[1.875rem] group-hover:bg-[--color] transition-all  bg-zinc-800 dark:bg-transparent duration-500">
+        @if(sec.icon!.endsWith(".svg")){
+          <svg-icon [src]="sec.icon" />
           <span>{{ sec.nombre | transloco }}</span>
         }
         @else{
@@ -26,7 +27,7 @@ import { TranslocoModule } from '@ngneat/transloco';
   </float>
   `,
   standalone: true,
-  imports: [FloatComponent,TranslocoModule],
+  imports: [FloatComponent, TranslocoModule, SvgIconComponent],
 })
 export class IconCardComponent {
   @Input() nombre:string = ''

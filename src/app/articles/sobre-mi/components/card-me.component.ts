@@ -11,7 +11,7 @@ import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
       <div class="aspect-square rounded-full w-[150px] md:w-[200px] border border-zinc-500 overflow-hidden">
         <img
           class="object-cover object-top hover:scale-110 transition-all duration-300"
-          src="assets/perfil.webp"
+          src="perfil.webp"
           alt="perfil"
         />
       </div>

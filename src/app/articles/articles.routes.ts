@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { ContactoComponent } from './contacto/seccion-contacto.component';
-import { CertificadosComponent } from './certificados.component';
+import { CertificadosComponent } from './sobre-mi/components/certificados.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 import { StreamComponent } from './transmiciones/stream.component';

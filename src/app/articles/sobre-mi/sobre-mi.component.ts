@@ -41,7 +41,7 @@ export class SobreMiComponent {
   tecnologias: IconCard[] = [
     { nombre: 'Angular Framework', icon: 'fa-brands fa-angular', color: '#ff0000' },
     { nombre: 'Microsoft Sql Server', icon: 'fa-solid fa-database', color: '#FCF443' },
-    { nombre: 'Dot-Net 8.0', icon: 'assets/svg/dotnet.svg', color: '#512BD4' },
+    { nombre: 'Dot-Net 8.0', icon: 'assets/svg/frameworks/net.svg', color: '#7d3fd2' },
     { nombre: 'Github', icon: 'fa-brands fa-github', color: '#4078c0' },
   ];
 

@@ -1,12 +1,12 @@
 <!--CONTENEDOR DEL MENU DE NAVEGACION-->
 <header
-  class="sticky top-0 flex items-center p-4 transition-all justify-evenly bg-inherit dark:bg-neutral-900"
+  class="sticky top-0 flex items-center p-4 transition-all justify-evenly bg-neutral-50 dark:bg-neutral-800 "
 >
   <nav class="sm:order-2">
     @if (anchoPantalla > 768) {
     <menu-top [listaNav]="navList"></menu-top>
     } @else {
-    <menu-right [listaNav]="navList" class="flex flex-wrap w-full">
+    <menu-right [listaNav]="navList" fondo="bg-neutral-50 dark:bg-neutral-800">
       <social-icons
         [socialIcons]="faIcons"
         [showNombre]="false"
@@ -16,7 +16,7 @@
     }
   </nav>
   <h1
-    class="text-3xl tracking-wide text-red-600 transition-all duration-500 ease-in-out bg-transparent sm:order-1 hover:scale-105 dark:text-white dark:hover:text-red-600"
+    class="text-3xl font-semibold tracking-widest text-red-600 transition-all duration-700 ease-in-out bg-transparent sm:order-1 hover:scale-110 dark:text-white dark:hover:text-red-600"
   >
     BYTERDEV
   </h1>
@@ -31,19 +31,19 @@
     <div>
       <input type="checkbox" class="hidden peer" id="config" />
       <!-- Botón de configuración -->
-      <label for="config">
-        <mat-icon>settings</mat-icon>
+      <label for="config" class="relative flex items-center justify-center cursor-pointer">
+        <mat-icon class="text-[28px] hover:scale-150 transition-transform duration-300 " style="width: 28px;height: 28px;">settings</mat-icon>
       </label>
       <!-- Menú desplegable con animación -->
       <div
         name="config"
         id="config"
-        class="absolute right-0 z-50 w-40 mt-2 overflow-hidden transition-all duration-300 ease-in-out origin-top transform translate-y-0 bg-white rounded-md shadow-md md:right-0 lg:right-auto dark:bg-zinc-900 max-h-0 peer-checked:max-h-60 peer-checked:translate-y-2 peer-checked:p-2 "
+        class="absolute right-0 z-50 w-40 mt-2 overflow-hidden transition-all duration-300 ease-in-out origin-top transform translate-y-0 rounded-md shadow-md md:right-0 lg:right-auto bg-neutral-50 dark:bg-zinc-900 max-h-0 peer-checked:max-h-60 peer-checked:translate-y-2 peer-checked:p-2"
       >
-        <p class="font-bold">Lenguajes:</p>
-        <select-lenguaje/>
         <p class="font-bold">Modo:</p>
         <mode-dark></mode-dark>
+        <p class="font-bold">Lenguajes:</p>
+        <select-lenguaje />
       </div>
     </div>
   </div>
