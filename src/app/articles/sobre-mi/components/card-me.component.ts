@@ -26,7 +26,7 @@ import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
         <p>🟥🟥⬜⬜🟥🟥</p>
         <p class="text-zinc-400">PeruKistano</p>
         <p class="text-zinc-400">
-          {{ calcularEdad('2003-09-11') + ' ' + ('edad' | transloco) }}
+          {{ calcularEdad('2003-09-11') + ' ' + ('years' | transloco) }}
         </p>
       </div>
     </float>

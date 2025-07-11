@@ -17,7 +17,7 @@ import { TranslocoModule } from '@ngneat/transloco';
   template: `
     <div
         #backdrop
-        class="fixed backdrop-blur-lg bg-red-100/30 dark:bg-red-900/30 rounded-2xl transition-all duration-300 z-100"
+        class="fixed backdrop-blur-lg bg-[var(--primary-color-transparent)] dark:bg-[var(--primary-color-transparent)] rounded-2xl transition-all duration-300 z-100"
         [ngStyle]="{
           left: 'var(--left)',
           top: 'var(--top)',
@@ -28,11 +28,11 @@ import { TranslocoModule } from '@ngneat/transloco';
       <ul class="sticky flex items-center uppercase font-bold tracking-widest bg-transparent gap-2">
         @for(nav of listaNav;track nav){
         <li
-          class="px-4 py-2 hover:text-red-600 transition-all"
-          routerLinkActive="text-red-600"
+          class="px-4 py-2 hover:text-[var(--hover-color)] transition-all"
+          routerLinkActive="text-[--primary-color]"
           [routerLinkActiveOptions]="{ exact: true }"
         >
-          <a [routerLink]="nav.link">{{ nav.nombre | transloco }}</a>
+          <a [routerLink]="nav.link">{{ nav.name | transloco }}</a>
         </li>
         }
       </ul>

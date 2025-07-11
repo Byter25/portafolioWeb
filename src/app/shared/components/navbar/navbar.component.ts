@@ -7,6 +7,7 @@ import { ModeDarkComponent } from './components/mode-dark.component';
 import { MatIcon } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { SelectLenguajeComponent } from './components/select-lenguajes.component';
+import { SelectThemeComponent } from './components/select-theme.component';
 
 @Component({
   selector: 'app-navbar',
@@ -18,7 +19,8 @@ import { SelectLenguajeComponent } from './components/select-lenguajes.component
     SocialIconComponent,
     MatIcon,
     FormsModule,
-    SelectLenguajeComponent
+    SelectLenguajeComponent,
+    SelectThemeComponent
 ],
   templateUrl: './navbar.component.html',
 })
@@ -32,10 +34,10 @@ export class NavbarComponent {
   ];
 
   navList: Links[] = [
-    { nombre: 'nav.inicio', link: '' },
-    { nombre: 'nav.servicios', link: 'services' },
-    { nombre: 'nav.sobre_mi', link: 'about' },
-    { nombre: 'nav.contacto', link: 'contact' },
+    { name: 'nav.inicio', link: '' },
+    { name: 'nav.servicios', link: 'services' },
+    { name: 'nav.sobre_mi', link: 'about' },
+    { name: 'nav.contacto', link: 'contact' },
   ];
 
   faIcons: SocialIcons[] = [

@@ -1,10 +1,9 @@
 <app-navbar @fadeInOut class="sticky top-0 z-50 shadow-sm dark:shadow-black bg-neutral-50 dark:bg-neutral-800"/>
 <main class="relative flex flex-col justify-center flex-1 overflow-hidden">
-  <div class="absolute bottom-0 left-0 bg-red-200 rounded-full opacity-50 dark:bg-red-600 -z-10 size-96 blur-3xl"></div>
-  <div class="absolute top-0 right-0 bg-red-200 rounded-full opacity-50 dark:bg-red-600 dark:opacity-50 size-96 -z-10 blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 bg-[var(--primary-color-transparent)] rounded-full opacity-50 dark:bg-[var(--primary-color)] -z-10 size-96 blur-3xl"></div>
+  <div class="absolute top-0 right-0 bg-[var(--primary-color-transparent)] rounded-full opacity-50 dark:bg-[var(--primary-color)] size-96 -z-10 blur-3xl"></div>
   <router-outlet/>
 </main>
-<footer
-  class="flex items-center justify-around p-4 shadow-md bg-neutral-50 dark:bg-neutral-800 shadow-zinc-500 dark:shadow-zinc-800 max-h-10">
+<footer class="flex items-center justify-around p-4 shadow-md bg-[var(--bg-color)] hover:bg-[var(--hover-bg-color)] transition-all duration-500 max-h-10">
   <p class="text-xs font-semibold">Hecho por {{ "@ByterDev" }}</p>
 </footer>

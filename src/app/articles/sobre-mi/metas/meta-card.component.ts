@@ -3,12 +3,12 @@ import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'donaciones',
+  selector: 'meta-card',
   standalone: true,
   imports: [NgStyle],
   template: `
     <div
-      class="relative px-4 py-2 w-full aspect-video bg-cover bg-center rounded-3xl overflow-hidden transition-all duration-300 ease-in-out text-white shadow-md shadow-black"
+      class="relative px-4 py-2 w-full min-w-[200px] aspect-video bg-cover bg-center rounded-3xl overflow-hidden transition-all duration-300 ease-in-out text-white shadow-md shadow-black"
       [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')' }"
     >
       <!-- Overlay oscuro con blur -->
@@ -26,6 +26,6 @@ import { RouterLink } from '@angular/router';
   `,
   styles: ``,
 })
-export class DonacionesComponent {
+export class MetaCardComponent {
   @Input() imageUrl: string = '';
 }

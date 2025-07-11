@@ -25,16 +25,16 @@ import { TranslocoModule } from '@ngneat/transloco';
       [ngClass]="fondo"
     >
     
-      <label for="navright" class="p-4 flex items-center w-full justify-end">
+      <label for="navright" class="p-4 flex items-center justify-start">
         <mat-icon  style="width: 28px; height: 28px; font-size: 28px;">close</mat-icon>
       </label>
       @for(nav of listaNav;track nav){
       <li
-        class="pl-4 py-2 border-l-4  border-gray-200 dark:border-gray-600 transition-all duration-300 ease-in-out"
-        routerLinkActive="dark:border-red-600 border-red-600"
+        class="pl-4 py-2 border-l-4  border-[var(--primary-color-transparent)] transition-all duration-300 ease-in-out"
+        routerLinkActive="border-[var(--primary-color)] bg-[var(--primary-color-transparent)] text-[--primary-color]"
         [routerLinkActiveOptions]="{ exact: true }"
       >
-        <a [routerLink]="nav.link">{{ nav.nombre | transloco }}</a>
+        <a [routerLink]="nav.link">{{ nav.name | transloco }}</a>
       </li>
       }
       <ng-content> </ng-content>
@@ -43,5 +43,5 @@ import { TranslocoModule } from '@ngneat/transloco';
 })
 export class MenuRightComponent {
   @Input() listaNav: Links[] = [];
-  @Input() fondo: string = 'bg-white dark:bg-back';
+  @Input() fondo: string = 'bg-[var(--bg-color)]';
 }

@@ -7,6 +7,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 import { StreamComponent } from './transmiciones/stream.component';
 import { PdfViewerComponent } from './sobre-mi/components/pdf-viewer.component';
+import { MetasComponent } from './sobre-mi/metas/metas.component';
 
 
 export const ARTICLES_ROUTES: Routes = [
@@ -25,4 +26,5 @@ export const ARTICLES_ROUTES: Routes = [
   { path: 'cookies', component: HomeComponent, data: {title: 'ByterDev'} },
   { path: 'privacity', component: HomeComponent, data: {title: 'ByterDev'} },
   { path: 'stream', component: StreamComponent, data: {title: 'ByterDev/stream'} },
+  { path: 'metas', component: MetasComponent, data: {title: 'ByterDev/metas'} },
 ];

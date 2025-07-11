@@ -13,10 +13,10 @@
   </float>
 
   <float
-    class="gap-10 font-bold md:row-start-2"
+    class="gap-10 md:row-start-2"
     [titulo]="'actions' | transloco"
   >
-    <btn-ref [links]="btnLinks"></btn-ref>
+    <icon-link [links]="btnLinks"/>
   </float>
   <icon-card
     class="lg:col-start-2"
@@ -30,19 +30,21 @@
   />
 
   <float
-    [titulo]="'donate' | transloco"
+    [titulo]="'METAS' | transloco"
     class="lg:col-start-4 lg:row-start-1 lg:row-span-2"
   >
     <div class="grid w-full gap-2 px-10 md:gap-5">
-      <donaciones imageUrl="DBZ4.webp">
-        <p class="font-bold">Epa, ¡El Sparking Zero!</p>
-        <p class="font-bold text-green-400 text-ellipsis">COMPLETADO</p>
-      </donaciones>
-      <donaciones imageUrl="pcgamer.webp">
-        <p class="font-bold">Pc gamer pa programar</p>
-        <p class="font-bold text-green-400 text-ellipsis">COMPLETADO</p>
-      </donaciones>
-      <div id="paypal-button-container"></div>
+      <meta-card imageUrl="metas-img/escritorio.webp">
+        <p class="font-bold">ESCRITORIO L</p>
+      </meta-card>
+      <meta-card imageUrl="metas-img/monitor.webp">
+        <p class="font-bold">MONITOR ADICIONAL</p>
+      </meta-card>
+      <meta-card imageUrl="metas-img/mousepad.webp">
+        <p class="font-bold">MOUSEPAD</p>
+      </meta-card>
+      <icon-link [link]='{name:"ver mas",link:"/metas",icon:"fa-solid fa-arrow-up-right-from-square"}'/>
+      
     </div>
   </float>
 </section>

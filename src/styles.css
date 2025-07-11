@@ -10,28 +10,44 @@
 
 }
 
+:root {
+  --primary-color:  #dc2626;
+  --primary-color-transparent: rgba(220, 38, 38, 0.3); /* 30% de opacidad */
+  --hover-color: #ef4444;
+  --bg-color: #f5f5f5;
+  --hover-bg-color: #fafafa;
+  --text-color: #111827;
+  --border-radius: 0.5rem;
+}
+.dark {
+  --bg-color: #171717;
+  --hover-bg-color: #1d1d1d;
+  --text-color: white;
+}
+
 body{
   @apply bg-neutral-200 ;
 }
-aside{
-  @apply bg-neutral-100 hover:bg-neutral-50 dark:bg-neutral-900 dark:hover:bg-neutral-800 transition-all duration-500
+aside {
+  @apply bg-[var(--bg-color)] hover:bg-[var(--hover-bg-color)] transition-all duration-500;
 }
-/* Estilo para la barra de desplazamiento */
 ::-webkit-scrollbar {
-  width: 6px; /* Ancho de la barra */
+  width: 6px;
 }
 
-/* Color del fondo del scroll */
 ::-webkit-scrollbar-track {
-  background: inherit; /* Fondo del área de la barra de desplazamiento */
+  background: inherit;
 }
 
-/* Color del 'thumb', la parte que se desplaza */
 ::-webkit-scrollbar-thumb {
-  @apply bg-red-600 rounded-lg
+  background-color: var(--primary-color);
+  border-radius: 0.5rem; /* equivale a rounded-lg */
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--hover-color);
+  border-radius: 0.5rem; /* equivale a rounded-lg */
 }
 
-/* Color al pasar el cursor */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-red-800
+  background-color: var(--hover-color);
 }

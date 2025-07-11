@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   imports: [NgClass],
   template: `
     <aside
-      class="relative py-2 px-4 rounded-md  hover:scale-105 ease-in-out h-full w-full overflow-hidden shadow-md shadow-gray-500/50  dark:shadow-black  z-10"
+      class="relative py-2 px-4 rounded-md  hover:scale-105 ease-in-out duration-300 h-full w-full overflow-hidden shadow-md shadow-gray-500/50  dark:shadow-black  z-10"
         [ngClass]="{
     'flex flex-col items-center justify-center': estaCentrado,
     'block': !estaCentrado
@@ -30,7 +30,7 @@ import { Component, Input } from '@angular/core';
     left: 0;
     width:100%;
     height:2px;
-    background: linear-gradient(to right, transparent, red);
+    background: linear-gradient(to right, transparent, var(--primary-color));
     animation: left-right 4s linear infinite;
   }
   aside div:nth-child(2){
@@ -40,7 +40,7 @@ import { Component, Input } from '@angular/core';
     right: 0;
     width:2px;
     height:100%;
-    background: linear-gradient(to bottom, transparent, red);
+    background: linear-gradient(to bottom, transparent, var(--primary-color));
     animation: top-bottom 4s linear infinite;
     animation-delay: 2s;
   }
@@ -51,7 +51,7 @@ import { Component, Input } from '@angular/core';
     right: 0;
     width:100%;
     height:2px;
-    background: linear-gradient(to left, transparent, red);
+    background: linear-gradient(to left, transparent, var(--primary-color));
     animation: right-left 4s linear infinite;
   }
   aside div:nth-child(4){
@@ -61,7 +61,7 @@ import { Component, Input } from '@angular/core';
     left: 0;
     width: 2px;
     height:100%;
-    background: linear-gradient(to top, transparent, red);
+    background: linear-gradient(to top, transparent, var(--primary-color));
     animation: bottom-top 4s linear infinite;
     animation-delay: 2s;
   }

@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { environment } from '@envs/environment.development';
 import { PaypalService } from '@services/paypal.service';
-import { DonacionesComponent } from './components/donaciones.component';
+import { MetaCardComponent } from './metas/meta-card.component';
 import { FloatComponent } from '@shared/components/float.component';
 import { CardProfileComponent } from "./components/card-me.component";
-import { IconLink } from '@core/models/icon-link';
 import { IconCard } from '@core/models/icon-card.interface';
 import { IconCardComponent } from "./components/icon-card.component";
-import { BtnRefComponent } from "./components/btn-ref.component";
+import { IconLinkComponent } from "./components/icon-link.component";
 import { TranslocoModule } from '@ngneat/transloco';
+import { IconLink } from '@core/models/link.interface';
 
 @Component({
   selector: 'app-sobre-mi',
   standalone: true,
-  imports: [DonacionesComponent, CardProfileComponent, IconCardComponent, FloatComponent, BtnRefComponent, TranslocoModule,],
+  imports: [MetaCardComponent, CardProfileComponent, IconCardComponent, FloatComponent, IconLinkComponent, TranslocoModule, IconLinkComponent],
   templateUrl: './sobre-mi.component.html',
   styles: ``,
 })
@@ -54,10 +53,9 @@ export class SobreMiComponent {
 
 
   btnLinks: IconLink[] = [
-    { nombre: 'btnLinks.certificados', link: '/certificates', icon: 'fa fa-solid fa-file-alt' },
-    { nombre: 'btnLinks.proyectos', link: '/proyects', icon: 'fas fa-folder' },
-    { nombre: 'btnLinks.streams', link: '/stream', icon: 'fas fa-folder' },
-    { nombre: 'btnLinks.cv', link: '/cv-byter', icon: 'fa-sharp fa-solid fa-download' },
+    { name: 'btnLinks.certificados', link: '/certificates', icon: 'fa fa-solid fa-file-alt' },
+    { name: 'btnLinks.proyectos', link: '/proyects', icon: 'fas fa-folder' },
+    { name: 'btnLinks.streams', link: '/stream', icon: 'fas fa-folder' },
+    { name: 'btnLinks.cv', link: '/cv-byter', icon: 'fa-sharp fa-solid fa-download' },
   ];
-
 }
